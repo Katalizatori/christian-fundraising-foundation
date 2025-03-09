@@ -1,0 +1,37 @@
+<!--Base template-->
+{% load static %}
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <!--Meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+        <title> Prototype 1 </title>
+        <!--Link to css-->
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'css/email-form.css' %}">
+        <link rel="stylesheet" href="{% static 'css/satoshi.css' %}">
+        <link rel="stylesheet" href="{% static 'css/output.css' %}">
+        
+
+        <!-- Page-specific CSS to reduce load time -->
+
+        {% block extra_css %}{% endblock %}  
+        
+    </head>
+    <body class="selection:bg-green-300">
+        <header>
+            {% include 'navbar.html' %}
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            {% include 'footer.html' %}      
+        </footer>
+    </body>
+ </html>

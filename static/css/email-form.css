@@ -1,0 +1,102 @@
+
+/* styles.css */
+
+/* Container for the email form */
+.email-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.email-header {
+    text-align: left; /* Right-align the title and text */
+}
+
+.email-header p {
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+}
+
+.email-header h2 {
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-font-size);
+    font-weight: 600;
+}
+
+
+
+em {
+    display: inline-block;
+    font-style: normal;
+    position: relative;
+    -webkit-transform: translateZ(0);
+  }
+  
+  em::after {
+    background-color: var(--yellow);
+    bottom: 7%;
+    content: "";
+    height: 25%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+
+.email-form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-fields {
+    display: flex;
+    gap: 40px;
+}
+
+.input-fields div {
+    flex: 1; 
+}
+
+
+.email-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gray);
+}
+
+/* Input styles */
+
+input{box-sizing:border-box} 
+
+.email-form input[type="text"],
+.email-form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Right-align the button */
+}
+
+.email-form button {
+    padding: 10px 20px;
+    background-color: var(--lime-green);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.email-form button:hover {
+    background-color: #0056b3;
+}

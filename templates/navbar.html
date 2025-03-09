@@ -1,0 +1,40 @@
+<nav class="navbar">
+    <!-- Logo on the far left -->
+    <div class="logo">
+        <a href="{% url 'index' %}">
+            <img src="logo.png" alt="Company Logo"> <!-- Replace with your logo path -->
+        </a>
+    </div>
+
+    <!-- Navigation links in the middle -->
+    <ul class="nav-links">
+        <!-- Home Link -->
+        <li>
+            {% url 'index' as index_url %}
+            <a href="{{ index_url }}" class="{% if request.path == index_url %}active{% endif %}">Home</a>
+        </li>
+
+        <!-- About Link -->
+        <li>
+            {% url 'about' as about_url %}
+            <a href="{{ about_url }}" class="{% if request.path == about_url %}active{% endif %}">About</a>
+        </li>
+
+        <!-- Resources Link -->
+        <li>
+            {% url 'resources' as resources_url %}
+            <a href="{{ resources_url }}" class="{% if request.path == resources_url %}active{% endif %}">Resources</a>
+        </li>
+
+        <!-- Contact Link -->
+        <li>
+            {% url 'contact' as contact_url %}
+            <a href="{{ contact_url }}" class="{% if request.path == contact_url %}active{% endif %}">Contact</a>
+        </li>
+    </ul>
+
+    <!-- "Book A Call" button on the far right -->
+    <div class="cta-button">
+        <a href="{{ contact_url }}" class="btn">Book A Call</a>
+    </div>
+</nav>

@@ -1,0 +1,35 @@
+<div class="email-container">
+    <div class="email-header">
+        <h3 class="font-bold mb-4 text-3xl"><em>FREE</em> Fundraising insights</h3>
+        <p>Every week, you will receive an email with biblical inspiration, research-backed insights, or fundraising ideas you can apply immediately. Join a growing community of over 1,000 Christian leaders and fundraisers – <em>sign up</em> today.</p>
+    </div>
+
+    <form method="post" action="{% url 'subscribe' %}" class="email-form">
+        
+        <!-- token -->
+        {% csrf_token %}
+        
+        <!-- First Name and Last Name Fields -->
+        <div class="input-fields">
+            <div>
+                <label for="id_first_name">First Name</label>
+                <input class="bg-white rounded-sm" type="text" id="id_first_name" name="first_name" required>
+            </div>
+            <div>
+                <label for="id_last_name">Last Name</label>
+                <input class="bg-white rounded-sm" type="text" id="id_last_name" name="last_name" required>
+            </div>
+        </div>
+
+        <!-- Email Field -->
+        <div>
+            <label for="id_email">Email Address</label>
+            <input class="bg-white rounded-sm" type="email" id="id_email" name="email" required>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="button-container">
+            <button type="submit">Join Today</button>
+        </div>
+    </form>
+</div>
