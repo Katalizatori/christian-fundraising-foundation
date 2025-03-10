@@ -35,7 +35,7 @@ em {
     position: relative;
     -webkit-transform: translateZ(0);
   }
-  
+
   em::after {
     background-color: var(--yellow);
     bottom: 7%;
@@ -61,14 +61,14 @@ em {
 }
 
 .input-fields div {
-    flex: 1; 
+    flex: 1;
 }
 
 
 .email-form label {
     display: block;
     margin-bottom: 5px;
-    color: var(--gray);
+    color: var(--black);
 }
 
 /* Input styles */
@@ -88,15 +88,20 @@ input{box-sizing:border-box}
 }
 
 .email-form button {
-    padding: 10px 20px;
-    background-color: var(--lime-green);
-    color: var(--white);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+    text-transform: uppercase;
+    background-image: linear-gradient(  102deg,  var(--yellow) 0%,  var(--lime) 51%, /* Darker shade */  var(--lime) 100%);
+    color: var(--black);
+    background-size: 200%;
+    border: 2px solid #e1f07a;
+    transition: background-position 0.5s ease-in-out;
+    /*Smoothtransition*/padding: 8px;
+    border-radius:var(--border-radius-4);
+    -webkit-border-radius:var(--border-radius-4);
+    -moz-border-radius:var(--border-radius-4);
+    -ms-border-radius:var(--border-radius-4);
+    -o-border-radius:var(--border-radius-4);
 }
 
 .email-form button:hover {
-    background-color: #0056b3;
+    background-position: 100% 0%; /* Move to the second half */
 }

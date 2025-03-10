@@ -70,23 +70,14 @@
 
 
 :root {
-    /* Test palette */
-    /* --red: rgb(255, 104, 76);
-    --light-blue: rgb(42, 167, 255);
-    --dark-blue: rgb(27, 60, 116);
-    
-    --black: rgb(0, 0, 0);
-    --gray: rgb(114, 124, 141);
-    --false-black: rgb(3, 16, 59);
-    --green: #EEF6CC; */
 
     /* Real palette */
-    --black: #2c2e35;
-    --gray: #9b9c9f;
-    --green: #62c892;
-    --lime-green: #88d08a;
-    --lime: #bdd986;
-    --yellow: #ffdd85;
+    --black: #1d1d1b;
+    --gray: #9d9c9f;
+    --green: #6dbd89;
+    --lime-green: #9acc81;
+    --lime: #cad87d;
+    --yellow: #fce181;
 
     --dark-green: #626F47;
     --dark-lime: #9bb665;
@@ -97,21 +88,28 @@
     /* --light-lime-green: #F9F6DC;
     --alt-light-lime-green: #FEFAE0;
     --lime-green: #e1f07a;
+    --dark-lime: #9bb665;
     --green: #6F9808;
+    --lime-green: #88d08a;
     --dark-green: #626F47;
     --darker-green: #384516;
     --white: #FCFCFA;
     --false-white: #FEFAE0;
-    --yellow: #FFCF50; */
-    
+    --yellow: #FFCF50;
+    --red: rgb(255, 104, 76);
+    --light-blue: rgb(42, 167, 255);
+    --dark-blue: rgb(27, 60, 116);
+    --black: rgb(0, 0, 0);
+    --gray: rgb(114, 124, 141);
+    --false-black: rgb(3, 16, 59);
+    --green: #EEF6CC; */
 
     --border-radius-1: 60px;
     --border-radius-2: 16px;
-    --border-radius-3: 10px;
-    --border-radius-4: 5px;
+    --border-radius-3: 1.5rem;
+    --border-radius-4: 6px;
 
-    --box-shadow-1: rgba(144, 238, 144, 0.2) 0px 16px 46px 0px; /* A soft light green shadow surrounding object. */
-    --box-shadow-2: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1); /* A more defined shadow with a netutral tone. */
+    --box-shadow-2: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1); /* A more defined shadow with a neutral tone. */
     --box-shadow-3:  rgba(27, 60, 116, 0.06) 0px 16px 46px 0px;
 
     --h1-font-size: 72px;
@@ -196,6 +194,10 @@ section {
     display: inline;
 }
 
+.hero-green {
+    background-color: var(--green);
+}
+
 /* Basic Components */
 
 .card {
@@ -230,12 +232,12 @@ section {
     text-transform: uppercase;
     background-image: linear-gradient(
   102deg,
-  var(--lime) 0%,
-  var(--lime-green) 51%, /* Darker shade */
-  var(--lime) 100%
+  #e1f07a 0%,
+  #88d08a 51%, /* Darker shade */
+  #e1f07a 100%
 );
     background-size: 200%;
-    border: 2px solid var(--lime);
+    border: 2px solid #e1f07a;
     transition: background-position 0.5s ease-in-out; /* Smooth transition */
 }
 
