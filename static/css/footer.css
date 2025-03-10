@@ -7,3 +7,45 @@ footer {
 	padding-left: 2em;
 	padding-right: 2em;
 }
+
+/* Responsive behaviors */
+
+/* Footer Responsive Styles */
+@media (max-width: 767px) {
+    /* Heading */
+    .footer h3 {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+
+    /* Email Form and Image Section */
+    .footer .flex.flex-col.md\:flex-row p {
+      font-size: 0.875rem;
+    }
+
+    /* Footer Links Section */
+    .footer .grid.grid-cols-1.md\:grid-cols-3 p {
+      font-size: 1rem;
+    }
+
+    .footer .grid.grid-cols-1.md\:grid-cols-3 a {
+      font-size: 0.875rem;
+    }
+
+    /* Connect with Us Section */
+    .footer .p-4 p {
+      font-size: 1rem;
+    }
+
+    .footer .p-4 a {
+      font-size: 0.875rem;
+    }
+
+    /* Copyright Section */
+    .footer .flex.flex-col.md\:flex-row p {
+      font-size: 0.875rem;
+    }
+    .footer .flex.flex-col.md\:flex-row ul a {
+      font-size: 0.875rem;
+    }
+  }

@@ -3,289 +3,260 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
-<link rel="stylesheet" href="{% static 'css/blog.css' %}"
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 {% endblock %}
 
 {% block content %}
-<!--Hero Section-->
-
+<!-- Hero Section -->
 <div class="hero-green">
-    <!-- Container -->
-    <div class="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
-      <!-- Title -->
-      <h1 class="mb-6 max-w-3xl text-4xl font-bold md:mb-10 md:text-6xl lg:mb-12 md:leading-tight">
-        Welcome to Christian Fundraising Consultancy.
-      </h1>
-      <!-- Buttons -->
-      <div class="flex items-stretch">
-        <a href="javascript:void(0);" class="CTA-button mr-6 rounded-md px-8 py-4 text-center font-semibold text-white md:mr-8">
-          Book a call
-        </a>
-        <a href="javascript:void(0);" class="flex items-center justify-center rounded-md border border-solid border-black bg-white px-6 py-3 font-bold">
-          <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94d411e6cf99_Vector%20(6).svg" alt="" class="mr-2 max-h-4 w-5" />
-          <p>See our Work</p>
-        </a>
+  <div class="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20 lg:py-24">
+    <h1 class="mb-6 max-w-3xl text-3xl font-bold md:mb-10 md:text-5xl lg:mb-12 lg:text-6xl md:leading-tight">
+      Welcome to Christian Fundraising Consultancy.
+    </h1>
+    <div class="flex flex-col md:flex-row items-stretch gap-4">
+      <a href="javascript:void(0);" class="CTA-button rounded-md px-6 py-3 md:px-8 md:py-4 text-center font-semibold text-white">
+        Book a call
+      </a>
+      <a href="javascript:void(0);" class="flex items-center justify-center rounded-md border border-solid border-black bg-white px-4 py-2 md:px-6 md:py-3 font-bold">
+        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94d411e6cf99_Vector%20(6).svg" alt="" class="mr-2 max-h-4 w-5" />
+        <p>See our Work</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Bottom Section -->
+<div class="mx-auto max-w-7xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
+  <div class="relative flex max-w-7xl flex-col gap-4 md:flex-row lg:justify-end">
+    <div class="max-w-xl md:mr-[520px] c-mr-520px md:max-w-xs">
+      <h3 class="text-2xl font-bold md:text-3xl">Our mission</h3>
+      <div class="my-6 w-16 border-t border-amber-300"></div>
+      <p>
+        To help Christian charities like yours to unlock the generosity of their supporters by applying biblical principles of fundraising, data-driven insights, and stories that stir hearts into action.
+      </p>
+    </div>
+    <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="shadow relative -bottom-6 -right-6 mt-20 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px" />
+  </div>
+</div>
+
+<!-- Services Section -->
+<section class="services-section py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold text-center mb-8 md:mb-12">Our services</h2>
+    <div class="service-cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Fundraising Strategy -->
+      <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="h-48 w-full">
+          <img class="h-full w-full object-scale-down" src="{% static 'media/1.jpg'%}">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-4">Fundraising Strategy</h3>
+          <p class="text-gray-700">We evaluate your fundraising plan, messages and activities and help you create a new roadmap for growing giving to your mission.</p>
+        </div>
+      </div>
+
+      <!-- Database Analysis -->
+      <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="h-48 w-full">
+          <img class="h-full w-full object-scale-down" src="{% static 'media/2.jpg'%}">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-4">Database Analysis</h3>
+          <p class="text-gray-700">We unlock the potential of your donor data with our Fundraising Fitness Test to increase giving, identify new major donors, and boost retention.</p>
+        </div>
+      </div>
+
+      <!-- Creative Services -->
+      <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="h-48 w-full">
+          <img class="h-full w-full object-scale-down" src="{% static 'media/3.jpg'%}">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-4">Creative Services</h3>
+          <p class="text-gray-700">We craft compelling appeals, print and media campaigns, and inspiring communications that stir the hearts and faith of Christian donors.</p>
+        </div>
+      </div>
+
+      <!-- Major and Legacy Giving -->
+      <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="h-48 w-full">
+          <img class="h-full w-full object-scale-down" src="{% static 'media/4.jpg'%}">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-4">Major and Legacy Giving</h3>
+          <p class="text-gray-700">We help you to build meaningful relationships with key supporters and invite them to invest more deeply in your mission.</p>
+        </div>
+      </div>
+
+      <!-- Donor Research -->
+      <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="h-48 w-full">
+          <img class="h-full w-full object-scale-down" src="{% static 'media/5.jpg'%}">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-4">Donor Research</h3>
+          <p class="text-gray-700">We enable you to gain fresh insights into Christian supporters, what motivates them to give, and which messages inspire action, through surveys and focus groups.</p>
+        </div>
+      </div>
+
+      <!-- Training and Coaching -->
+      <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="h-48 w-full">
+          <img class="h-full w-full object-scale-down" src="{% static 'media/6.jpg'%}">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-4">Training and Coaching</h3>
+          <p class="text-gray-700">Equip you and your team with expert-led training, webinars, and courses to achieve fundraising success.</p>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Hero bottom -->
-  <div class="mx-auto max-w-7xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
-    <!-- Component -->
-    <div class="relative flex max-w-7xl flex-col gap-4 md:flex-row lg:justify-end">
-      <div class="max-w-xl md:mr-[520px] c-mr-520px md:max-w-xs">
-        <!-- Title -->
-        <h3 class="text-2xl font-bold md:text-3xl">Our mission</h3>
-        <!-- Divider -->
-        <div class="my-6 w-16 border-t border-amber-300"></div>
-        <p class="text-sm text-gray-500">
-          To help Christian charities like yours to unlock the generosity of their supporters by applying biblical principles of fundraising, data-driven insights, and stories that stir hearts into action.
+</section>
+
+<!-- Help You Grow Section -->
+<section class="help-you-grow-section py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-gray-200 h-40 flex items-center justify-center">
+          <img src="https://via.placeholder.com/150" alt="Image 1" class="w-full h-full object-cover">
+        </div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center">
+          <img src="https://via.placeholder.com/150" alt="Image 2" class="w-full h-full object-cover">
+        </div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center">
+          <img src="https://via.placeholder.com/150" alt="Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center">
+          <img src="https://via.placeholder.com/150" alt="Image 4" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="flex flex-col justify-center">
+        <span class="flex items-center w-1/2">
+          <span class="h-px flex-1 bg-amber-300"></span>
+          <span class="pl-4">22+ Years of Experience</span>
+        </span>
+        <h2 class="text-2xl font-bold mb-4 mt-4">We can help your ministry <em>grow</em></h2>
+        <p class="text-gray-700">
+          With us, fundraising isn’t just about money — it’s about building a community of givers who share in your mission for God’s Kingdom.
         </p>
       </div>
-      <!-- Image -->
-      <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="shadow relative -bottom-6 -right-6 mt-20 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px" />
     </div>
   </div>
-
-
-<!--Services Section-->
-<section class="services-section py-16">
-    <div class="container">
-        <h2 class="text-2xl font-bold mb-4">Our Services</h2>
-        <div class="service-cards-container grid grid-cols-3 gap-4">
-            <div class="service-card">
-                <div class="h-48 w-auto item item1">
-                    <img class="h-48 w-96 object-scale-down" src="{% static 'media/1.jpg'%}">
-                </div>
-                <div class="item item2">
-                    <h3 class="text-xl font-bold mb-4"> Fundraising Strategy </h3>
-                    <p>We evaluate your fundraising plan, messages and activities and help you create a new roadmap for growing giving to your mission. </p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="h-48 w-auto item item1">
-                    <img class="h-48 w-96 object-scale-down" src="{% static 'media/2.jpg'%}">
-                </div>
-                <div class="item item2">
-                    <h3 class="text-xl font-bold mb-4"> Database Analysis </h3>
-                    <p>We unlock the potential of your donor data with our Fundraising Fitness Test to increase giving, identify new major donors, and boost retention.</p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="h-48 w-auto item item1">
-                    <img class="h-48 w-96 object-scale-down" src="{% static 'media/3.jpg'%}">
-                </div>
-                <div class="item item2">
-                    <h3 class="text-xl font-bold mb-4"> Creative Copywriting, Design and Videos </h3>
-                    <p>We craft compelling appeals, print and media campaigns, and inspiring communications that that stir the hearts and faith of Christian donors.</p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="h-48 w-auto item item1">
-                    <img class="h-48 w-96 object-scale-down" src="{% static 'media/4.jpg'%}">
-                </div>
-                <div class="item item2">
-                    <h3 class="text-xl font-bold mb-4"> Major and Legacy Giving </h3>
-                    <p>We help you to build meaningful relationships with key supporters and invite them to invest more deeply in your mission.</p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="h-48 w-auto item item1">
-                    <img class="h-48 w-96 object-scale-down" src="{% static 'media/5.jpg'%}">
-                </div>
-                <div class="item item2">
-                    <h3 class="text-xl font-bold mb-4"> Donor Research </h3>
-                    <p>We enable you to gain fresh insights into Christian supporters, what motivates them to give, and which messages inspire action, through surveys and focus groups.</p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="h-48 w-auto item item1">
-                    <img class="h-48 w-96 object-scale-down" src="{% static 'media/6.jpg'%}">
-                </div>
-                <div class="item item2">
-                    <h3 class="text-xl font-bold mb-4"> Training and Coaching </h3>
-                    <p>Equip you and your team with expert-led training, webinars, and courses to achieve fundraising success.</p>
-                </div>
-            </div>
-        </div>
-        <div class="flex justify-center">
-            <button class=" CTA-button mr-6 rounded-md px-8 py-4 text-center font-semibold text-white md:mr-8"> Book a Call</button>
-        </div>
-    </div>
 </section>
 
-<!--'Help you grow' Section-->
-<section class="help-you-grow-section py-16">
-
-    <div class="container mx-auto p-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- First Column: Image Grid -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-gray-200 h-40 flex items-center justify-center">
-              <img src="https://via.placeholder.com/150" alt="Image 1" class="shadow w-full h-full object-cover">
-            </div>
-            <div class="bg-gray-200 h-40 flex items-center justify-center">
-              <img src="https://via.placeholder.com/150" alt="Image 2" class="shadow w-full h-full object-cover">
-            </div>
-            <div class="bg-gray-200 h-40 flex items-center justify-center">
-              <img src="https://via.placeholder.com/150" alt="Image 3" class="shadow w-full h-full object-cover">
-            </div>
-            <div class="bg-gray-200 h-40 flex items-center justify-center">
-              <img class="object-contain" src="https://via.placeholder.com/150" alt="Image 4" class="shadow w-full h-full object-cover">
-            </div>
-          </div>
-          <!-- Second Column: Text -->
-          <div class="flex flex-col justify-center ml-4">
-            <span class="flex items-center w-1/2">
-              <span class="h-px flex-1 bg-amber-300"></span>
-              <span class="pl-4">22+ Years of Experience</span>
-              </span>
-            <h2 class="text-2xl font-bold mb-4">We can help your ministry <em>grow</em></h2>
-            <p class="text-gray-700">
-                With us, fundraising isn’t just about money — it’s about building a community of givers who share in your mission for God’s Kingdom.
-                We believe that your mission deserves a strong, engaged community of givers.
-                We create faith-driven strategies and campaigns that inspire generosity and sustain ministry growth.
-                Your ministry’s success is our priority.
-            </p>
-          </div>
-        </div>
-      </div>
-</section>
-
-
-<!--'Proven path' Section-->
+<!-- Proven Path Section -->
 <section class="path-section py-16">
-    <div class="container">
-        <div class="px-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-              <div>
-                <div class="container mx-auto p-4">
-                  <span class="flex items-center">
-                    <span class="h-px bg-amber-300 flex-grow"></span>
-                    <span class="px-4">Our workflow</span>
-                    <span class="h-px bg-amber-300 flex-grow"></span>
-                  </span>
-                </div>
-              </div>
-              <h2 class="text-2xl font-bold mb-4">
-                <span class="relative inline-block">
-                  <span class="relative">Our proven path to fundraising <em>success</em>
-              </h2>
-            </div>
-            <div class="grid gap-8 row-gap-0 lg:grid-cols-4">
-              <div class="card relative text-center">
-                <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
-                  <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
-                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                  </svg>
-                </div>
-                <h6 class="mb-2 text-2xl font-extrabold">Assess</h6>
-                <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
-                  We evaluate your current fundraising strategy, donor engagement, and key opportunities for growth.
-                </p>
-                <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
-                <div class="top-0 right-0 flex items-center justify-center h-24 lg:-mr-8 lg:absolute">
-                  <svg class="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
-                    <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="card relative text-center">
-                <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
-                  <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
-                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                  </svg>
-                </div>
-                <h6 class="mb-2 text-2xl font-extrabold">Plan</h6>
-                <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
-                  We develop a tailored, biblically grounded strategy with clear steps to increase giving to your mission. 
-                </p>
-                <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
-                <div class="top-0 right-0 flex items-center justify-center h-24 lg:-mr-8 lg:absolute">
-                  <svg class="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
-                    <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="card relative text-center">
-                <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
-                  <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
-                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                  </svg>
-                </div>
-                <h6 class="mb-2 text-2xl font-extrabold">Implement</h6>
-                <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
-                  We guide you in executing the strategy through compelling messaging, campaigns, and donor engagement. 
-                </p>
-                <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
-                <div class="top-0 right-0 flex items-center justify-center h-24 lg:-mr-8 lg:absolute">
-                  <svg class="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
-                    <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="card relative text-center">
-                <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
-                  <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
-                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                  </svg>
-                </div>
-                <h6 class="mb-2 text-2xl font-extrabold">Grow</h6>
-                <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
-                  We monitor progress, refine strategies, and equip your team to achieve long-term fundraising success.
-                </p>
-                <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
-              </div>
-            </div>
-          </div>
+  <div class="container mx-auto px-4">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <div class="container mx-auto p-4">
+        <span class="flex items-center">
+          <span class="h-px bg-amber-300 flex-grow"></span>
+          <span class="px-4">Our workflow</span>
+          <span class="h-px bg-amber-300 flex-grow"></span>
+        </span>
+      </div>
+      <h2 class="text-2xl font-bold mb-4">
+        <span class="relative inline-block">
+          Our proven path to fundraising <em>success</em>
+        </span>
+      </h2>
     </div>
-</section>
-
-<!--Impact Section-->
-<section class="stats-section py-16">
-    <div class="container">
-        <div>
-          <div class="container mx-auto p-4">
-            <span class="flex items-center">
-              <span class="h-px bg-amber-300 flex-grow"></span>
-              <span class="px-4">Our growth</span>
-              <span class="h-px bg-amber-300 flex-grow"></span>
-            </span>
-          </div>
-            <h2 class="font-bold text-center mb-4">Impact over the last 22+ years</h2>
+    <div class="grid gap-8 row-gap-0 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+      <!-- Assess Card -->
+      <div class="card relative text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+          <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+          </svg>
         </div>
-        <div class="bg-white py-24 sm:py-32">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt class="text-base/7 text-gray-600">Happy Clients</dt>
-                  <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 lg:text-7xl sm:text-5xl">127</dd>
-                </div>
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt class="text-base/7 text-gray-600">Training Sessions</dt>
-                  <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">1,000+</dd>
-                </div>
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt class="text-base/7 text-gray-600">Current Projects</dt>
-                  <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">18</dd>
-                </div>
-              </dl>
-            </div>
-          </div>
+        <h6 class="mb-2 text-2xl font-extrabold">Assess</h6>
+        <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+          We evaluate your current fundraising strategy, donor engagement, and key opportunities for growth.
+        </p>
+        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+      </div>
+
+      <!-- Plan Card -->
+      <div class="card relative text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+          <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+          </svg>
+        </div>
+        <h6 class="mb-2 text-2xl font-extrabold">Plan</h6>
+        <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+          We develop a tailored, biblically grounded strategy with clear steps to increase giving to your mission.
+        </p>
+        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+      </div>
+
+      <!-- Implement Card -->
+      <div class="card relative text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+          <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+          </svg>
+        </div>
+        <h6 class="mb-2 text-2xl font-extrabold">Implement</h6>
+        <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+          We guide you in executing the strategy through compelling messaging, campaigns, and donor engagement.
+        </p>
+        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+      </div>
+
+      <!-- Grow Card -->
+      <div class="card relative text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+          <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+          </svg>
+        </div>
+        <h6 class="mb-2 text-2xl font-extrabold">Grow</h6>
+        <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+          We monitor progress, refine strategies, and equip your team to achieve long-term fundraising success.
+        </p>
+        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+      </div>
     </div>
+  </div>
 </section>
 
-<!--'Testimonials' Section-->
+<!-- Impact Section -->
+<section class="stats-section py-16">
+  <div class="container mx-auto px-4">
+    <div class="container mx-auto p-4">
+      <span class="flex items-center">
+        <span class="h-px bg-amber-300 flex-grow"></span>
+        <span class="px-4">Our growth</span>
+        <span class="h-px bg-amber-300 flex-grow"></span>
+      </span>
+    </div>
+    <h2 class="font-bold text-center mb-4">Impact over the last 22+ years</h2>
+    <div class="bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-gray-600">Happy Clients</dt>
+            <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 lg:text-7xl sm:text-5xl">127</dd>
+          </div>
+          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-gray-600">Training Sessions</dt>
+            <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">1,000+</dd>
+          </div>
+          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-gray-600">Current Projects</dt>
+            <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">18</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Testimonials Section -->
 <section class="testimonials-section py-16" id="testimonials">
-  <div class="container">
+  <div class="container mx-auto px-4">
     <div class="container mx-auto p-4">
       <span class="flex items-center">
         <span class="h-px bg-amber-300 flex-grow"></span>
@@ -306,18 +277,12 @@
           <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg" alt="" class="mr-3 inline-block w-4 flex-none" />
         </div>
         <p class="mb-4 px-10 max-w-xl text-center mx-auto">
-          Dignissim ullamcorper eu urna enim gravida sodales. Sceleisque orci
-          semper vulputate nisi, laoreet scelerisque purus. Pharetra,
-          venenatis mattis magna pretium consequat, massa. Urna arcu amet
-          purus sagittis.
+          Dignissim ullamcorper eu urna enim gravida sodales. Sceleisque orci semper vulputate nisi, laoreet scelerisque purus. Pharetra, venenatis mattis magna pretium consequat, massa. Urna arcu amet purus sagittis.
         </p>
-
         <img class="w-16 h-16 rounded-full object-cover mx-auto mt-8" alt="" src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" />
-
         <p class="font-semibold text-lg mt-3">David James</p>
         <p class="text-sm text-gray-500">CEO/Chairman</p>
       </div>
-
       <button class="absolute top-1/2 transform -translate-y-1/2 left-0 md:left-5">
         <svg width="72" height="73" viewBox="0 0 72 73" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="0.5" y="1" width="71" height="71" rx="35.5" stroke="#E2E2E2" />
@@ -348,9 +313,9 @@
   </div>
 </section>
 
-<!--'Resources' Section-->
+<!-- Resources Section -->
 <section class="blog-section py-16">
-  <div class="container">
+  <div class="container mx-auto px-4">
     {% include 'blog.html' %}
   </div>
 </section>

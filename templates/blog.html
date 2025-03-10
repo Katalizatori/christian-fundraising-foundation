@@ -3,7 +3,7 @@
   <span class="h-px bg-amber-300 w-1/2"></span>
    <span class="pl-4">Our Resources</span>
  </span>
-<h2 class="font-bold">Latest posts, insights and <em>free</em> templates.</h2>
+<h2 class="font-bold text-center">Latest posts, insights and <em>free</em> templates.</h2>
 <div class="blog-cards-container">
     {% for post in latest_posts %}
     <div class="shadow blog-card">
@@ -15,13 +15,13 @@
         <h3 class="blog-title">{{ post.title }}</h3>
         <span class="blog-time">{{ post.created_on|date:"F j, Y" }}</span>
         <p class="blog-description">
-            {{ post.content|truncatewords:30 }}
+            {{ post.short_description|safe }}
         </p>
         <div class="blog-options">
           <span>
-            Read Full Blog
+            Read Full Article
           </span>
-          <button class="blog-btn">{{ post.category }}</button>
+          <button class="blog-btn">{{ post.get_category_display }}</button>
         </div>
     </div>
     {% endfor %}

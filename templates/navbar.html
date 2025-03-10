@@ -16,16 +16,28 @@
             <a href="{{ index_url }}" class="{% if request.path == index_url %}active{% endif %}">Home</a>
         </li>
 
-        <!-- About Link -->
+        <!-- Services Link -->
         <li>
-            {% url 'about' as about_url %}
-            <a href="{{ about_url }}" class="{% if request.path == about_url %}active{% endif %}">About</a>
+            {% url 'services' as services_url %}
+            <a href="{{ services_url }}" class="{% if request.path == services_url %}active{% endif %}">Services</a>
+        </li>
+
+        <!-- Training Link -->
+        <li>
+            {% url 'training' as training_url %}
+            <a href="{{ training_url }}" class="{% if request.path == training_url %}active{% endif %}">Training</a>
         </li>
 
         <!-- Resources Link -->
         <li>
-            {% url 'resources' as resources_url %}
+            {% url 'resources' as about_url %}
             <a href="{{ resources_url }}" class="{% if request.path == resources_url %}active{% endif %}">Resources</a>
+        </li>
+
+        <!-- About Link -->
+        <li>
+            {% url 'about' as about_url %}
+            <a href="{{ about_url }}" class="{% if request.path == about_url %}active{% endif %}">About</a>
         </li>
 
         <!-- Contact Link -->
@@ -37,6 +49,6 @@
 
     <!-- "Book A Call" button on the far right -->
     <div class="CTA-button mr-4 px-4 py-2 rounded-md font-semibold text-white">
-        <a href="{{ contact_url }}" class="btn">Book A Call</a>
+        <a href="{{ call_url }}" class="btn">Book A Call</a>
     </div>
 </nav>

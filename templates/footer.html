@@ -1,94 +1,73 @@
-
 {% load static %}
 
 <section class="footer">
-    <div class="container">
-        <div class="flex justify-between items-center border-b p-4">
-            {% include 'email-form.html' %}
-            <div class="flex gap-5">
-                <img src="https://via.placeholder.com/150" alt="Image 3" class="w-full h-full object-cover">
-                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae nesciunt sit illo temporibus rerum necessitatibus molestiae aliquid eaque repellendus. Odio debitis cupiditate, quasi dolor atque illo sapiente natus excepturi asperiores!</p>
-            </div>
-        </div>
-        <div class="grid justify-between grid-cols-3 gap-4 md:grid-cols-3 sm:grid-cols-1 divide-x p-4">
-            <h5 class="m-6 text-xl font-semibold text-slate-800">
-              <img class="logo" style="height: 150px;" src="{% static 'media/logo.png' %}" alt="Company Logo">
-            </h5>
-            <div class=" m-6 grid justify-between grid-cols-3 gap-4">
-              <ul>
-                <p class="block mb-1 text-base font-semibold  text-slate-800">
-                  Product
-                </p>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Overview
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Solutions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Tutorials
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <p class="block mb-1 text-base font-semibold text-slate-800">
-                  Company
-                </p>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    About us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Press
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-700 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    News
-                  </a>
-                </li>
-              </ul>
-              </div>
-              <div class="p-4">
-                <p class="font-bold mb-4 mt-4"> Connect with us </p>
-                <a href="mailto:placeholder@gmail.com">placeholder@gmail.com</a>
-                <div class="flex mt-4">
-                <a class="mr-2" style="height: 30px;width: 30px;" href="linkedin.com"><img src="{% static 'media/icons8-linkedin.svg' %}"></a>
-                <a class="mr-2" style="height: 30px;width: 30px;" href="youtube.com"><img src="{% static 'media/icons8-youtube.svg' %}"></a>
-                <a class="mr-2" style="height: 30px;width: 30px;" href="substack.com"><img src="{% static 'media/icons8-substack.svg' %}"></a>
-                </div>
-            </div>
-          </div>
-        <div class="flex justify-between border-t">
-            <div class="flex w-full flex-row flex-wrap items-center justify-center gap-x-12 gap-y-3 py-4 text-center md:justify-between">
-                <p class="font-sans antialiased text-base text-current">© 2025 Christian Fundraising</p>
-                <ul class="flex flex-wrap items-center gap-x-6 gap-y-2">
-                <li>
-                    <a href="#" class="font-sans antialiased text-base text-current hover:text-primary">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" class="font-sans antialiased text-base text-current hover:text-primary">License</a>
-                </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+  <div class="container">
+    <!-- Heading -->
+    <h3 class="font-bold mb-4 text-3xl md:text-4xl text-center">
+      Get <em>FREE</em> Fundraising insights
+    </h3>
 
+    <!-- Email Form and Image Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center border-b p-4">
+      <!-- Email Form -->
+      {% include 'email-form.html' %}
+
+      <!-- Image and Text -->
+      <div class="flex flex-col md:flex-row gap-5 mt-6 md:mt-0">
+        <img src="https://via.placeholder.com/150" alt="Image 3" class="w-32 h-32 object-cover">
+        <p class="text-sm md:text-base text-gray-700">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae nesciunt sit illo temporibus rerum necessitatibus molestiae aliquid eaque repellendus. Odio debitis cupiditate, quasi dolor atque illo sapiente natus excepturi asperiores!
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Links Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+      <!-- Logo -->
+      <div class="flex justify-center md:justify-start">
+        <img class="logo h-24 md:h-32" src="{% static 'media/logo.png' %}" alt="Company Logo">
+      </div>
+
+      <!-- Product and Company Links -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Product Links -->
+        <ul>
+          <p class="block mb-2 text-lg font-semibold text-slate-800">Product</p>
+          <li><a href="#" class="block text-sm text-slate-600 py-1 hover:text-slate-500">Overview</a></li>
+          <li><a href="#" class="block text-sm text-slate-600 py-1 hover:text-slate-500">Features</a></li>
+          <li><a href="#" class="block text-sm text-slate-600 py-1 hover:text-slate-500">Solutions</a></li>
+          <li><a href="#" class="block text-sm text-slate-600 py-1 hover:text-slate-500">Tutorials</a></li>
+        </ul>
+
+        <!-- Company Links -->
+        <ul>
+          <p class="block mb-2 text-lg font-semibold text-slate-800">Company</p>
+          <li><a href="#" class="block text-sm text-slate-600 py-1 hover:text-slate-500">About us</a></li>
+          <li><a href="#" class="block text-sm text-slate-600 py-1 hover:text-slate-500">Careers</a></li>
+          <li><a href="#" class="block text-sm text-slate-600 py-1 hover:text-slate-500">Press</a></li>
+          <li><a href="#" class="block text-sm text-slate-600 py-1 hover:text-slate-500">News</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect with Us -->
+      <div class="p-4">
+        <p class="font-bold mb-4 text-lg">Connect with us</p>
+        <a href="mailto:placeholder@gmail.com" class="text-sm text-slate-600 hover:text-slate-500">placeholder@gmail.com</a>
+        <div class="flex mt-4 gap-3">
+          <a href="linkedin.com"><img src="{% static 'media/icons8-linkedin.svg' %}" class="w-8 h-8"></a>
+          <a href="youtube.com"><img src="{% static 'media/icons8-youtube.svg' %}" class="w-8 h-8"></a>
+          <a href="substack.com"><img src="{% static 'media/icons8-substack.svg' %}" class="w-8 h-8"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center border-t py-4">
+      <p class="text-sm text-gray-700 text-center md:text-left">© 2025 Christian Fundraising</p>
+      <ul class="flex gap-4 mt-4 md:mt-0">
+        <li><a href="#" class="text-sm text-gray-700 hover:text-primary">Privacy Policy</a></li>
+        <li><a href="#" class="text-sm text-gray-700 hover:text-primary">License</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

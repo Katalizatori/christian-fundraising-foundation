@@ -2,15 +2,14 @@
 
 <div class="email-container">
     <div class="email-header">
-        <h3 class="font-bold mb-4 text-3xl">Get <em>FREE</em> Fundraising insights</h3>
         <p>Every week, you will receive an email with biblical inspiration, research-backed insights, or fundraising ideas you can apply immediately. Join a growing community of over 1,000 Christian leaders and fundraisers. <strong><em>Sign up</em> today.</p></strong>
     </div>
 
     <form method="post" action="{% url 'subscribe' %}" class="email-form">
-        
+
         <!-- token -->
         {% csrf_token %}
-        
+
         <!-- First Name and Last Name Fields -->
         <div class="input-fields">
             <div>
@@ -30,7 +29,7 @@
         </div>
         <!-- Submit Button -->
         <div class="button-container">
-            <button type="submit">Join Today</button>
+            <button type="submit font-bold">Join Today</button>
         </div>
     </form>
 </div>

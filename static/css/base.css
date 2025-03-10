@@ -112,7 +112,7 @@
     --box-shadow-2: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1); /* A more defined shadow with a neutral tone. */
     --box-shadow-3:  rgba(27, 60, 116, 0.06) 0px 16px 46px 0px;
 
-    --h1-font-size: 72px;
+    --h1-font-size: 60px;
     --h1-line-height: 1.1;
     --h2-font-size: 60px;
     --h2-line-height: 1.2;
@@ -124,7 +124,7 @@
     --h5-line-height: 1.3;
     --h6-font-size: 24px;
     --h6-line-height: 1.3;
-    --body-font-size: 16px;
+    --body-font-size: 1.125em;
     --body-line-height: 1.5;
 
     /* Spacing and sizing system */
@@ -146,13 +146,13 @@ html, body {
 }
 
 h1 {
-    font-size: var(--h1-font-size); 
+    font-size: var(--h1-font-size);
     line-height: var(--h1-line-height);
 	color: var(--black);
 }
 
 h2 {
-	font-size: var(--h2-font-size); 
+	font-size: var(--h2-font-size);
     line-height: var(--h2-line-height);
     color: var(--black);
 }
@@ -166,23 +166,98 @@ p {
     mix-blend-mode : multiply;
 }
 
-/* Responsive Behaviors */
-
-@media (max-width: 768px) {
-    .main-container {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-container {
-        padding: 10px;
-    }
-}
-
 section {
     width: 100%;
 }
+
+/* Responsive Behaviors */
+
+@media (max-width: 767px) {
+    /* Hero Section */
+    .hero-green h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .hero-green .CTA-button {
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+    }
+
+    /* Mission Section */
+    .hero-bottom h3 {
+      font-size: 1.5rem;
+    }
+
+  .hero-bottom p {
+      font-size: 0.875rem;
+    }
+
+    /* Services Section */
+    .services-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+    }
+
+    /* Help You Grow Section */
+    .help-you-grow-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .help-you-grow-section p {
+      font-size: 0.875rem;
+    }
+
+    /* Proven Path Section */
+    .path-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .path-section h6 {
+      font-size: 1.25rem;
+    }
+
+    .path-section p {
+      font-size: 0.875rem;
+    }
+
+    /* Impact Section */
+    .stats-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .stats-section dd {
+      font-size: 2rem;
+    }
+
+    .stats-section dt {
+      font-size: 0.875rem;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .testimonials-section p {
+      font-size: 0.875rem;
+    }
+
+    .testimonials-section .font-semibold {
+      font-size: 1rem;
+    }
+
+    .testimonials-section .text-sm {
+      font-size: 0.75rem;
+    }
+  }
 
 /* Utility Classes */
 
@@ -206,10 +281,26 @@ section {
 }
 
 .container {
-    margin: 0 auto; /* Center the container */
-    max-width: 70%; /* Constrain the content width */
-    width: 100%; /* Take full width up to max-width */
-    padding: 2rem; /* Add padding inside the container */
+  margin: 0 auto; /* Center the container */
+  width: 100%; /* Take full width up to max-width */
+  padding: 1rem; /* Default padding for small screens */
+  max-width: 90%; /* Default max-width for small screens */
+}
+
+/* Medium screens (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+      max-width: 80%; /* Slightly wider for medium screens */
+      padding: 1.5rem; /* Increase padding for medium screens */
+  }
+}
+
+/* Large screens (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+      max-width: 70%; /* Original max-width for large screens */
+      padding: 2rem; /* Original padding for large screens */
+  }
 }
 
 .email-input {

@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{ load static }
+
+{% block content %}
+<div class="blog-detail">
+    <h1>{{ post.title }}</h1>
+    <p><strong>Published on:</strong> {{ post.created_at|date:"F j, Y" }}</p>
+    <p><strong>Author:</strong> {{ post.author }}</p>
+    {% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    {% endif %}
+    <p>{{ post.content }}</p>
+</div>
+{% endblock %}

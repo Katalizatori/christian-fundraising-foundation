@@ -17,7 +17,7 @@
 }
 
 .email-header p {
-    font-size: var(--body-font-size);
+    font-size: 20px;
     line-height: var(--body-line-height);
 }
 
@@ -26,8 +26,6 @@
     line-height: var(--h2-font-size);
     font-weight: 600;
 }
-
-
 
 em {
     display: inline-block;
@@ -67,6 +65,7 @@ em {
 
 .email-form label {
     display: block;
+    font-weight: bold;
     margin-bottom: 5px;
     color: var(--black);
 }
@@ -100,6 +99,9 @@ input{box-sizing:border-box}
     -moz-border-radius:var(--border-radius-4);
     -ms-border-radius:var(--border-radius-4);
     -o-border-radius:var(--border-radius-4);
+    font-weight: bold;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .email-form button:hover {
