@@ -1,0 +1,29 @@
+
+<span class="flex items-center w-1/2">
+  <span class="h-px bg-amber-300 w-1/2"></span>
+   <span class="pl-4">Our Resources</span>
+ </span>
+<h2 class="font-bold">Latest posts, insights and <em>free</em> templates.</h2>
+<div class="blog-cards-container">
+    {% for post in latest_posts %}
+    <div class="shadow blog-card">
+        <div class="blog-card-img-holder">
+            {% if post.image %}
+          <img src="{{ post.image.url }}" alt="{{ post.title }}">
+          {% endif %}
+        </div>
+        <h3 class="blog-title">{{ post.title }}</h3>
+        <span class="blog-time">{{ post.created_on|date:"F j, Y" }}</span>
+        <p class="blog-description">
+            {{ post.content|truncatewords:30 }}
+        </p>
+        <div class="blog-options">
+          <span>
+            Read Full Blog
+          </span>
+          <button class="blog-btn">{{ post.category }}</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+

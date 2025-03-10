@@ -27,41 +27,6 @@
 	background-color: var(--white);
 }
 
-
-.circle {
-	position: absolute;
-	border-radius: 50%;
-	bottom: 0; /* Position circles at the bottom */
-	transform: translateX(-50%); /* Center horizontally */
-}
-
-.circle1 {
-	width: 200px;
-	height: 200px;
-	background-color: #88D08A;
-	opacity: 0.2;
-	left: 50%; /* Center horizontally */
-	bottom: -100px; /* Move up to show only the top half */
-}
-
-.circle2 {
-	width: 150px;
-	height: 150px;
-	background-color: #A3D588;
-	opacity: 0.2;
-	left: 50%; /* Center horizontally */
-	bottom: -75px; /* Move up to show only the top half */
-}
-
-.circle3 {
-	width: 100px;
-	height: 100px;
-	background-color: #BDD986;
-	opacity: 0.2;
-	left: 50%; /* Center horizontally */
-	bottom: -50px; /* Move up to show only the top half */
-}
-
 /* Container for the grid */
 .path-cards-container {
 	gap: 25px; /* Spacing between cards */
@@ -72,7 +37,12 @@
   .path-card {
 	padding: 20px;
 	box-shadow: var(--box-shadow-3);
-  }
+	border-radius: var(--border-radius-2);
+	-webkit-border-radius: var(--border-radius-2)  ;
+	-moz-border-radius: var(--border-radius-2)  ;
+	-ms-border-radius: var(--border-radius-2)  ;
+	-o-border-radius: var(--border-radius-2)  ;
+}
   
   /* Styling for the image container */
   .item1 {

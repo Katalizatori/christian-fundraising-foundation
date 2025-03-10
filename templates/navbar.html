@@ -1,8 +1,10 @@
+{% load static %}
+
 <nav class="navbar">
     <!-- Logo on the far left -->
     <div class="logo">
         <a href="{% url 'index' %}">
-            <img src="logo.png" alt="Company Logo"> <!-- Replace with your logo path -->
+            <img class="logo ml-4" style="height: 60px;" src="{% static 'media/logo.png' %}" alt="Company Logo"> <!-- Replace with your logo path -->
         </a>
     </div>
 
@@ -34,7 +36,7 @@
     </ul>
 
     <!-- "Book A Call" button on the far right -->
-    <div class="cta-button">
+    <div class="CTA-button mr-4 px-4 py-2 rounded-md font-semibold text-white">
         <a href="{{ contact_url }}" class="btn">Book A Call</a>
     </div>
 </nav>

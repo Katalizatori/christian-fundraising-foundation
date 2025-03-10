@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-{% load static %} 
+{% load static %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
-{% endblock %} 
+<link rel="stylesheet" href="{% static 'css/blog.css' %}"
+{% endblock %}
 
 {% block content %}
 <!--Hero Section-->
@@ -13,11 +14,11 @@
     <div class="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
       <!-- Title -->
       <h1 class="mb-6 max-w-3xl text-4xl font-bold md:mb-10 md:text-6xl lg:mb-12 md:leading-tight">
-        The Website You Want Without The Dev Time.
+        Welcome to Christian Fundraising Consultancy.
       </h1>
       <!-- Buttons -->
       <div class="flex items-stretch">
-        <a href="javascript:void(0);" class="mr-6 rounded-md bg-black px-8 py-4 text-center font-semibold text-white md:mr-8">
+        <a href="javascript:void(0);" class="CTA-button mr-6 rounded-md px-8 py-4 text-center font-semibold text-white md:mr-8">
           Book a call
         </a>
         <a href="javascript:void(0);" class="flex items-center justify-center rounded-md border border-solid border-black bg-white px-6 py-3 font-bold">
@@ -35,27 +36,23 @@
         <!-- Title -->
         <h3 class="text-2xl font-bold md:text-3xl">Introduction</h3>
         <!-- Divider -->
-        <div class="my-6 w-16 border-t border-black"></div>
+        <div class="my-6 w-16 border-t border-amber-300"></div>
         <p class="text-sm text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Suspendisse varius enim in eros elementum tristique. Duis cursus,
-          mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-          libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-          lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+          We help Christian charities like yours to unlock the generosity of their supporters by applying biblical principles of fundraising, data-driven insights, and stories that stir hearts into action.
         </p>
       </div>
       <!-- Image -->
-      <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="relative -bottom-6 -right-6 mt-20 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px" />
+      <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="shadow relative -bottom-6 -right-6 mt-20 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px" />
     </div>
   </div>
 
 
 <!--Services Section-->
-<section class="services-section">
+<section class="services-section py-16">
     <div class="container">
         <h2 class="text-2xl font-bold mb-4">Our Services</h2>
         <div class="service-cards-container grid grid-cols-3 gap-4">
-            <div class="service-card hover:shadow-md rounded-lg transition-all cursor-pointer w-96">
+            <div class="service-card">
                 <div class="h-48 w-auto item item1">
                     <img class="h-48 w-96 object-scale-down" src="{% static 'media/1.jpg'%}">
                 </div>
@@ -116,49 +113,57 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <button class="CTA-button"> Book a Call</button>
+            <button class=" CTA-button mr-6 rounded-md px-8 py-4 text-center font-semibold text-white md:mr-8"> Book a Call</button>
         </div>
     </div>
 </section>
 
 <!--'Our Work' Section-->
-<section class="our-work-section">
-    
+<section class="our-work-section py-16">
+  <div class="container">
+    <h2 class="text-2xl font-bold mb-4">See our work</h2>
+    <p>Three photos to be provided by Sergio</p> 
+    <p>Redina training photo </p>
+    <p>Campaign package photo  </p>
+    <p>Strategy / Data photo </p>
+  </div>
+  
     
 </section>
 
 
 <!--'Help you grow' Section-->
-<section class="help-you-grow-section">
+<section class="help-you-grow-section py-16">
 
     <div class="container mx-auto p-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- First Column: Image Grid -->
           <div class="grid grid-cols-2 gap-4">
             <div class="bg-gray-200 h-40 flex items-center justify-center">
-              <img src="https://via.placeholder.com/150" alt="Image 1" class="w-full h-full object-cover">
+              <img src="https://via.placeholder.com/150" alt="Image 1" class="shadow w-full h-full object-cover">
             </div>
             <div class="bg-gray-200 h-40 flex items-center justify-center">
-              <img src="https://via.placeholder.com/150" alt="Image 2" class="w-full h-full object-cover">
+              <img src="https://via.placeholder.com/150" alt="Image 2" class="shadow w-full h-full object-cover">
             </div>
             <div class="bg-gray-200 h-40 flex items-center justify-center">
-              <img src="https://via.placeholder.com/150" alt="Image 3" class="w-full h-full object-cover">
+              <img src="https://via.placeholder.com/150" alt="Image 3" class="shadow w-full h-full object-cover">
             </div>
             <div class="bg-gray-200 h-40 flex items-center justify-center">
-              <img class="object-contain" src="https://via.placeholder.com/150" alt="Image 4" class="w-full h-full object-cover">
+              <img class="object-contain" src="https://via.placeholder.com/150" alt="Image 4" class="shadow w-full h-full object-cover">
             </div>
           </div>
           <!-- Second Column: Text -->
-          <div class="flex flex-col justify-center">
-            <p class="pre-title">22+ Years of Experience</p>
+          <div class="flex flex-col justify-center ml-4">
+            <span class="flex items-center w-1/2">
+              <span class="h-px flex-1 bg-amber-300"></span>
+              <span class="pl-4">22+ Years of Experience</span>
+              </span>
             <h2 class="text-2xl font-bold mb-4">We can help your ministry <em>grow</em></h2>
             <p class="text-gray-700">
                 With us, fundraising isn’t just about money — it’s about building a community of givers who share in your mission for God’s Kingdom.
-                We help ministries FIND new supporters, WIN them for the cause, KEEP them for the long run, and LIFT their giving from one level to the next.
                 We believe that your mission deserves a strong, engaged community of givers.
                 We create faith-driven strategies and campaigns that inspire generosity and sustain ministry growth.
                 Your ministry’s success is our priority.
-                
             </p>
           </div>
         </div>
@@ -167,41 +172,34 @@
 
 
 <!--'Proven path' Section-->
-<section class="path-section">
+<section class="path-section py-16">
     <div class="container">
-        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="px-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
               <div>
-                <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 pre-title-double">
-                  Our workflow
-                </p>
+                <div class="container mx-auto p-4">
+                  <span class="flex items-center">
+                    <span class="h-px bg-amber-300 flex-grow"></span>
+                    <span class="px-4">Our workflow</span>
+                    <span class="h-px bg-amber-300 flex-grow"></span>
+                  </span>
+                </div>
               </div>
               <h2 class="text-2xl font-bold mb-4">
                 <span class="relative inline-block">
-                  <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-                    <defs>
-                      <pattern id="f51618fb-0edb-4bcb-b35a-ffc770941286" x="0" y="0" width=".135" height=".30">
-                        <circle cx="1" cy="1" r=".7"></circle>
-                      </pattern>
-                    </defs>
-                    <rect fill="url(#f51618fb-0edb-4bcb-b35a-ffc770941286)" width="52" height="24"></rect>
-                  </svg>
                   <span class="relative">Our proven path to fundraising <em>success</em>
               </h2>
-              <p class="text-base text-gray-700 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
-              </p>
             </div>
-            <div class="grid gap-8 row-gap-0 lg:grid-cols-3">
-              <div class="relative text-center">
+            <div class="grid gap-8 row-gap-0 lg:grid-cols-4">
+              <div class="card relative text-center">
                 <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
                   <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                   </svg>
                 </div>
-                <h6 class="mb-2 text-2xl font-extrabold">Step 1</h6>
+                <h6 class="mb-2 text-2xl font-extrabold">Assess</h6>
                 <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
-                  Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down clap
+                  We evaluate your current fundraising strategy, donor engagement, and key opportunities for growth.
                 </p>
                 <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
                 <div class="top-0 right-0 flex items-center justify-center h-24 lg:-mr-8 lg:absolute">
@@ -211,15 +209,15 @@
                   </svg>
                 </div>
               </div>
-              <div class="relative text-center">
+              <div class="card relative text-center">
                 <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
                   <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                   </svg>
                 </div>
-                <h6 class="mb-2 text-2xl font-extrabold">Step 2</h6>
+                <h6 class="mb-2 text-2xl font-extrabold">Plan</h6>
                 <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
-                  They urge you to put down your sword and come join the winners. In 22 years the only 'winners'
+                  We develop a tailored, biblically grounded strategy with clear steps to increase giving to your mission. 
                 </p>
                 <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
                 <div class="top-0 right-0 flex items-center justify-center h-24 lg:-mr-8 lg:absolute">
@@ -229,15 +227,33 @@
                   </svg>
                 </div>
               </div>
-              <div class="relative text-center">
+              <div class="card relative text-center">
                 <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
                   <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                   </svg>
                 </div>
-                <h6 class="mb-2 text-2xl font-extrabold">Step 3</h6>
+                <h6 class="mb-2 text-2xl font-extrabold">Implement</h6>
                 <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
-                  Tell them I hate them. Is the Space Pope reptilian!? Tell her she looks thin. Hello, little man
+                  We guide you in executing the strategy through compelling messaging, campaigns, and donor engagement. 
+                </p>
+                <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+                <div class="top-0 right-0 flex items-center justify-center h-24 lg:-mr-8 lg:absolute">
+                  <svg class="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
+                    <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="card relative text-center">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+                  <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </div>
+                <h6 class="mb-2 text-2xl font-extrabold">Grow</h6>
+                <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+                  We monitor progress, refine strategies, and equip your team to achieve long-term fundraising success.
                 </p>
                 <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
               </div>
@@ -247,11 +263,17 @@
 </section>
 
 <!--Impact Section-->
-<section class="stats-section">
+<section class="stats-section py-16">
     <div class="container">
         <div>
-            <p class="pre-title-double">Trust the numbers</p>
-            <h2 class="font-bold mb-4">Impact over the last 22+ years</h2>
+          <div class="container mx-auto p-4">
+            <span class="flex items-center">
+              <span class="h-px bg-amber-300 flex-grow"></span>
+              <span class="px-4">Our growth</span>
+              <span class="h-px bg-amber-300 flex-grow"></span>
+            </span>
+          </div>
+            <h2 class="font-bold text-center mb-4">Impact over the last 22+ years</h2>
         </div>
         <div class="bg-white py-24 sm:py-32">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -276,360 +298,120 @@
 
 <!--'Testimonials' Section-->
 
-<section>
-    <!-- Container -->
-    <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
-      <!-- Heading Container -->
-      <div class="mx-auto flex max-w-3xl flex-col text-center">
-        <!-- Heading -->
-        <h2 class="mb-4 text-3xl font-bold md:text-5xl">
-          What our clients are saying
-        </h2>
-        <!-- Subheading -->
-        <p class="text-sm sm:text-base">
-          ElevateAI's AI-centric solutions have enabled businesses to scale
-          greater heights. Here's what they have to say...
-        </p>
-      </div>
-      <!-- Contents -->
-      <div class="relative mb-5 md:mb-6 lg:mb-8">
-        <!-- Row -->
-        <div class="relative mt-12 flex flex-row justify-items-center gap-5 overflow-hidden md:gap-4">
-          <!-- Cards Container -->
-          <div class="flex translate-x-0 flex-row">
-            <div class="flex flex-none">
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Jonathan Smith</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Matthew Johnson</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Andy Dao</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Jonathan Smith</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Matthew Johnson</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Andy Dao</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Row -->
-        <div class="md:gap- relative mt-12 flex flex-row justify-items-center gap-5 overflow-hidden">
-          <!-- Cards Container -->
-          <div class="flex translate-x-0 flex-row-reverse sm:ml-16">
-            <div class="flex flex-none">
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Jonathan Smith</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Matthew Johnson</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Andy Dao</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Jonathan Smith</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Matthew Johnson</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="mr-8 flex max-w-sm flex-col gap-6 rounded-xl border border-gray-300 bg-gray-100 p-8 sm:max-w-lg">
-                <div class="flex gap-4">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844" alt="" class="inline-block h-16 w-16 rounded-full object-cover" />
-                  <div class="flex flex-col">
-                    <h6 class="text-base font-bold">Andy Dao</h6>
-                    <p class="text-sm text-gray-500">
-                      Small Business Owner
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  I want to express my utmost satisfaction with Elevate AI.
-                  This software has completely transformed the way we analyze
-                  and utilize data in our business. Its user-friendly
-                  interface, powerful features, and exceptional support have
-                  exceeded our expectations.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Bottom Margin Component -->
-        <div class="absolute h-full w-[5%] bg-[linear-gradient(to_right,_rgba(255,_255,_255,_0.1),_rgb(255,_255,_255))]  sm:w-[10%]"></div>
-        <div class="absolute h-full w-[5%] bg-[linear-gradient(270deg,_rgba(255,_255,_255,_0.1),_rgb(255,_255,_255))]  sm:w-[10%]"></div>
-      </div>
-      <!-- Button -->
-      <div class="flex flex-col">
-        <a href="javascript:void(0);" class="mx-auto font-bold text-black">
-          Check all reviews
-        </a>
-      </div>
+<section class="testimonials-section py-16" id="testimonials">
+  <div class="container">
+    <div class="container mx-auto p-4">
+      <span class="flex items-center">
+        <span class="h-px bg-amber-300 flex-grow"></span>
+        <span class="px-4">Satisfied clients</span>
+        <span class="h-px bg-amber-300 flex-grow"></span>
+      </span>
     </div>
-  </section>
-  
+    <div class="mx-auto flex flex-col gap-y-16 px-5 sm:gap-y-20 md:px-10 relative">
+      <h2 class="text-center text-3xl font-bold md:text-5xl">
+        Testimonials
+      </h2>
+      <div class="p-6 text-center justify-center">
+        <div class="flex mb-8 justify-center">
+          <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg" alt="" class="mr-3 inline-block w-4 flex-none" />
+          <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg" alt="" class="mr-3 inline-block w-4 flex-none" />
+          <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg" alt="" class="mr-3 inline-block w-4 flex-none" />
+          <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg" alt="" class="mr-3 inline-block w-4 flex-none" />
+          <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg" alt="" class="mr-3 inline-block w-4 flex-none" />
+        </div>
+        <p class="mb-4 px-10 max-w-xl text-center mx-auto">
+          Dignissim ullamcorper eu urna enim gravida sodales. Sceleisque orci
+          semper vulputate nisi, laoreet scelerisque purus. Pharetra,
+          venenatis mattis magna pretium consequat, massa. Urna arcu amet
+          purus sagittis.
+        </p>
+
+        <img class="w-16 h-16 rounded-full object-cover mx-auto mt-8" alt="" src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" />
+
+        <p class="font-semibold text-lg mt-3">David James</p>
+        <p class="text-sm text-gray-500">CEO/Chairman</p>
+      </div>
+
+      <button class="absolute top-1/2 transform -translate-y-1/2 left-0 md:left-5">
+        <svg width="72" height="73" viewBox="0 0 72 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" y="1" width="71" height="71" rx="35.5" stroke="#E2E2E2" />
+          <g clipPath="url(#clip0_3799_19567)">
+            <path d="M44 35.5H31.83L37.42 29.91L36 28.5L28 36.5L36 44.5L37.41 43.09L31.83 37.5H44V35.5Z" fill="black" />
+          </g>
+          <defs>
+            <clipPath id="clip0_3799_19567">
+              <rect width="24" height="24" fill="white" transform="translate(24 24.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+      <button class="absolute top-1/2 transform -translate-y-1/2 right-0 md:right-5">
+        <svg width="72" height="73" viewBox="0 0 72 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" y="1" width="71" height="71" rx="35.5" stroke="#E2E2E2" />
+          <g clipPath="url(#clip0_3799_19610)">
+            <path d="M36 28.5L34.59 29.91L40.17 35.5H28V37.5H40.17L34.59 43.09L36 44.5L44 36.5L36 28.5Z" fill="black" />
+          </g>
+          <defs>
+            <clipPath id="clip0_3799_19610">
+              <rect width="24" height="24" fill="white" transform="translate(24 24.5)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
 
 <!--'Our team' Section-->
 <section class="team-section">
-    <div class="container">
-
-
-<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-    <div class="flex justify-end px-4 pt-4">
-        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
-            <span class="sr-only">Open dropdown</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-            </svg>
-        </button>
-        <!-- Dropdown menu -->
-        <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-            <ul class="py-2" aria-labelledby="dropdownButton">
-            <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
-            </li>
-            <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
-            </li>
-            <li>
-                <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-            </li>
-            </ul>
+    <!-- Container -->
+    <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+      <!-- Title -->
+      <h2 class="text-center text-3xl font-bold md:text-5xl">
+        Our Team Members
+      </h2>
+      <p class="mx-auto mb-8 mt-4 text-center text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16">
+        Lorem ipsum dolor sit amet elit ut aliquam
+      </p>
+      <!-- Content -->
+      <div class="mx-auto grid justify-items-center gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 lg:justify-items-stretch">
+        <!-- Item -->
+        <div class="flex max-w-sm flex-col items-center gap-4 rounded-md border border-solid border-gray-300 px-8 py-6 md:max-w-full">
+          <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="mb-4 inline-block h-52 w-full object-cover" />
+          <p class="font-bold">John</p>
+          <p class="text-sm text-gray-500">Webflow Developer</p>
         </div>
-    </div>
-    <div class="flex flex-col items-center pb-10">
-        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
-        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-        <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-        <div class="flex mt-4 md:mt-6">
-            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add friend</a>
-            <a href="#" class="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Message</a>
+        <!-- Item -->
+        <div class="flex max-w-sm flex-col items-center gap-4 rounded-md border border-solid border-gray-300 px-8 py-6 md:max-w-full">
+          <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="mb-4 inline-block h-52 w-full object-cover" />
+          <p class="font-bold">Annisyah</p>
+          <p class="text-sm text-gray-500">Webflow Developer</p>
         </div>
+        <!-- Item -->
+        <div class="flex max-w-sm flex-col items-center gap-4 rounded-md border border-solid border-gray-300 px-8 py-6 md:max-w-full">
+          <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="mb-4 inline-block h-52 w-full object-cover" />
+          <p class="font-bold">Tamara</p>
+          <p class="text-sm text-gray-500">UI/UX Designer</p>
+        </div>
+        <!-- Item -->
+        <div class="flex max-w-sm flex-col items-center gap-4 rounded-md border border-solid border-gray-300 px-8 py-6 md:max-w-full">
+          <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="mb-4 inline-block h-52 w-full object-cover" />
+          <p class="font-bold">Kevin</p>
+          <p class="text-sm text-gray-500">Product Manager</p>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
     </div>
 </section>
 
 <!--'Resources' Section-->
-<section class="blog-section">
-    <!--!! DONE(3/3): Add backend content !!-->
-    <div class="container">
-        <p class="pre-title">Our resources</p>
-        <h2 class="font-bold">Latests posts, templates & insights</h2>
-        <div class="blog-cards-container">
-            {% for post in latest_posts %}
-            <div class="blog-card relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">      
-                <div class="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
-                  <span class="text-sm font-medium text-slate-600">
-                    {{ post.category }}
-                  </span>
-                </div>
-                
-                <div class="p-4">
-                  <h5 class="mb-2 text-slate-800 text-xl font-semibold">
-                    {{ post.title }}
-                  </h5>
-                  <p class=" blog-summary leading-normal font-light">
-                    {{ post.content|truncatewords:30 }}
-                  </p>
-                  <p> {{ post.author }} </p>
-                </div>
-                <div class="mx-3 border-t border-slate-200 pb-3 pt-2 px-1">
-                  <span class="text-sm text-slate-600 font-medium"> {{ post.created_on|date:"F j, Y" }}
-                  </span>
-                </div>
-            </div>
-        </div>
-        {% empty %}
-        <p>No blog posts available.</p>
-        {% endfor %}
-    </div>
-
-   
-
+<section class="blog-section py-16">
+  <div class="container">
+    {% include 'blog.html' %}
+  </div>
 </section>
 
 {% endblock %}

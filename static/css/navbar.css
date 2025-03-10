@@ -6,9 +6,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--white);
-	padding-top: 2em;
-	padding-left: 2em;
-	padding-right: 2em;
+	padding: 1em;
 }
 
 /* Logo Styles */
@@ -27,15 +25,31 @@
     text-decoration: none;
     color: #333333;
     font-weight: 500;
+    position: relative; /* Required for pseudo-element positioning */
     transition: color 0.3s ease;
 }
 
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust to position the underline */
+    width: 0; /* Start with no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: var(--lime); /* Color of the underline */
+    transition: width 0.3s ease; /* Animate the width */
+}
+
 .nav-links li a:hover {
-    color: #007bff; /* Change to your brand color */
+    color: var(--lime);
+}
+
+.nav-links li a:hover::after {
+    width: 100%; /* Expand the underline to full width */
 }
 
 .nav-links li a.active {
-    color: #007bff; /* Active link color */
+    color: var(--lime);
     font-weight: bold;
 }
 
