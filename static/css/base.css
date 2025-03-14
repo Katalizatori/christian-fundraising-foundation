@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -14,8 +14,8 @@
     dl, dt, dd, ol, ul, li,
     fieldset, form, label, legend,
     table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
     menu, nav, output, ruby, section, summary,
     time, mark, audio, video {
     margin: 0;
@@ -26,7 +26,7 @@
     vertical-align: baseline;
     }
     /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure, 
+    article, aside, details, figcaption, figure,
     footer, header, hgroup, menu, nav, section {
     display: block;
     }
@@ -59,14 +59,12 @@
     font: inherit;
     color: inherit;
     cursor: pointer;
-    outline: none; 
+    outline: none;
     }
 }
 
 
-/* Varibles */
-
-
+/* Variables */
 
 
 :root {
@@ -83,26 +81,6 @@
     --dark-lime: #9bb665;
     --white: rgb(255, 255, 255);
     --false-white: rgb(237, 233, 227);
-
-    /* Additions */
-    /* --light-lime-green: #F9F6DC;
-    --alt-light-lime-green: #FEFAE0;
-    --lime-green: #e1f07a;
-    --dark-lime: #9bb665;
-    --green: #6F9808;
-    --lime-green: #88d08a;
-    --dark-green: #626F47;
-    --darker-green: #384516;
-    --white: #FCFCFA;
-    --false-white: #FEFAE0;
-    --yellow: #FFCF50;
-    --red: rgb(255, 104, 76);
-    --light-blue: rgb(42, 167, 255);
-    --dark-blue: rgb(27, 60, 116);
-    --black: rgb(0, 0, 0);
-    --gray: rgb(114, 124, 141);
-    --false-black: rgb(3, 16, 59);
-    --green: #EEF6CC; */
 
     --border-radius-1: 60px;
     --border-radius-2: 16px;
@@ -134,7 +112,6 @@
 }
 
 /* Basics */
-
 
 html, body {
 	background-color: var(--white);
@@ -168,6 +145,14 @@ p {
 
 section {
     width: 100%;
+}
+
+img {
+  border-radius: 1.5em;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  -ms-border-radius: 1.5em;
+  -o-border-radius: 1.5em;
 }
 
 /* Responsive Behaviors */
@@ -281,10 +266,10 @@ section {
 }
 
 .container {
-  margin: 0 auto; /* Center the container */
-  width: 100%; /* Take full width up to max-width */
-  padding: 1rem; /* Default padding for small screens */
-  max-width: 90%; /* Default max-width for small screens */
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  max-width: 90%;
 }
 
 /* Medium screens (tablets, 768px and up) */
@@ -304,13 +289,13 @@ section {
 }
 
 .email-input {
-	width: 50vw; 
-    height: 40px; 
-    padding: 10px; 
-    font-size: 16px; 
-    border: 1px solid var(--dark-green); 
+	width: 50vw;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--dark-green);
     border-radius: var(--border-radius-2);
-	font-size: 16px; 
+	font-size: 16px;
 	background-color: var(--false-white);
 	transition: transform 0.3s ease;
 

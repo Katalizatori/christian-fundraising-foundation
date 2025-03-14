@@ -8,6 +8,15 @@ footer {
 	padding-right: 2em;
 }
 
+.footer-container {
+  width: 80%;
+  margin: 0 auto; /* Center the container */
+  padding: 2em;
+}
+
+.footer-testimonial {
+  width: 30em;
+}
 /* Responsive behaviors */
 
 /* Footer Responsive Styles */
@@ -48,4 +57,8 @@ footer {
     .footer .flex.flex-col.md\:flex-row ul a {
       font-size: 0.875rem;
     }
+
+   .footer-testimonial {
+      width: auto;
+   }
   }

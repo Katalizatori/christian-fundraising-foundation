@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     "ckeditor",  # Added apps
     'tailwind',
     "blog",
-    
+    'subscriptions',
+
 ]
 
 MIDDLEWARE = [
@@ -66,7 +67,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    
+
 ]
 
 ROOT_URLCONF = "christianfoundation.urls"
@@ -82,6 +83,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "subscriptions.context_processor.subscribe_form" #Added contexts
             ],
         },
     },

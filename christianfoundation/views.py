@@ -3,7 +3,6 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
 from mailchimp3 import MailChimp
-from .forms import SubscribeForm
 from blog.models import Post # from blog app
 
 def index(request):
@@ -32,31 +31,3 @@ def contact(request):
     """View function for the CONTACT page of the site."""
     return render(request, "contact.html")
 
-
-def subscribe(request):
-    if request.method == "POST":
-        form = SubscribeForm(request.POST)
-        if form.is_valid():
-            email = form.cleaned_data["email"]
-            try:
-                # TODO: Malchimp API key
-                client = MailChimp(mc_api=settings.MAILCHIMP_API_KEU)
-                client.lists.members.create(
-                    settings.MAILCHIMP_LIST_ID,
-                    {
-                        "email_address": email,
-                        "status": "subscribed",
-                    },
-                )
-
-                return redirect("success")
-            except Exception as e:
-                return render(request, "error.html", {"error": str(e)})
-
-    else:
-        form = SubscribeForm()
-    return render(request, "subscribe.html", {"form": form})
-
-
-def success(request):
-    return render(request, "success.html")

@@ -6,8 +6,7 @@
     </div>
 
     <form method="post" action="{% url 'subscribe' %}" class="email-form">
-
-        <!-- token -->
+        <!-- CSRF Token -->
         {% csrf_token %}
 
         <!-- First Name and Last Name Fields -->
@@ -15,10 +14,20 @@
             <div>
                 <label for="id_first_name">First Name</label>
                 <input class="bg-white rounded-sm" type="text" id="id_first_name" name="first_name" required>
+                {% if form.first_name.errors %}
+                    <div class="error-message">
+                        {{ form.first_name.errors }}
+                    </div>
+                {% endif %}
             </div>
             <div>
                 <label for="id_last_name">Last Name</label>
                 <input class="bg-white rounded-sm" type="text" id="id_last_name" name="last_name" required>
+                {% if form.last_name.errors %}
+                    <div class="error-message">
+                        {{ form.last_name.errors }}
+                    </div>
+                {% endif %}
             </div>
         </div>
 
@@ -26,10 +35,21 @@
         <div>
             <label for="id_email">Email Address</label>
             <input class="bg-white rounded-sm" type="email" id="id_email" name="email" required>
+            {% if form.email.errors %}
+                <div class="error-message">
+                    {{ form.email.errors }}
+                </div>
+            {% endif %}
         </div>
+        <!-- Privacy Policy -->
+        <div class="form-checkbox">
+            {{ form.agree_to_policy }}
+            {{ form.agree_to_policy.label_tag }}
+        </div>
+
         <!-- Submit Button -->
         <div class="button-container">
-            <button type="submit font-bold">Join Today</button>
+            <button type="submit" class="font-bold">Join Today</button>
         </div>
     </form>
 </div>
