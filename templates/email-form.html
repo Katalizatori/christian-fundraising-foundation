@@ -5,6 +5,11 @@
         <p>Every week, you will receive an email with biblical inspiration, research-backed insights, or fundraising ideas you can apply immediately. Join a growing community of over 1,000 Christian leaders and fundraisers. <strong><em>Sign up</em> today.</p></strong>
     </div>
 
+    <!-- Debug statement -->
+    <pre>{{ subscribe_form }}</pre>
+    <!-- Debug statement -->
+    <pre>{{ request|pprint }}</pre>
+
     <form method="post" action="{% url 'subscribe' %}" class="email-form">
         <!-- CSRF Token -->
         {% csrf_token %}
@@ -13,19 +18,19 @@
         <div class="input-fields">
             <div>
                 <label for="id_first_name">First Name</label>
-                <input class="bg-white rounded-sm" type="text" id="id_first_name" name="first_name" required>
-                {% if form.first_name.errors %}
+                {{ subscribe_form.first_name }}
+                {% if subscribe_form.first_name.errors %}
                     <div class="error-message">
-                        {{ form.first_name.errors }}
+                        {{ subscribe_form.first_name.errors }}
                     </div>
                 {% endif %}
             </div>
             <div>
                 <label for="id_last_name">Last Name</label>
-                <input class="bg-white rounded-sm" type="text" id="id_last_name" name="last_name" required>
-                {% if form.last_name.errors %}
+                {{ subscribe_form.last_name }}
+                {% if subscribe_form.last_name.errors %}
                     <div class="error-message">
-                        {{ form.last_name.errors }}
+                        {{ subscribe_form.last_name.errors }}
                     </div>
                 {% endif %}
             </div>
@@ -34,17 +39,23 @@
         <!-- Email Field -->
         <div>
             <label for="id_email">Email Address</label>
-            <input class="bg-white rounded-sm" type="email" id="id_email" name="email" required>
-            {% if form.email.errors %}
+            {{ subscribe_form.email }}
+            {% if subscribe_form.email.errors %}
                 <div class="error-message">
-                    {{ form.email.errors }}
+                    {{ subscribe_form.email.errors }}
                 </div>
             {% endif %}
         </div>
+
         <!-- Privacy Policy -->
         <div class="form-checkbox">
-            {{ form.agree_to_policy }}
-            {{ form.agree_to_policy.label_tag }}
+            {{ subscribe_form.agree_to_policy }}
+            {{ subscribe_form.agree_to_policy.label_tag }}
+            {% if subscribe_form.agree_to_policy.errors %}
+                <div class="error-message">
+                    {{ subscribe_form.agree_to_policy.errors }}
+                </div>
+            {% endif %}
         </div>
 
         <!-- Submit Button -->

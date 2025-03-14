@@ -6,9 +6,9 @@ from .views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+     path("", index, name="index"),
     path('blog/', include('blog.urls')), # DONE(3/3): Detail view for blogposts.
-    path('', include('subscriptions.urls')),  # Include subscriptions URLs
-    path("", index, name="index"),
+    path("subscribe/", include('subscriptions.urls')),  # Include subscriptions URLs
 
     path("about", about, name="about"),
     path("contact", contact, name="contact"),

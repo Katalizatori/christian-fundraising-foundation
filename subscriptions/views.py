@@ -34,4 +34,4 @@ def subscribe_view(request):
             print("Form errors:", form.errors)  # Debug statement
     else:
         form = SubscribeForm()
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'index.html', {'form': form})  # Use 'form' consistently
