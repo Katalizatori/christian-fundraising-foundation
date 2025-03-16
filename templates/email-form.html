@@ -4,12 +4,6 @@
     <div class="email-header">
         <p>Every week, you will receive an email with biblical inspiration, research-backed insights, or fundraising ideas you can apply immediately. Join a growing community of over 1,000 Christian leaders and fundraisers. <strong><em>Sign up</em> today.</p></strong>
     </div>
-
-    <!-- Debug statement -->
-    <pre>{{ subscribe_form }}</pre>
-    <!-- Debug statement -->
-    <pre>{{ request|pprint }}</pre>
-
     <form method="post" action="{% url 'subscribe' %}" class="email-form">
         <!-- CSRF Token -->
         {% csrf_token %}
@@ -48,8 +42,8 @@
         </div>
 
         <!-- Privacy Policy -->
-        <div class="form-checkbox">
-            {{ subscribe_form.agree_to_policy }}
+        <div class="form-checkbox flex">
+            <span class="mr-2">{{ subscribe_form.agree_to_policy }}</span>
             {{ subscribe_form.agree_to_policy.label_tag }}
             {% if subscribe_form.agree_to_policy.errors %}
                 <div class="error-message">

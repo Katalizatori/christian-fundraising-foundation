@@ -21,6 +21,12 @@ footer {
 
 /* Footer Responsive Styles */
 @media (max-width: 767px) {
+  .footer-container {
+    padding-top: 2em;
+    padding-left: 0em;
+    padding-right: 0em;
+    width: 95%;
+  }
     /* Heading */
     .footer h3 {
       font-size: 1.75rem;

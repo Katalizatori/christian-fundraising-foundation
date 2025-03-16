@@ -7,42 +7,84 @@
 
 {% block content %}
 <section class="call-hero-section">
-    <div class="title-container">
-        <h1>Schedule a call with us</h1>
-        <p> Are you looking to grow giving to your mission cause, engage more supporters, or launch a successful campaign? Let’s talk. </p>
-        <p> Book a call to discuss your current challenges, identify opportunities for growth, and explore how we can support your mission. Whether you need strategic advice, hands-on fundraising guidance, or expert training, we’re here to help.</p>
-        <p>Schedule your free, no-obligation call today and take the next step toward sustainable fundraising success.</p>
+    <div class="title-container mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+        <h1 class="font-bold mb-5">Schedule a call with us</h1> <!-- Larger on mobile -->
+        <div class="text-left mx-auto mb-8 mt-4 max-w-lg text-base md:mb-12 md:text-lg">
+            <p> Are you looking to grow giving to your mission cause, engage more supporters, or launch a successful campaign? Let’s talk. </p>
+            <p> Book a call to discuss your current challenges, identify opportunities for growth, and explore how we can support your mission. Whether you need strategic advice, hands-on fundraising guidance, or expert training, we’re here to help.</p>
+            <p>Schedule your free, no-obligation call today and take the next step toward sustainable fundraising success.</p>
+        </div>
+        <div class="flex justify-center mb-5">
+            <div class="mr-6 md:mr-10 md:mr-12">
+              <h3 class="text-3xl font-bold md:text-4xl">45k+</h3> <!-- Larger on mobile -->
+              <p class="text-sm">Happy Customers</p>
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold md:text-4xl">200K+</h3> <!-- Larger on mobile -->
+              <p class="text-sm">Emails Sent</p>
+            </div>
+        </div>
+        <!-- Image -->
+      <img src="{% static 'media/call-image.jpg'%}" alt="" class="inline-block h-[500px] w-full object-cover" />
     </div>
 </section>
 
 <section class="conditions-section">
-    <div class="container">
-        <div class="conditions-container">
-            <h2>Please call us if...</h2>
-            <ul>
-                <li>You represent a Christian charity or mission agency that is looking to increase giving from individual donors, major donors or churches.</li>
-                <li>You need help with launching effective fundraising appeals, growing giving from major donors or legacies, looking for new donors, and more. </li>
-                <li>You are ready to invest money and other resources in fundraising, marketing and communications.</li>
-                <li>You are looking for fundraising trainers for your team or speakers for your event.</li>
-                <li>You are a key decision-maker or budget holder when it comes to partnering with a consultancy like ours.</li>
-            </ul>
+    <div class="container mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
+        <div class="conditions-container flex justify-center"> <!-- Center the card -->
+            <div class="card w-full md:w-1/2"> <!-- Card takes up half the screen -->
+                <h2 class="text-4xl font-bold md:text-3xl mb-4 text-center">Please call us if...</h2> <!-- Adjusted size and centered -->
+                <ul class="list-none pl-0"> <!-- Remove default padding -->
+                    <li class="flex items-start"> <!-- Align SVG with text -->
+                        <svg class="mt-1 mr-2 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="width: 1.25rem; height: 1.25rem;"> <!-- Adjusted SVG size and alignment -->
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                        </svg>
+                        You represent a Christian charity or mission agency that is looking to increase giving from individual donors, major donors or churches.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="mt-1 mr-2 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="width: 1.25rem; height: 1.25rem;">
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                        </svg>
+                        You need help with launching effective fundraising appeals, growing giving from major donors or legacies, looking for new donors, and more.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="mt-1 mr-2 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="width: 1.25rem; height: 1.25rem;">
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                        </svg>
+                        You are ready to invest money and other resources in fundraising, marketing and communications.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="mt-1 mr-2 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="width: 1.25rem; height: 1.25rem;">
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                        </svg>
+                        You are looking for fundraising trainers for your team or speakers for your event.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="mt-1 mr-2 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="width: 1.25rem; height: 1.25rem;">
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                        </svg>
+                        You are a key decision-maker or budget holder when it comes to partnering with a consultancy like ours.
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="form-section">
-    <div class="container">
-        <div class="form-container">
-            <div class="form-content">
-                <h2>In our 45-minute FREE call, we will...</h2>
+    <div class="container mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
+        <div class="form-container flex flex-col md:flex-row gap-8">
+            <div class="form-content w-full md:w-1/2">
+                <h2 class="text-4xl font-bold md:text-3xl mb-4">In our 45-minute FREE call, we will...</h2> <!-- Adjusted size -->
+                <div class="my-6 w-16 border-t border-amber-300"></div>
                 <ul>
                     <li>Discuss your key fundraising challenges.</li>
                     <li>Identify new goals for growing giving and what you need to achieve them. </li>
                     <li>Explore how we can work together to move forward.</li>
                 </ul>
             </div>
-            <div class="form-wrapper">
-                <form action="">
+            <div class="form-wrapper w-full md:w-1/2">
+                <form action="" class="mb-10">
                     <div class="form-grid">
                         <div class="form-group">
                             <label class="form-label">First Name <span class="required">*</span></label>

@@ -15,4 +15,5 @@ urlpatterns = [
 
     path('services', services, name="services"), # Added url paths for all pages.
     path('training', training, name="training"),
+    path("call", call, name="call"),
 ]

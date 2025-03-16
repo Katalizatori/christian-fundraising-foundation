@@ -6,5 +6,4 @@ from .views import *
 
 urlpatterns = [
     path('', subscribe_view, name='subscribe'),
-    path('call', call, name="call"),
 ]

@@ -4,16 +4,6 @@ from .forms import *
 from .models import Subscriber
 
 # Create your views here.
-def call(request):
-    if request.method == 'POST':
-        form = CallForm(request.POST)
-        if form.is_valid():
-            # Process the data
-            return redirect('success.html')
-    else:
-        form = CallForm()
-    return render(request, 'book-call.html', {'form': form})
-
 def subscribe_view(request):
     if request.method == 'POST':
         print("Form submitted!")  # Debug statement

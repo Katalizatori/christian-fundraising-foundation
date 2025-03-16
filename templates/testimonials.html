@@ -1,0 +1,105 @@
+<section class="testimonials-section py-8 md:py-16" id="testimonials">
+    <div class="container mx-auto px-4">
+      <div class="container mx-auto p-4">
+        <span class="flex items-center">
+          <span class="h-px bg-amber-300 flex-grow"></span>
+          <span class="px-4 text-sm md:text-base">Satisfied clients</span>
+          <span class="h-px bg-amber-300 flex-grow"></span>
+        </span>
+      </div>
+      <div class="mx-auto flex flex-col gap-y-8 md:gap-y-16 px-4 md:px-10 relative">
+        <h2 class="text-center text-2xl md:text-3xl lg:text-5xl font-bold">Testimonials</h2>
+        <!-- Carousel Container -->
+        <div class="carousel relative overflow-hidden w-full">
+          <!-- Testimonials -->
+          <div class="testimonials flex transition-transform duration-500 ease-in-out">
+            <!-- Testimonial 1 -->
+            <div class="testimonial flex-shrink-0 w-full text-center px-4">
+              <div class="w-full md:w-1/2 m-auto">
+                <p class="font-semibold text-base md:text-lg mt-3">Joyce De Yongh</p>
+                <p class="text-xs md:text-sm text-gray-500">Communications Manager, Derek Prince Ministries International</p>
+                <p class="mt-4 text-sm md:text-base text-gray-700 italic">"Redina’s expertise in fundraising has been invaluable to our ministry, bringing clarity and strategy to our donor communications. Her ability to craft compelling appeals has significantly strengthened our connection with supporters and increased engagement. Working with Redina and her team is always a joy. Their insights, professionalism, and passion for God’s mission shine through in everything they do."</p>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial flex-shrink-0 w-full text-center px-4">
+              <div class="w-full md:w-1/2 m-auto">
+                <p class="font-semibold text-base md:text-lg mt-3">Gary Williams</p>
+                <p class="text-xs md:text-sm text-gray-500">National Director, CMA Australia</p>
+                <p class="mt-4 text-sm md:text-base text-gray-700 italic">"Thank you Redina, that’s EXACTLY what the CMA Fundraising Network is all about, you captured it beautifully in your presentation and this will bless a lot of people."</p>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="testimonial flex-shrink-0 w-full text-center px-4">
+              <div class="w-full md:w-1/2 m-auto">
+                <p class="font-semibold text-base md:text-lg mt-3">Trudy Adjrah</p>
+                <p class="text-xs md:text-sm text-gray-500">Legacy Fundraising Manager, London City Mission</p>
+                <p class="mt-4 text-sm md:text-base text-gray-700 italic">"Redina is a rare gem in the Christian fundraising world. Her wisdom and deep biblical insights bring a unique depth to every project she works on. Whether at Church Urban Fund or Mercy Ships UK, I’ve seen firsthand how her strategic advice and exceptional copywriting skills, as well as the creativity of her team, inspire generosity and impact."</p>
+              </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="testimonial flex-shrink-0 w-full text-center px-4">
+              <div class="w-full md:w-1/2 m-auto">
+                <p class="font-semibold text-base md:text-lg mt-3">Rob Foxley</p>
+                <p class="text-xs md:text-sm text-gray-500">Individual Giving Manager, Mission Without Borders</p>
+                <p class="mt-4 text-sm md:text-base text-gray-700 italic">"Thank you for training our national communication officers! Your presentation was excellent. You inspired them to do a better job at telling stories and gathering good images. And, what you said, Redina will serve as a great resource for onboarding new team members."</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <!-- Navigation Buttons -->
+        <button class="carousel-prev absolute top-1/2 transform -translate-y-1/2 left-0 md:left-5">
+            <svg width="48" height="48" viewBox="0 0 72 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="1" width="71" height="71" rx="35.5" stroke="#E2E2E2" />
+              <g clipPath="url(#clip0_3799_19567)">
+                <path d="M44 35.5H31.83L37.42 29.91L36 28.5L28 36.5L36 44.5L37.41 43.09L31.83 37.5H44V35.5Z" fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_3799_19567">
+                  <rect width="24" height="24" fill="white" transform="translate(24 24.5)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <button class="carousel-next absolute top-1/2 transform -translate-y-1/2 right-0 md:right-5">
+            <svg width="48" height="48" viewBox="0 0 72 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="1" width="71" height="71" rx="35.5" stroke="#E2E2E2" />
+              <g clipPath="url(#clip0_3799_19610)">
+                <path d="M36 28.5L34.59 29.91L40.17 35.5H28V37.5H40.17L34.59 43.09L36 44.5L44 36.5L36 28.5Z" fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_3799_19610">
+                  <rect width="24" height="24" fill="white" transform="translate(24 24.5)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+      </div>
+    </div>
+  
+    <!-- JavaScript for Carousel -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const testimonials = document.querySelector('.testimonials');
+        const prevButton = document.querySelector('.carousel-prev');
+        const nextButton = document.querySelector('.carousel-next');
+        let currentIndex = 0;
+  
+        const showTestimonial = (index) => {
+          const offset = -index * 100; // Each slide is 100% of the container width
+          testimonials.style.transform = `translateX(${offset}%)`;
+        };
+  
+        prevButton.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + testimonials.children.length) % testimonials.children.length;
+          showTestimonial(currentIndex);
+        });
+  
+        nextButton.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % testimonials.children.length;
+          showTestimonial(currentIndex);
+        });
+      });
+    </script>
+  </section>

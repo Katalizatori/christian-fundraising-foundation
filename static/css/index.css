@@ -1,3 +1,5 @@
+/* Hero section */
+
 .hero-section {
 	background-color: var(--light-lime-green);
 	line-height: 5em;
@@ -6,6 +8,8 @@
 	height: 65vh;
 	gap: 25px;
 }
+
+/* Services section */
 
 .service-cards-container {
 	gap: 25px; /* Spacing between cards */
@@ -27,6 +31,7 @@
 	background-color: var(--white);
 }
 
+
 /* Container for the grid */
 .path-cards-container {
 	gap: 25px; /* Spacing between cards */
@@ -43,19 +48,34 @@
 	-ms-border-radius: var(--border-radius-2)  ;
 	-o-border-radius: var(--border-radius-2)  ;
 }
-  
+
   /* Styling for the image container */
   .item1 {
 	margin-bottom: 15px; /* Space between image and text */
   }
-  
+
   /* Styling for the text container */
   .item2 {
-	flex-shrink: 1; 
+	flex-shrink: 1;
   }
-  
 
 
+/* Help You Frow section */
+.grow-section-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 8px;
+	grid-row-gap: 4px;
+	position: relative;
+	}
 
+	.div1 { grid-area: 1 / 1 / 5 / 4; }
+	.div2 { grid-area: 1 / 4 / 5 / 6; }
+	.div3 { grid-area: 5 / 3 / 6 / 4; position: absolute;
+		right: 0px;}
+	.div4 { grid-area: 5 / 4 / 6 / 6; }
 
-    
+.stats-section {
+	background: url("../media/svg-gobbler.svg") no-repeat center / contain;
+	}

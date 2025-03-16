@@ -31,3 +31,7 @@ def contact(request):
     """View function for the CONTACT page of the site."""
     return render(request, "contact.html")
 
+def call(request):
+    """View function for the CALL page of the site."""
+    return render(request, "book-call.html")
+
