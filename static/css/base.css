@@ -96,9 +96,9 @@
     --green: #6dbd89; /* hsl(141,38%,58%) hsl(166,38%,58%)*/
     --green-rotated-darker: hsl(166,38%,58%);
     --green-rotated-lighter: hsl(116,38%,58%);
-    --green-50: #E9F5ED;
-    --green-150: #DBEFE2;
-    --green-200: #CCE8D6;
+    --green-1: #E9F5ED;
+    --green-2: #DBEFE2;
+    --green-3: #CCE8D6;
     --green-4: #BDE1CA;
     --green-5: #AFDBBE;
     --green-6: #A0D4B2;
@@ -107,19 +107,25 @@
     --green-15: #2C4C37;
     --green-18: #0B130E;
 
+    /* Shadows: Float */
+    --box-shadow-2: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1); /* A more defined shadow with a neutral tone. */
+    --box-shadow-3:  rgba(27, 60, 116, 0.06) 0px 16px 46px 0px;
 
-    --dark-green: #626F47;
-    --dark-lime: #9bb665;
-    --white: rgb(255, 255, 255);
-    --false-white: rgb(237, 233, 227);
+    /* Shadows: Raised */
+    --raised-upper: inset 0 1px 0 #CCE8D6;
+    --raised-lower: 0 1px 3px hsla(0, 0%, 0%, .2);
 
+    /* Shadows:  Recessed */
+    --recessed-upper: inset 0 2px 2px hsla(0, 0%, 0%, .1);
+    --recessed-lower: 0 2px 0 hsla(0, 0%, 100%, .15);
+
+    /* Border Radiuses */
     --border-radius-1: 60px;
     --border-radius-2: 16px;
     --border-radius-3: 1.5rem;
     --border-radius-4: 6px;
 
-    --box-shadow-2: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1); /* A more defined shadow with a neutral tone. */
-    --box-shadow-3:  rgba(27, 60, 116, 0.06) 0px 16px 46px 0px;
+   
 
     --h1-font-size: 60px;
     --h1-line-height: 1.1;
