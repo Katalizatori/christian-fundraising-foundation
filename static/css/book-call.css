@@ -91,6 +91,13 @@ h2 {
 
 .form-wrapper {
     flex: 1 1 50%;
+    background-color: var(--light-green);
+    padding: 30px;
+    border-radius: var(--border-radius-3);
+    -webkit-border-radius: var(--border-radius-3);
+    -moz-border-radius: var(--border-radius-3);
+    -ms-border-radius: var(--border-radius-3);
+    -o-border-radius: var(--border-radius-3);
 }
 
 .form-grid {

@@ -77,6 +77,37 @@
     --lime: #cad87d;
     --yellow: #fce181;
 
+    /* Accent: Yellow */
+    /* https://www.shadegenerator.com/FCE181 */
+    --yellow: #fce181;
+    --yellow-rotated-darker: hsr(37,95%,75%);
+    --yellow-rotated-lighter: hsr(57,95%,75%);
+    --yellow-1: #FEF8E0;
+    --yellow-2: #FEF5D3;
+    --yellow-3: #FEF2C6;
+    --yellow-4: #FDEFBA;
+    --yellow-5: #FDECAD;
+    --yellow-6: #FDE9A1;
+    --yellow-7: #FCE694;
+
+
+    /* Primary: Main Green shades */
+    /* https://www.shadegenerator.com/6DBD89 */
+    --green: #6dbd89; /* hsl(141,38%,58%) hsl(166,38%,58%)*/
+    --green-rotated-darker: hsl(166,38%,58%);
+    --green-rotated-lighter: hsl(116,38%,58%);
+    --green-50: #E9F5ED;
+    --green-150: #DBEFE2;
+    --green-200: #CCE8D6;
+    --green-4: #BDE1CA;
+    --green-5: #AFDBBE;
+    --green-6: #A0D4B2;
+    --green-7: #92CEA7;
+    --green-8: #83C79B;
+    --green-15: #2C4C37;
+    --green-18: #0B130E;
+
+
     --dark-green: #626F47;
     --dark-lime: #9bb665;
     --white: rgb(255, 255, 255);

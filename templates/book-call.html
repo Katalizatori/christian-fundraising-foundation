@@ -83,31 +83,63 @@
                     <li>Explore how we can work together to move forward.</li>
                 </ul>
             </div>
-            <div class="form-wrapper w-full md:w-1/2">
-                <form action="" class="mb-10">
+            <div class="form-wrapper w-full md:w-1/2 p-10">
+                <form action="" class="mb-10" method="post">
+                    {% csrf_token %} <!-- Add this if using Django to prevent CSRF attacks -->
                     <div class="form-grid">
                         <div class="form-group">
                             <label class="form-label">First Name <span class="required">*</span></label>
-                            <input type="text" class="form-input" placeholder="First Name" required>
+                            <input type="text" class="form-input" placeholder="First Name" name="first_name" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Last Name <span class="required">*</span></label>
-                            <input type="text" class="form-input" placeholder="Last Name" required>
+                            <label class="form-label">Surname <span class="required">*</span></label>
+                            <input type="text" class="form-input" placeholder="Surname" name="surname" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Email <span class="required">*</span></label>
-                        <input type="email" class="form-input" placeholder="name@pagedone.com" required>
+                        <input type="email" class="form-input" placeholder="name@pagedone.com" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Message <span class="required">*</span></label>
-                        <textarea class="form-textarea" placeholder="Write a message..." required></textarea>
+                        <label class="form-label">Phone <span class="required">*</span></label>
+                        <input type="tel" class="form-input" placeholder="Phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Name of your organisation <span class="required">*</span></label>
+                        <input type="text" class="form-input" placeholder="Organisation Name" name="organisation_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">What is your role in the organisation? <span class="required">*</span></label>
+                        <input type="text" class="form-input" placeholder="Your Role" name="role" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">What is the annual income of your organisation? <span class="required">*</span></label>
+                        <select class="form-input" name="annual_income" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="Less than £500K">Less than £500K</option>
+                            <option value="£500K - £1million">£500K - £1million</option>
+                            <option value="£1 million - £3 million">£1 million - £3 million</option>
+                            <option value="£3 million - £10 million">£3 million - £10 million</option>
+                            <option value="Over £10 million">Over £10 million</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Do you have fundraisers in your team? <span class="required">*</span></label>
+                        <div class="form-radio">
+                            <label><input type="radio" name="fundraisers" value="Yes" required> Yes</label>
+                            <label><input type="radio" name="fundraisers" value="No" required> No</label>
+                            <label><input type="radio" name="fundraisers" value="Not Yet" required> Not Yet</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">How can we best support you? Please share specific details about your needs and goals. <span class="required">*</span></label>
+                        <textarea class="form-textarea" placeholder="Write your message..." name="support_needs" required></textarea>
                     </div>
                     <div class="form-checkbox">
-                        <input type="checkbox" id="checkbox-policy" required>
+                        <input type="checkbox" id="checkbox-policy" name="privacy_policy" required>
                         <label for="checkbox-policy">You agree to our friendly <a href="#" class="underline">privacy policy.</a></label>
                     </div>
-                    <button type="submit" class="form-button">Send Message</button>
+                    <button type="submit" class="form-button">Submit</button>
                 </form>
             </div>
         </div>
