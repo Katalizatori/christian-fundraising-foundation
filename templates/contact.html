@@ -1,0 +1,62 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+<link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+{% endblock %} {% block content %}
+<!-- Hero Section -->
+<section class="call-hero-section">
+  <!-- Hero Green Section -->
+  <div class="hero-green">
+    <div
+      class="hero-content mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20 lg:py-24"
+    >
+      <h1
+        class="mb-6 max-w-3xl text-3xl font-bold md:mb-10 md:text-5xl lg:mb-12 lg:text-6xl md:leading-tight"
+      >
+        Contact Us
+      </h1>
+      <div class="stats flex flex-col md:flex-row items-stretch gap-4">
+        <div>
+          <h3>45k+</h3>
+          <p>Happy Customers</p>
+        </div>
+        <div class="divider-vertical"></div>
+        <div>
+          <h3>200K+</h3>
+          <p>Emails Sent</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission Section -->
+  <div class="mission-section">
+    <div class="mission-content">
+      <Tell class="mission-text">
+        <h3>Our mission</h3>
+        <div class="divider"></div>
+        <p>
+          Are you looking to create a robust fundraising plan and launch appeals
+          that get results? Are you drowning in data but not sure how to turn it
+          into useful insights? Are you looking for experienced Christian
+          trainers who can equip your team to do fundraising well?</p> <p>We’re here to
+          help. At Christian Fundraising Consultancy, we come alongside
+          ministries like yours offering biblical and practical fundraising
+          insights and solutions. Together we can unlock the generosity of your
+          supporters and reach your goals with confidence.</p> <p>Tell us about your
+          ministry and how we can support you.
+        </p>
+      </div>
+      <!-- Photo -->
+      <img
+        src="{% static 'media/contact-us.jpg'%}"
+        alt=""
+        class="mission-image"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Proven Path Section -->
+{% include 'workflow.html' %}
+
+{% endblock %}

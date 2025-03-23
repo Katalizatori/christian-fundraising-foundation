@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 import os
@@ -53,10 +52,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "ckeditor",  # Added apps
-    'tailwind',
+    "tailwind",
     "blog",
-    'subscriptions',
-
+    "subscriptions",
+    "calls",
 ]
 
 MIDDLEWARE = [
@@ -67,7 +66,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-
 ]
 
 ROOT_URLCONF = "christianfoundation.urls"
@@ -83,7 +81,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "subscriptions.context_processor.subscribe_form" #Added contexts
+                "subscriptions.context_processor.subscribe_form",  # Added contexts
             ],
         },
     },

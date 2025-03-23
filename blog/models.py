@@ -8,10 +8,12 @@ from ckeditor.fields import RichTextField
 
 STATUS = ((0, "Draft"), (1, "Publish"))
 
-CATEGORIES = (("template", "Template"),
-              ("article", "Article"),
-              ("blog", "Blog"),
-              )
+CATEGORIES = (
+    ("template", "Template"),
+    ("article", "Article"),
+    ("blog", "Blog"),
+)
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -20,9 +22,9 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     updated_on = models.DateTimeField(auto_now=True)
-    content = RichTextField() # Uses ckreditor
+    content = RichTextField()  # Uses ckreditor
     created_on = models.DateTimeField(auto_now_add=True)
-    category = models.CharField(max_length=50, choices=CATEGORIES, default='Article')
+    category = models.CharField(max_length=50, choices=CATEGORIES, default="Article")
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
@@ -37,7 +39,7 @@ class Post(models.Model):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('post_detail', kwargs={'slug': self.slug})
+        return reverse("post_detail", kwargs={"slug": self.slug})
 
     def short_description(self):
         words = self.content.split()

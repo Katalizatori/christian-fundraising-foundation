@@ -5,5 +5,5 @@ from django.urls import path, include
 from .views import *
 
 urlpatterns = [
-    path('', subscribe_view, name='subscribe'),
+    path("", subscribe_view, name="subscribe"),
 ]

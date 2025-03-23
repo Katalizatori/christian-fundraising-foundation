@@ -62,30 +62,6 @@ em {
     flex: 1;
 }
 
-
-.email-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: var(--black);
-}
-
-/* Input styles */
-
-input{box-sizing:border-box} 
-
-.email-form input[type="text"],
-.email-form input[type="email"] {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: flex-end; /* Right-align the button */
-}
-
 .email-form button {
     text-transform: uppercase;
     background-image: linear-gradient(  102deg,  var(--yellow) 0%,  var(--lime) 51%, /* Darker shade */  var(--lime) 100%);

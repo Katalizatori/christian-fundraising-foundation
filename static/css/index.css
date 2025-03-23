@@ -1,81 +1,83 @@
-/* Hero section */
-
-.hero-section {
-	background-color: var(--light-lime-green);
-	line-height: 5em;
-	padding: 20px;
-	text-align: center;
-	height: 65vh;
-	gap: 25px;
-}
 
 /* Services section */
-
 .service-cards-container {
-	gap: 25px; /* Spacing between cards */
-	padding: 20px; /* Padding around the container */
+  gap: 25px; /* Spacing between cards */
+  padding: 20px; /* Padding around the container */
 }
 
 .service-card {
-	padding: 20px;
-	box-shadow: var(--box-shadow-3);
+  padding: 20px;
+  box-shadow: var(--box-shadow-3);
 }
 
 .item3 {
-    grid-column: span 2;
-	margin: auto;
+  grid-column: span 2;
+  margin: auto;
 }
 
 .path-section {
-	/* TODO: Background with the 3 circles */
-	background-color: var(--white);
+  background-color: var(--white);
 }
-
 
 /* Container for the grid */
 .path-cards-container {
-	gap: 25px; /* Spacing between cards */
-	padding: 20px; /* Padding around the container */
-  }
-  
-  /* Styling for each card */
-  .path-card {
-	padding: 20px;
-	box-shadow: var(--box-shadow-3);
-	border-radius: var(--border-radius-2);
-	-webkit-border-radius: var(--border-radius-2)  ;
-	-moz-border-radius: var(--border-radius-2)  ;
-	-ms-border-radius: var(--border-radius-2)  ;
-	-o-border-radius: var(--border-radius-2)  ;
+  gap: 25px; /* Spacing between cards */
+  padding: 20px; /* Padding around the container */
 }
 
-  /* Styling for the image container */
-  .item1 {
-	margin-bottom: 15px; /* Space between image and text */
-  }
+/* Styling for each card */
+.path-card {
+  padding: 20px;
+  box-shadow: var(--box-shadow-3);
+  border-radius: var(--border-radius-2);
+  -webkit-border-radius: var(--border-radius-2);
+  -moz-border-radius: var(--border-radius-2);
+  -ms-border-radius: var(--border-radius-2);
+  -o-border-radius: var(--border-radius-2);
+}
 
-  /* Styling for the text container */
-  .item2 {
-	flex-shrink: 1;
-  }
+/* Styling for the image container */
+.item1 {
+  margin-bottom: 15px; /* Space between image and text */
+}
 
+/* Styling for the text container */
+.item2 {
+  flex-shrink: 1;
+}
 
+.help-you-grow-section {
+  background-color: var(--green-3);
+}
 /* Help You Frow section */
 .grow-section-grid {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
-	grid-column-gap: 8px;
-	grid-row-gap: 4px;
-	position: relative;
-	}
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 8px;
+  grid-row-gap: 4px;
+  position: relative;
+}
 
-	.div1 { grid-area: 1 / 1 / 5 / 4; }
-	.div2 { grid-area: 1 / 4 / 5 / 6; }
-	.div3 { grid-area: 5 / 3 / 6 / 4; position: absolute;
-		right: 0px;}
-	.div4 { grid-area: 5 / 4 / 6 / 6; }
+.div1 {
+  grid-area: 1 / 1 / 5 / 4;
+}
+.div2 {
+  grid-area: 1 / 4 / 5 / 6;
+}
+.div3 {
+  grid-area: 5 / 3 / 6 / 4;
+  position: absolute;
+  right: 0px;
+}
+.div4 {
+  grid-area: 5 / 4 / 6 / 6;
+}
 
 .stats-section {
-	background: url("../media/svg-gobbler.svg") no-repeat center / contain;
-	}
+  background: url("../media/svg-gobbler.svg") no-repeat center / contain;
+}
+
+.testimonials-section {
+  background-color: var(--green-3);
+}

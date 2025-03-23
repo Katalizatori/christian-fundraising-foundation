@@ -6,14 +6,12 @@ from .views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-     path("", index, name="index"),
-    path('blog/', include('blog.urls')), # DONE(3/3): Detail view for blogposts.
-    path("subscribe/", include('subscriptions.urls')),  # Include subscriptions URLs
-
+    path("", index, name="index"),
+    path("blog/", include("blog.urls")),  # DONE(3/3): Detail view for blogposts.
+    path("subscribe/", include("subscriptions.urls")),
+    path('call/', include('calls.urls')), # Include subscriptions URLs
     path("about", about, name="about"),
     path("contact", contact, name="contact"),
-
-    path('services', services, name="services"), # Added url paths for all pages.
-    path('training', training, name="training"),
-    path("call", call, name="call"),
+    path("services", services, name="services"),  # Added url paths for all pages.
+    path("training", training, name="training"),
 ]
