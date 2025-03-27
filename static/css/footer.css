@@ -1,11 +1,16 @@
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--green);
-	padding-bottom: 2em;
-	padding-left: 2em;
-	padding-right: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--green);
+  padding-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.divider-footer {
+  width: 100%;
+  border-top: 2px solid var(--green-14);
 }
 
 .footer-container {
@@ -17,6 +22,26 @@ footer {
 .footer-testimonial {
   width: 30em;
 }
+
+.footer-testimonial svg {
+  color: var(--green-15);
+}
+
+.testimonial-citation-1 {
+  font-size: calc(var(--text-base) + 2px);
+  color: var(--green-18);
+  font-weight: bold;
+}
+
+.testimonial-citation-2 {
+  font-size: calc(var(--text-base) + 2px);
+  color: var(--green-18);
+  font-weight: 500;
+}
+
+.links-section a {
+  color: var(--green-18);
+}
 /* Responsive behaviors */
 
 /* Footer Responsive Styles */
@@ -27,44 +52,8 @@ footer {
     padding-right: 0em;
     width: 95%;
   }
-    /* Heading */
-    .footer h3 {
-      font-size: 1.75rem;
-      line-height: 1.2;
-    }
 
-    /* Email Form and Image Section */
-    .footer .flex.flex-col.md\:flex-row p {
-      font-size: 0.875rem;
-    }
-
-    /* Footer Links Section */
-    .footer .grid.grid-cols-1.md\:grid-cols-3 p {
-      font-size: 1rem;
-    }
-
-    .footer .grid.grid-cols-1.md\:grid-cols-3 a {
-      font-size: 0.875rem;
-    }
-
-    /* Connect with Us Section */
-    .footer .p-4 p {
-      font-size: 1rem;
-    }
-
-    .footer .p-4 a {
-      font-size: 0.875rem;
-    }
-
-    /* Copyright Section */
-    .footer .flex.flex-col.md\:flex-row p {
-      font-size: 0.875rem;
-    }
-    .footer .flex.flex-col.md\:flex-row ul a {
-      font-size: 0.875rem;
-    }
-
-   .footer-testimonial {
-      width: auto;
-   }
+  .footer-testimonial {
+    width: auto;
   }
+}

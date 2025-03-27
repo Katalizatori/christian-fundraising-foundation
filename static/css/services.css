@@ -1,0 +1,14 @@
+@media (max-width: 767px) {
+
+    .services-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tab-square {
+        flex-direction: row;
+        width: auto;
+        height: 60px;
+    }
+
+}

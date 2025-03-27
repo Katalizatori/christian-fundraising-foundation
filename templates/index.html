@@ -1,113 +1,172 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+<link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}" />
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
-<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <!-- Hero Section -->
-<div class="hero-green">
-  <div class="hero-content mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20 lg:py-24">
-    <h1 class="mb-6 max-w-3xl text-3xl font-bold md:mb-10 md:text-5xl lg:mb-12 lg:text-6xl md:leading-tight">
-      Welcome to Christian Fundraising Consultancy
-    </h1>
-    <div class="flex flex-col md:flex-row items-stretch gap-4">
-      <a href="/call" class="CTA-button rounded-md px-6 py-3 md:px-8 md:py-4 text-center font-semibold text-white">
-        Book a call
-      </a>
-      <a href="/work" class="flex items-center justify-center rounded-md border border-solid border-black bg-white px-4 py-2 md:px-6 md:py-3 font-bold">
-        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94d411e6cf99_Vector%20(6).svg" alt="" class="mr-2 max-h-4 w-5" />
-        <p>See our Work</p>
-      </a>
+<section class="hero" id="hero">
+  <div class="hero-green">
+    <div
+      class="hero-content mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20 lg:py-24"
+    >
+      <h1
+        class="mb-6 max-w-3xl text-3xl font-bold md:mb-10 md:text-5xl lg:mb-12 lg:text-6xl md:leading-tight"
+      >
+        Welcome to Christian Fundraising Consultancy
+      </h1>
+      <div class="flex flex-col md:flex-row items-stretch gap-4">
+        <a
+          href="/call"
+          class="CTA-button rounded-md px-6 py-3 md:px-8 md:py-4 text-center font-semibold text-white"
+        >
+          Book a call
+        </a>
+        <a
+          href="/work"
+          class="flex items-center justify-center rounded-md border border-solid border-black bg-white px-4 py-2 md:px-6 md:py-3 font-bold"
+        >
+          <img
+            src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94d411e6cf99_Vector%20(6).svg"
+            alt=""
+            class="mr-2 max-h-4 w-5"
+          />
+          <p>See our Work</p>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 
- <!-- Mission Section -->
-<div class="mission-section">
-  <div class="mission-content">
-    <div class="mission-text">
-      <h3 class="text-2xl font-bold md:text-3xl">Our mission</h3>
-      <div class="divider"></div>
-      <p>
-        To help Christian charities like yours to unlock the generosity of their supporters by applying biblical principles of fundraising, data-driven insights, and stories that stir hearts into action.
-      </p>
+  <!-- Mission Section -->
+  <div class="mission-section">
+    <div class="mission-content">
+      <div class="mission-text">
+        <h3 class="text-2xl font-bold md:text-3xl">Our mission</h3>
+        <div class="divider"></div>
+        <p>
+          To help Christian charities like yours to unlock the generosity of
+          their supporters by applying biblical principles of fundraising,
+          data-driven insights, and stories that stir hearts into action.
+        </p>
+      </div>
+      <img
+        src="{% static 'media/home-image.jpg' %}"
+        alt=""
+        class="shadow relative -bottom-6 -right-6 mt-20 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px"
+      />
     </div>
-    <img src="{% static 'media/home-image.jpg' %}" alt="" class="shadow relative -bottom-6 -right-6 mt-20 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px" />
   </div>
-</div>
+</section>
 
 <!-- Services Section -->
 <section class="services-section py-16">
   <div class="container mx-auto px-4">
     <h2 class="text-2xl font-bold text-center mb-8 md:mb-12">Our services</h2>
-    <div class="service-cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div
+      class="service-cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
       <!-- Fundraising Strategy -->
       <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 w-full">
-          <img class="h-full w-full object-scale-down" src="{% static 'media/1.jpg'%}">
+          <img
+            class="h-full w-full object-scale-down"
+            src="{% static 'media/1.jpg'%}"
+          />
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold mb-4">Fundraising Strategy</h3>
-          <p class="text-gray-700">We evaluate your fundraising plan, messages and activities and help you create a new roadmap for growing giving to your mission.</p>
+          <p class="text-gray-700">
+            We evaluate your fundraising plan, messages and activities and help
+            you create a new roadmap for growing giving to your mission.
+          </p>
         </div>
       </div>
 
       <!-- Database Analysis -->
       <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 w-full">
-          <img class="h-full w-full object-scale-down" src="{% static 'media/2.jpg'%}">
+          <img
+            class="h-full w-full object-scale-down"
+            src="{% static 'media/2.jpg'%}"
+          />
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold mb-4">Database Analysis</h3>
-          <p class="text-gray-700">We unlock the potential of your donor data with our Fundraising Fitness Test to increase giving, identify new major donors, and boost retention.</p>
+          <p class="text-gray-700">
+            We unlock the potential of your donor data with our Fundraising
+            Fitness Test to increase giving, identify new major donors, and
+            boost retention.
+          </p>
         </div>
       </div>
 
       <!-- Creative Services -->
       <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 w-full">
-          <img class="h-full w-full object-scale-down" src="{% static 'media/3.jpg'%}">
+          <img
+            class="h-full w-full object-scale-down"
+            src="{% static 'media/3.jpg'%}"
+          />
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold mb-4">Creative Services</h3>
-          <p class="text-gray-700">We craft compelling appeals, print and media campaigns, and inspiring communications that stir the hearts and faith of Christian donors.</p>
+          <p class="text-gray-700">
+            We craft compelling appeals, print and media campaigns, and
+            inspiring communications that stir the hearts and faith of Christian
+            donors.
+          </p>
         </div>
       </div>
 
       <!-- Major and Legacy Giving -->
       <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 w-full">
-          <img class="h-full w-full object-scale-down" src="{% static 'media/4.jpg'%}">
+          <img
+            class="h-full w-full object-scale-down"
+            src="{% static 'media/4.jpg'%}"
+          />
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold mb-4">Major and Legacy Giving</h3>
-          <p class="text-gray-700">We help you to build meaningful relationships with key supporters and invite them to invest more deeply in your mission.</p>
+          <p class="text-gray-700">
+            We help you to build meaningful relationships with key supporters
+            and invite them to invest more deeply in your mission.
+          </p>
         </div>
       </div>
 
       <!-- Donor Research -->
       <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 w-full">
-          <img class="h-full w-full object-scale-down" src="{% static 'media/5.jpg'%}">
+          <img
+            class="h-full w-full object-scale-down"
+            src="{% static 'media/5.jpg'%}"
+          />
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold mb-4">Donor Research</h3>
-          <p class="text-gray-700">We enable you to gain fresh insights into Christian supporters, what motivates them to give, and which messages inspire action, through surveys and focus groups.</p>
+          <p class="text-gray-700">
+            We enable you to gain fresh insights into Christian supporters, what
+            motivates them to give, and which messages inspire action, through
+            surveys and focus groups.
+          </p>
         </div>
       </div>
 
       <!-- Training and Coaching -->
       <div class="service-card bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="h-48 w-full">
-          <img class="h-full w-full object-scale-down" src="{% static 'media/6.jpg'%}">
+          <img
+            class="h-full w-full object-scale-down"
+            src="{% static 'media/6.jpg'%}"
+          />
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold mb-4">Training and Coaching</h3>
-          <p class="text-gray-700">Equip you and your team with expert-led training, webinars, and courses to achieve fundraising success.</p>
+          <p class="text-gray-700">
+            Equip you and your team with expert-led training, webinars, and
+            courses to achieve fundraising success.
+          </p>
         </div>
       </div>
     </div>
@@ -120,16 +179,32 @@
     <div class="grow-section-grid">
       <div class="div1 mr-8 grid grid-cols-2 gap-4">
         <div class="bg-gray-200 h-40 flex items-center justify-center">
-          <img src="https://via.placeholder.com/150" alt="Image 1" class="w-full h-full object-cover">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Image 1"
+            class="w-full h-full object-cover"
+          />
         </div>
         <div class="bg-gray-200 h-40 flex items-center justify-center">
-          <img src="https://via.placeholder.com/150" alt="Image 2" class="w-full h-full object-cover">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Image 2"
+            class="w-full h-full object-cover"
+          />
         </div>
         <div class="bg-gray-200 h-40 flex items-center justify-center">
-          <img src="https://via.placeholder.com/150" alt="Image 3" class="w-full h-full object-cover">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Image 3"
+            class="w-full h-full object-cover"
+          />
         </div>
         <div class="bg-gray-200 h-40 flex items-center justify-center">
-          <img src="https://via.placeholder.com/150" alt="Image 4" class="w-full h-full object-cover">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Image 4"
+            class="w-full h-full object-cover"
+          />
         </div>
       </div>
       <div class="div2 flex flex-col justify-center">
@@ -137,23 +212,39 @@
           <span class="h-px flex-1 bg-amber-300"></span>
           <span class="pl-4">22+ Years of Experience</span>
         </span>
-        <h2 class="text-2xl font-bold mb-4 mt-4">We can help your ministry <em>grow</em></h2>
+        <h2 class="text-2xl font-bold mb-4 mt-4">
+          We can help your ministry <em>grow</em>
+        </h2>
         <p class="mb-4">
-          With us, fundraising isn’t just about money — it’s about building a community of givers who share in your mission for God’s Kingdom. 
+          With us, fundraising isn’t just about money — it’s about building a
+          community of givers who share in your mission for God’s Kingdom.
         </p>
         <ul class="pl-5 space-y-3 list-disc marker:border-amber-400">
-          <li><strong>FIND</strong> new supporters, <strong>WIN</strong> them for the cause, <strong>KEEP</strong> them for the long run, and <strong>LIFT</strong> their giving from one level to the next.</li>
-          <li>We believe that your mission deserves a strong, engaged community of givers.</li>
-          <li>We create faith-driven strategies and campaigns that inspire generosity and sustain ministry growth.</li>
+          <li>
+            <strong>FIND</strong> new supporters, <strong>WIN</strong> them for
+            the cause, <strong>KEEP</strong> them for the long run, and
+            <strong>LIFT</strong> their giving from one level to the next.
+          </li>
+          <li>
+            We believe that your mission deserves a strong, engaged community of
+            givers.
+          </li>
+          <li>
+            We create faith-driven strategies and campaigns that inspire
+            generosity and sustain ministry growth.
+          </li>
         </ul>
       </div>
       <div class="div3 mt-10 mr-8">
-        <a href="/work" class="CTA-button rounded-md px-6 py-3 md:px-8 md:py-4 text-center font-semibold text-white">
+        <a
+          href="/work"
+          class="CTA-button rounded-md px-6 py-3 md:px-8 md:py-4 text-center font-semibold text-white"
+        >
           See our work
         </a>
       </div>
       <div class="div4 mt-10">
-        <p> Your ministry’s success is our priority. </p>
+        <p>Your ministry’s success is our priority.</p>
       </div>
     </div>
   </div>
@@ -175,18 +266,32 @@
     <h2 class="font-bold text-center mb-4">Impact over the last 22+ years</h2>
     <div class="py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+        <dl
+          class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3"
+        >
           <div class="mx-auto flex max-w-xs flex-col gap-y-4">
             <dt class="text-base/7 text-gray-600">Happy Clients</dt>
-            <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 lg:text-7xl sm:text-5xl">127</dd>
+            <dd
+              class="order-first text-4xl font-semibold tracking-tight text-gray-900 lg:text-7xl sm:text-5xl"
+            >
+              127
+            </dd>
           </div>
           <div class="mx-auto flex max-w-xs flex-col gap-y-4">
             <dt class="text-base/7 text-gray-600">Training Sessions</dt>
-            <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">1,000+</dd>
+            <dd
+              class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl"
+            >
+              1,000+
+            </dd>
           </div>
           <div class="mx-auto flex max-w-xs flex-col gap-y-4">
             <dt class="text-base/7 text-gray-600">Current Projects</dt>
-            <dd class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">18</dd>
+            <dd
+              class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl"
+            >
+              18
+            </dd>
           </div>
         </dl>
       </div>
@@ -195,12 +300,12 @@
 </section>
 
 <!-- Testimonials Section -->
- {% include 'testimonials.html' %}
+{% include 'testimonials.html' %}
 
 <!-- Resources Section -->
 <section class="blog-section py-16">
   <div class="container mx-auto px-4">
-    {% include 'blog.html' %}
+    {% load blog_tags %} {% show_latest_posts %}
   </div>
 </section>
 

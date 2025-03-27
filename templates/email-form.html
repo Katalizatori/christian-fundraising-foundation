@@ -2,7 +2,7 @@
 
 <div class="form-section">
     <div class="email-container">
-        <div class="email-header">
+        <div class="email-header mb-4">
             <p>Every week, you will receive an email with biblical inspiration, research-backed insights, or fundraising ideas you can apply immediately. Join a growing community of over 1,000 Christian leaders and fundraisers. <strong><em>Sign up</em> today.</strong></p>
         </div>
         <form method="post" action="{% url 'subscribe' %}" class="email-form">
@@ -12,9 +12,6 @@
             <!-- First Name and Last Name Fields -->
             <div class="input-fields form-grid">
                 <div class="form-group">
-                    <label for="id_first_name" class="form-label">
-                        First Name <span class="required">*</span>
-                    </label>
                     <input type="text" name="first_name" id="id_first_name" class="form-input" placeholder="First Name" value="{{ subscribe_form.first_name.value|default:'' }}" required>
                     {% if subscribe_form.first_name.errors %}
                         <div class="error-message">
@@ -23,9 +20,6 @@
                     {% endif %}
                 </div>
                 <div class="form-group">
-                    <label for="id_last_name" class="form-label">
-                        Last Name <span class="required">*</span>
-                    </label>
                     <input type="text" name="last_name" id="id_last_name" class="form-input" placeholder="Last Name" value="{{ subscribe_form.last_name.value|default:'' }}" required>
                     {% if subscribe_form.last_name.errors %}
                         <div class="error-message">
@@ -37,9 +31,6 @@
 
             <!-- Email Field -->
             <div class="form-group">
-                <label for="id_email" class="form-label">
-                    Email Address <span class="required">*</span>
-                </label>
                 <input type="email" name="email" id="id_email" class="form-input" placeholder="name@page.com" value="{{ subscribe_form.email.value|default:'' }}" required>
                 {% if subscribe_form.email.errors %}
                     <div class="error-message">

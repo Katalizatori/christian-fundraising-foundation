@@ -174,7 +174,7 @@
   --green: #6dbd89; /* hsl(141,38%,58%) hsl(166,38%,58%)*/
   --green-rotated-darker: hsl(166, 38%, 58%);
   --green-rotated-lighter: hsl(116, 38%, 58%);
-  --green-1: #e9f5ed;
+  --green-1: #E5F3EA;
   --green-2: #dbefe2;
   --green-3: #cce8d6;
   --green-4: #bde1ca;
@@ -182,8 +182,33 @@
   --green-6: #a0d4b2;
   --green-7: #92cea7;
   --green-8: #83c79b;
-  --green-15: #2c4c37;
-  --green-18: #0b130e;
+  --green-9: #68B482;
+  --green-10: #62AA7B;
+  --green-11: #5DA174;
+  --green-12: #57976E;
+  --green-13: #528E67;
+  --green-14: #4C8460;
+  --green-15: #477B59;
+  --green-16: #3C684B;
+  --green-17: #31553E;
+  --green-18: #264230;
+  --green-19: #16261B;
+
+  /* Secondary: Lime Green */
+  --lime-green: #9acc81;
+  --lime-green-1: #F0F7EC;
+  --lime-green-2: #E6F2E0;
+  --lime-green-3: #DCEDD3;
+  --lime-green-4: #D2E8C6;
+  --lime-green-5: #C2E0B3;
+  --lime-green-6: #B8DBA7;
+  --lime-green-7: #AED69A;
+  --lime-green-8: #A4D18E;
+  --lime-green-9: #8BB874;
+  --lime-green-10: #7BA367;
+  --lime-green-11: #6C8F5A;
+  --lime-green-12: #5C7A4D;
+
 
   /* Shadows: Float */
   --box-shadow-2:
@@ -251,6 +276,7 @@ body {
   color: var(--black);
 }
 
+
 h1 {
   font-size: var(--h1-font-size);
   line-height: var(--h1-line-height);
@@ -288,9 +314,12 @@ img {
 
 @media (max-width: 767px) {
   /* Hero Section */
-  .hero-green h1 {
-    font-size: 2rem;
-    line-height: 1.2;
+  h1 {
+    font-size: var(--h1-font-size-mobile);
+  }
+
+  .container {
+    padding: 0;
   }
 
   .hero-green .CTA-button {
@@ -383,6 +412,18 @@ img {
   display: inline;
 }
 
+.green-6 {
+  color: var(--green-6);
+}
+
+.green-15 {
+  color: var(--green-15);
+}
+
+.green-16 {
+  color: var(--green-16);
+}
+
 /* Basic Components */
 
 .card {
@@ -408,88 +449,12 @@ img {
   border-right: 2px solid var(--lime);
 }
 
-/* Hero Sections */
-
-.hero-green {
-  background-color: var(--green);
-  text-align: left;
+.divider-full {
+  width: 80%;
+  border-top: 4px solid var(--green-1);
 }
 
-/* Mission Section */
-.mission-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  position: relative;
-}
-
-.mission-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.mission-text {
-  max-width: 600px; /* Adjust as needed */
-}
-
-.mission-text h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.mission-content .divider {
-  border-top: 2px solid var(--lime);
-}
-
-.mission-text p {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-/* Mission Image */
-.mission-image {
-  position: absolute;
-  top: -100px; /* Overlaps the hero section */
-  right: -100px; /* Extends beyond the container */
-  width: 500px; /* Adjust as needed */
-  height: 500px; /* Adjust as needed */
-  object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Medium screens (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .container {
-    max-width: 80%; /* Slightly wider for medium screens */
-    padding: 1.5rem; /* Increase padding for medium screens */
-  }
-}
-
-/* Large screens (desktops, 1024px and up) */
-@media (min-width: 1024px) {
-  .container {
-    max-width: 70%; /* Original max-width for large screens */
-    padding: 2rem; /* Original padding for large screens */
-  }
-}
-
-.email-input {
-  width: 50vw;
-  height: 40px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid var(--dark-green);
-  border-radius: var(--border-radius-2);
-  font-size: 16px;
-  background-color: var(--false-white);
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-}
+/* Button Style */
 
 .CTA-button {
   text-transform: uppercase;
@@ -595,4 +560,87 @@ img {
 .raised-button:hover {
   box-shadow: var(--raised-upper), 0 2px 6px hsla(0, 0%, 0%, 0.3); /* Deeper shadow on hover */
   transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Hero Sections */
+
+.hero-green {
+  background-color: var(--green);
+  text-align: left;
+}
+
+/* Mission Section */
+.mission-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.mission-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mission-text {
+  max-width: 600px; /* Adjust as needed */
+}
+
+.mission-text h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mission-content .divider {
+  border-top: 2px solid var(--lime);
+}
+
+.mission-text p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Mission Image */
+.mission-image {
+  position: absolute;
+  top: -100px; /* Overlaps the hero section */
+  right: -100px; /* Extends beyond the container */
+  width: 500px; /* Adjust as needed */
+  height: 500px; /* Adjust as needed */
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Medium screens (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 80%; /* Slightly wider for medium screens */
+    padding: 1.5rem; /* Increase padding for medium screens */
+  }
+}
+
+/* Large screens (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 70%; /* Original max-width for large screens */
+    padding: 2rem; /* Original padding for large screens */
+  }
+}
+
+.email-input {
+  width: 50vw;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--dark-green);
+  border-radius: var(--border-radius-2);
+  font-size: 16px;
+  background-color: var(--false-white);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }

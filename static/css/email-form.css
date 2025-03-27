@@ -17,7 +17,7 @@
 }
 
 .email-header p {
-    font-size: 20px;
+    font-weight: 450;
     line-height: var(--body-line-height);
 }
 
@@ -82,4 +82,8 @@ em {
 
 .email-form button:hover {
     background-position: 100% 0%; /* Move to the second half */
+}
+
+.email-form .form-checkbox a {
+    color: var(--green-15);
 }

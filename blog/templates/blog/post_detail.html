@@ -1,0 +1,23 @@
+{% extends "blog/base_blog.html" %}
+
+{% block blog_content %}
+  <article class="post-detail">
+    {% if post.main_image %}
+      <img src="{{ post.main_image.url }}" alt="{{ post.title }}" class="post-header-image">
+    {% endif %}
+    <div class="hero-green">
+      <div class="hero-content mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20 lg:py-24">
+        <h1 class="mb-6 max-w-3xl text-3xl font-bold md:mb-10 md:text-5xl lg:mb-12 lg:text-6xl md:leading-tight">
+        {{ post.title }}</h1>
+        <div class="post-meta">
+          <span>By {{ post.author }} • {{ post.created_on|date:"F j, Y" }}</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="post-content">
+      {{ post.content|safe }}
+    </div>
+  </article>
+
+{% endblock %}

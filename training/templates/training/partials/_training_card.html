@@ -1,0 +1,25 @@
+<div class="training-card">
+    {% if event.image_url %}
+    <div class="training-image">
+        <img src="{{ event.image_url }}" alt="{{ event.name }}" loading="lazy">
+    </div>
+    {% endif %}
+    
+    <div class="training-content">
+        <h3>{{ event.name }}</h3>
+        <div class="training-meta">
+            <time datetime="{{ event.start_datetime|date:'Y-m-d' }}">
+                {{ event.start_datetime|date:"F j, Y" }}
+            </time>
+            <span>{{ event.start_datetime|time }} - {{ event.end_datetime|time }}</span>
+        </div>
+        
+        <p class="training-description">
+            {{ event.description|truncatewords:30 }}
+        </p>
+        
+        <a href="{{ event.url }}" target="_blank" class="register-button">
+            Register Now
+        </a>
+    </div>
+</div>

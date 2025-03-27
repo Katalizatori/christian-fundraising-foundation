@@ -12,26 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
-
-# APIs and IDs -- !! DO NOT LEAVE PUBLIC !!
-MAILCHIMP_API_KEY = os.getenv("MAILCHIMP_API_KEY")
-MAILCHIMP_LIST_ID = os.getenv("MAILCHIMP_LIST_ID")
-MAILCHIMP_SERVER = os.getenv("MAILCHIMP_SERVER")
-
-
-from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-PROJECT_DIR = BASE_DIR / "christianfoundation"
-MEDIA_ROOT = BASE_DIR / "media"
+ROOT_URLCONF = "christianfoundation.urls"
+WSGI_APPLICATION = "christianfoundation.wsgi.application"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -42,7 +24,38 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+
+# ------------------------------------------------------------------------------
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.getenv("SECRET_KEY")
+
+# APIs and IDs -- !! DO NOT LEAVE PUBLIC !!
+MAILCHIMP_API_KEY = os.getenv("MAILCHIMP_API_KEY")
+MAILCHIMP_LIST_ID = os.getenv("MAILCHIMP_LIST_ID")
+MAILCHIMP_SERVER = os.getenv("MAILCHIMP_SERVER")
+
+# ------------------------------------------------------------------------------
+
+
+
+
+# ------------------------------------------------------------------------------
+
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_DIR = BASE_DIR / "christianfoundation"
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/media/"
+# ------------------------------------------------------------------------------
+
+# Installed Apps ---------------------------------------------------------------------
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -51,12 +64,35 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "ckeditor",  # Added apps
+    "ckeditor",  # ADDED -------------------------------------------------------------
+    "ckeditor_uploader",
     "tailwind",
     "blog",
+    "training",
     "subscriptions",
     "calls",
 ]
+
+# ------------------------------------------------------------------------------
+
+
+# CKEditor ---------------------------------------------------------------------
+CKEDITOR_UPLOAD_PATH = "ckeditor_uploads/"  # Subdirectory under MEDIA_ROOT
+CKEDITOR_RESTRICT_BY_USER = True  # Users only see their own uploads
+CKEDITOR_ALLOW_NONIMAGE_FILES = False  # Block non-image uploads by default
+CKEDITOR_IMAGE_BACKEND = "pillow"  # For image compression
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'height': 400,
+        'width': '100%',
+        'extraPlugins': ','.join(['uploadimage']),
+        'uploadUrl': '/ckeditor/upload/',
+    },
+}
+# ------------------------------------------------------------------------------
+
+# Middleware ---------------------------------------------------------------------
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -67,9 +103,9 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+# ------------------------------------------------------------------------------
 
-ROOT_URLCONF = "christianfoundation.urls"
-
+# Templates ---------------------------------------------------------------------
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -87,7 +123,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "christianfoundation.wsgi.application"
+
+# ------------------------------------------------------------------------------
 
 
 # Database
@@ -100,6 +137,7 @@ DATABASES = {
     }
 }
 
+# ------------------------------------------------------------------------------
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -119,6 +157,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# ------------------------------------------------------------------------------
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -131,6 +170,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+# ------------------------------------------------------------------------------
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -138,12 +178,14 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 # Additional locations of static files
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIRS = [BASE_DIR / "static", BASE_DIR, 'blog/static']
 
 # Directory where collected static files will be stored during deployment
 STATIC_ROOT = BASE_DIR / "staticfiles"  # Used during `collectstatic`
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+
+# ------------------------------------------------------------------------------
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

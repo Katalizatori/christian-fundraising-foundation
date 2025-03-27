@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="training-container">
+    <h1>Upcoming Training Events</h1>
+    <div class="training-grid">
+        {% for event in events %}
+            {% include "training/partials/_training_card.html" %}
+        {% empty %}
+            <p class="empty-state">No upcoming training events. Check back soon!</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

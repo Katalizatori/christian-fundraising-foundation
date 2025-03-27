@@ -1,15 +1,22 @@
 {% load static %}
 
 <nav class="navbar">
-    <!-- Logo on the far left -->
+    <!-- Logo -->
     <div class="logo">
         <a href="{% url 'index' %}">
-            <img class="logo ml-4" style="height: 60px;" src="{% static 'media/logo.png' %}" alt="Company Logo"> <!-- Replace with your logo path -->
+            <img class="logo ml-4" style="height: 60px;" src="{% static 'media/logo.png' %}" alt="Company Logo">
         </a>
     </div>
 
-    <!-- Navigation links in the middle -->
-    <ul class="nav-links">
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="navLinks">
         <!-- Home Link -->
         <li>
             {% url 'index' as index_url %}
@@ -22,16 +29,16 @@
             <a href="{{ services_url }}" class="{% if request.path == services_url %}active{% endif %}">Services</a>
         </li>
 
-        <!-- Training Link -->
+        <!-- Training Link (with namespace) -->
         <li>
-            {% url 'training' as training_url %}
-            <a href="{{ training_url }}" class="{% if request.path == training_url %}active{% endif %}">Training</a>
+            <a href="{% url 'training:list' %}" 
+               class="{% if 'training/' in request.path %}active{% endif %}">Training</a>
         </li>
 
-        <!-- Resources Link -->
+        <!-- Resources Link (with blog namespace) -->
         <li>
-            {% url 'resources' as about_url %}
-            <a href="{{ resources_url }}" class="{% if request.path == resources_url %}active{% endif %}">Resources</a>
+            <a href="{% url 'blog:post_list' %}" 
+               class="{% if 'blog/' in request.path %}active{% endif %}">Resources</a>
         </li>
 
         <!-- About Link -->
@@ -45,10 +52,24 @@
             {% url 'contact' as contact_url %}
             <a href="{{ contact_url }}" class="{% if request.path == contact_url %}active{% endif %}">Contact</a>
         </li>
+
+        <!-- CTA Button - moved inside nav-links for mobile -->
+        <li class="mobile-cta">
+            <div class="CTA-button px-4 py-2 rounded-md font-semibold text-white">
+                <a href="/call" class="btn">Book A Call</a>
+            </div>
+        </li>
     </ul>
 
-    <!-- "Book A Call" button on the far right -->
-    <div class="CTA-button mr-4 px-4 py-2 rounded-md font-semibold text-white">
+    <!-- CTA Button - desktop version -->
+    <div class="CTA-button mr-4 px-4 py-2 rounded-md font-semibold text-white desktop-cta">
         <a href="/call" class="btn">Book A Call</a>
     </div>
 </nav>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+</script>

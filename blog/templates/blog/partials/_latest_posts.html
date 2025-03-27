@@ -1,0 +1,31 @@
+<div class="latest-posts-section">
+  <div class="latest-posts-header">
+    <span class="divider-line"></span>
+    <span class="section-title">{{ header|default:"Latest Posts" }}</span>
+  </div>
+  
+  <div class="latest-posts-grid">
+    {% for post in latest_posts %}
+    <article class="blog-card">
+      {% if post.main_image %}
+      <div class="blog-card-image">
+        <img src="{{ post.main_image.url }}" 
+             alt="{{ post.title }}"
+             loading="lazy">
+      </div>
+      {% endif %}
+      
+      <div class="blog-card-content">
+        <h3 class="blog-card-title">{{ post.title }}</h3>
+        <time class="blog-card-meta">{{ post.created_on|date:"F j, Y" }}</time>
+        <p class="blog-card-excerpt">{{ post.short_description|striptags }}</p>
+        <a href="{{ post.get_absolute_url }}" class="blog-card-link">
+          Read Article
+        </a>
+      </div>
+    </article>
+    {% empty %}
+    <p class="blog-empty-state">No posts available yet.</p>
+    {% endfor %}
+  </div>
+</div>

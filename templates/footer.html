@@ -8,9 +8,7 @@
     </h3>
 
     <!-- Email Form and Image Section -->
-    <div
-      class="flex flex-col md:flex-row justify-between items-center border-b p-4"
-    >
+    <div class="flex flex-col md:flex-row justify-between items-center p-4">
       <!-- Email Form -->
       {% include 'email-form.html' %}
 
@@ -42,14 +40,19 @@
             </p>
           </blockquote>
 
-          <p class="font-semibold">Rev John Pellowe, MBA, DMin</p>
-          <p class="text-sm">CEO, Canadian Center for Christian Charities</p>
+          <p class="testimonial-citation-1">Rev John Pellowe, MBA, DMin</p>
+          <p class="testimonial-citation-2">
+            CEO, Canadian Center for Christian Charities
+          </p>
         </div>
       </div>
     </div>
 
+    <div class="divider-footer m-auto"></div>
     <!-- Footer Links Section -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+    <div
+      class="links-section not-only:grid grid-cols-1 md:grid-cols-3 gap-6 p-4"
+    >
       <!-- Logo -->
       <div class="flex justify-center md:justify-start">
         <img
@@ -137,21 +140,14 @@
     </div>
 
     <!-- Copyright Section -->
-    <div
-      class="flex flex-col md:flex-row justify-between items-center border-t py-4"
-    >
-      <p class="text-sm text-gray-700 text-center md:text-left">
+    <div class="divider-footer m-auto"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center py-4">
+      <p class="green-15" style="font-size: 1rem">
         © 2025 Christian Fundraising Consultancy Ltd
       </p>
-      <ul class="flex gap-4 mt-4 md:mt-0">
-        <li>
-          <a
-            href="/privacy-policy"
-            class="text-sm text-gray-700 hover:text-primary"
-            >Privacy Policy</a
-          >
-        </li>
-      </ul>
+      <a href="/privacy-policy" class="green-15" style="font-size: 1rem"
+        >Privacy Policy</a
+      >
     </div>
   </div>
 </section>
