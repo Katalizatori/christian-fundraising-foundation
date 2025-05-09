@@ -5,11 +5,7 @@ import dj_database_url
 
 # Security settings
 DEBUG = False
-ALLOWED_HOSTS = [
-    os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'localhost'), 
-    'christianfoundation.onrender.com',
-    # Add your custom domains here when ready
-]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 CSRF_TRUSTED_ORIGINS = [
     f"https://{host}" for host in ALLOWED_HOSTS if host != 'localhost'
 ]
