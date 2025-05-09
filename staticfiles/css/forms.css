@@ -1,0 +1,206 @@
+/* forms.css */
+
+
+.form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+
+    .form-wrapper {
+        width: 100%;
+    }
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-content, .form-wrapper {
+        flex: 1 1 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Content (Left Side) */
+.form-content {
+    flex: 1 1 40%;
+}
+
+.form-content h2 {
+    font-size: 2.25rem; /* 36px */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.form-content p {
+    font-size: 1.125rem; /* 18px */
+    color: #4b5563; /* Gray text */
+    margin-bottom: 1.5rem;
+}
+
+.form-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.form-content li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Form Wrapper (Right Side) */
+.form-wrapper {
+    flex: 1 1 50%;
+    padding: 30px;
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow-3);
+}
+
+/* Form Grid (for multiple fields in a row) */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    }
+}
+
+/* Form Group (container for each field) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151; /* Dark gray */
+    margin-bottom: 5px;
+}
+
+.form-label .required {
+    color: #ef4444; /* Red for required asterisk */
+}
+
+/* Form Inputs */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #374151; /* Dark gray */
+    background-color: #ffffff; /* White background */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+    border-color: var(--green-4); /* Use variable for focus border color */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* Subtle focus ring */
+}
+
+/* Form Textarea */
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #374151; /* Dark gray */
+    background-color: #ffffff; /* White background */
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 150px;
+}
+
+.form-textarea:focus {
+    border-color: var(--green-4); /* Use variable for focus border color */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* Subtle focus ring */
+}
+
+/* Form Checkbox */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-checkbox label {
+    font-size: 0.875rem;
+    color: #374151; /* Dark gray */
+}
+
+.form-checkbox a {
+    color: var(--green-8); /* Use variable for link color */
+    text-decoration: underline;
+}
+
+/* Form Radio Buttons */
+.form-radio {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-radio label {
+    font-size: 0.875rem;
+    color: #374151; /* Dark gray */
+}
+
+/* Form Button */
+.form-button {
+    text-transform: uppercase;
+    padding: 12px 24px;
+    background-color: var(--green-8); /* Use variable for button background */
+    color: #ffffff; /* White text */
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid #e1f07a; /* Light lime border */
+    border-radius: var(--border-radius-4); /* Use variable for border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: var(--lime); /* Use variable for hover background */
+}
+
+/* Arrow icon */
+.form-button::after {
+    content: " →"; /* Unicode arrow */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Error Messages */
+.error-message {
+    font-size: 0.75rem; /* 12px */
+    color: #ef4444; /* Red for errors */
+    margin-top: 0.25rem;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}

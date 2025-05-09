@@ -1,0 +1,90 @@
+
+  /* Hero Section: Book a Call specifics */
+  
+  .stats .divider-vertical {
+    border-right: 2px solid var(--green-16);
+  }
+
+  .stats h3 {
+    color: var(--green-18);
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .stats p {
+    font-size: 1rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .mission-content {
+      flex-direction: column;
+    }
+
+    .mission-image {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+
+/* Conditions Section */
+
+.conditions-section {
+    padding: 60px 0;
+    background-color: var(--green-3);
+}
+
+.conditions-section h2 {
+    font-size: 40px;
+}
+
+.conditions-section ul li {
+    font-size: 1.125rem; /* Slightly larger text */
+    font-weight: 500; /* Bolder text */
+    line-height: 1.6; /* Better line spacing */
+    color: var(--green-18);
+}
+
+.conditions-section ul li svg {
+    width: 1.25rem; /* Slightly larger SVG */
+    height: 1.25rem; /* Slightly larger SVG */
+    color: var(--green-6); /* Use CSS variable for color */
+}
+
+.conditions-section .card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-3);
+    -webkit-border-radius: var(--border-radius-3);
+    -moz-border-radius: var(--border-radius-3);
+    -ms-border-radius: var(--border-radius-3);
+    -o-border-radius: var(--border-radius-3);
+}
+
+.conditions-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.conditions-container li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .call-hero-section {
+        padding-bottom: 60px;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .conditions-section h2 {
+        font-size: var(--h3-font-size-mobile);
+    }
+
+    .form-section h2 {
+        font-size: var(--h3-font-size-mobile);
+    }
+}
