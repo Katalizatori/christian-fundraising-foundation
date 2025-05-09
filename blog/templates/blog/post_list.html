@@ -1,39 +1,59 @@
-{% extends "base.html" %}
+{% extends "blog/base_blog.html" %}
 {% load static blog_tags %}
 
-{% block extra_head %}
-  <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
-{% endblock %}
-
 {% block content %}
-<div class="blog-container">
-  <header class="blog-header">
-    <h1>Blog Posts</h1>
-    <p class="subtitle">Latest updates and resources</p>
-  </header>
-
-  <div class="post-list">
-    {% for post in posts %}
-      {% include "blog/partials/_post_card.html" %}
-    {% empty %}
-      <p class="empty-state">No posts yet. Check back soon!</p>
-    {% endfor %}
-  </div>
-
-  {% if is_paginated %}
-    <div class="pagination">
-      {% if page_obj.has_previous %}
-        <a href="?page={{ page_obj.previous_page_number }}" class="pagination-link">Previous</a>
-      {% endif %}
-      
-      <span class="current-page">
-        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-      </span>
-      
-      {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}" class="pagination-link">Next</a>
-      {% endif %}
+<section class="hero-green">
+  <div class="hero-green">
+    <div
+      class="hero-content mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20 lg:py-24"
+    >
+      <h1
+        class="mb-6 max-w-3xl text-3xl font-bold md:mb-10 md:text-5xl lg:mb-12 lg:text-6xl md:leading-tight"
+      >
+        Resources
+      </h1>
+      <div class="stats flex flex-col md:flex-row items-stretch gap-4">
+        <div>
+          <h3>45k+</h3>
+          <p>Happy Customers</p>
+        </div>
+        <div class="divider-vertical"></div>
+        <div>
+          <h3>200K+</h3>
+          <p>Emails Sent</p>
+        </div>
+      </div>
     </div>
-  {% endif %}
+  </div>
+</section>
+<div class="container">
+  <section class="latest-posts-section">
+
+    <div class="latest-posts-grid">
+      {% for post in posts %}
+        {% include "blog/partials/_post_card.html" %}
+      {% empty %}
+        <div class="blog-empty-state">
+          <p>No posts yet. Check back soon!</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if is_paginated %}
+      <div class="pagination">
+        {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}" class="pagination-link">Previous</a>
+        {% endif %}
+        
+        <span class="current-page">
+          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+        
+        {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}" class="pagination-link">Next</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </section>
 </div>
 {% endblock %}

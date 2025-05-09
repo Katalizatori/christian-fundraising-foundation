@@ -7,6 +7,8 @@ INCOME = (
     ("max_10m", "£3 million - £10 million"),
     ("over_10m", "Over £10 million"),
 )
+
+
 class CallRequest(models.Model):
     first_name = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)

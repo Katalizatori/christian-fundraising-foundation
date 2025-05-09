@@ -1,21 +1,4 @@
-from django import forms
-
-
-class BaseUserForm(forms.Form):
-    name = forms.CharField(
-        max_length=200,
-        required=True,
-        error_messages={"required": "Please enter your name."},
-    )
-    surname = forms.CharField(
-        max_length=200,
-        required=True,
-        error_messages={"required": "Please enter your surname."},
-    )
-    email = forms.EmailField(
-        required=True, error_messages={"required": "Please enter your email."}
-    )
-
+# forms.py
 
 # forms.py
 from django import forms
@@ -75,27 +58,4 @@ class SubscribeForm(forms.Form):
         error_messages={
             "required": "Please enter your email address.",
         },
-    )
-    agree_to_policy = forms.BooleanField(
-        required=True,
-        label="I agree to the privacy policy.",
-    )
-
-
-class CallForm(BaseUserForm):
-    organization = forms.CharField(
-        max_length=200,
-        required=True,
-        error_messages={"required": "Please enter your organization."},
-    )
-    income = forms.ChoiceField(
-        choices=[("low", "Low"), ("medium", "Medium"), ("high", "High")],
-        widget=forms.RadioSelect,
-        required=True,
-        error_messages={"required": "Please select your income level."},
-    )
-    details = forms.CharField(
-        widget=forms.Textarea,
-        required=True,
-        error_messages={"required": "Please provide details."},
     )

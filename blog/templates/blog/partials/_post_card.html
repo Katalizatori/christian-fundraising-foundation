@@ -1,28 +1,44 @@
-<article class="post-card">
+<article class="blog-card">
   {% if post.main_image %}
-  <div class="post-card-image">
+  <div class="blog-card-img-holder">
     <img src="{{ post.main_image.url }}" 
          alt="{{ post.title }}"
          loading="lazy">
   </div>
   {% endif %}
   
-  <div class="post-card-content">
-    <div class="post-meta">
-      <span class="post-category">{{ post.get_category_display }}</span>
-      <time datetime="{{ post.created_on|date:'Y-m-d' }}">
-        {{ post.created_on|date:"F j, Y" }}
-      </time>
+  <div class="blog-card-content">
+    <div class="blog-badges">
+      {% if post.get_category_display %}
+      <span class="blog-badge category">{{ post.get_category_display }}</span>
+      {% endif %}
     </div>
     
-    <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+    <h3 class="blog-card-title">
+      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </h3>
     
-    <p class="post-excerpt">
+    <p class="blog-description">
       {{ post.short_description|striptags|truncatewords:25 }}
     </p>
     
-    <a href="{{ post.get_absolute_url }}" class="read-more">
-      Read Article →
-    </a>
+    <div class="blog-options">
+      {% if post.author.get_full_name %}
+      <span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+        </svg>
+        {{ post.author.get_full_name }}
+      </span>
+      {% endif %}
+      <span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <time datetime="{{ post.created_on|date:'Y-m-d' }}">
+          {{ post.created_on|date:"M j, Y" }}
+        </time>
+      </span>
+    </div>
   </div>
 </article>

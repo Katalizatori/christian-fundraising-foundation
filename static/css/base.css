@@ -149,7 +149,7 @@
 :root {
   /* Real palette */
   --black: #1d1d1b;
-  --white: #fefefe;
+  --white: #ffffff;
   --gray: #9d9c9f;
   --green: #6dbd89;
   --lime-green: #9acc81;
@@ -174,7 +174,7 @@
   --green: #6dbd89; /* hsl(141,38%,58%) hsl(166,38%,58%)*/
   --green-rotated-darker: hsl(166, 38%, 58%);
   --green-rotated-lighter: hsl(116, 38%, 58%);
-  --green-1: #E5F3EA;
+  --green-1: #e5f3ea;
   --green-2: #dbefe2;
   --green-3: #cce8d6;
   --green-4: #bde1ca;
@@ -182,33 +182,32 @@
   --green-6: #a0d4b2;
   --green-7: #92cea7;
   --green-8: #83c79b;
-  --green-9: #68B482;
-  --green-10: #62AA7B;
-  --green-11: #5DA174;
-  --green-12: #57976E;
-  --green-13: #528E67;
-  --green-14: #4C8460;
-  --green-15: #477B59;
-  --green-16: #3C684B;
-  --green-17: #31553E;
+  --green-9: #68b482;
+  --green-10: #62aa7b;
+  --green-11: #5da174;
+  --green-12: #57976e;
+  --green-13: #528e67;
+  --green-14: #4c8460;
+  --green-15: #477b59;
+  --green-16: #3c684b;
+  --green-17: #31553e;
   --green-18: #264230;
-  --green-19: #16261B;
+  --green-19: #16261b;
 
   /* Secondary: Lime Green */
   --lime-green: #9acc81;
-  --lime-green-1: #F0F7EC;
-  --lime-green-2: #E6F2E0;
-  --lime-green-3: #DCEDD3;
-  --lime-green-4: #D2E8C6;
-  --lime-green-5: #C2E0B3;
-  --lime-green-6: #B8DBA7;
-  --lime-green-7: #AED69A;
-  --lime-green-8: #A4D18E;
-  --lime-green-9: #8BB874;
-  --lime-green-10: #7BA367;
-  --lime-green-11: #6C8F5A;
-  --lime-green-12: #5C7A4D;
-
+  --lime-green-1: #f0f7ec;
+  --lime-green-2: #e6f2e0;
+  --lime-green-3: #dcedd3;
+  --lime-green-4: #d2e8c6;
+  --lime-green-5: #c2e0b3;
+  --lime-green-6: #b8dba7;
+  --lime-green-7: #aed69a;
+  --lime-green-8: #a4d18e;
+  --lime-green-9: #8bb874;
+  --lime-green-10: #7ba367;
+  --lime-green-11: #6c8f5a;
+  --lime-green-12: #5c7a4d;
 
   /* Shadows: Float */
   --box-shadow-2:
@@ -226,7 +225,7 @@
   /* Border Radiuses */
   --border-radius-1: 60px;
   --border-radius-2: 16px;
-  --border-radius-3: 1.5rem;
+  --border-radius-3: 10px;
   --border-radius-4: 6px;
 
   --h1-font-size: 60px;
@@ -244,22 +243,23 @@
   --body-font-size: 20px;
   --body-line-height: 1.5;
 
-  --h1-font-size-mobile: 50px;
-  --h1-line-height-mobile: 1.1;
-  --h2-font-size-mobile: 40px;
-  --h2-line-height-mobile: 1.2;
-  --h3-font-size-mobile: 35px;
-  --h3-line-height-mobile: 1.2;
-  --h4-font-size-mobile: 25px;
-  --h4-line-height-mobile: 1.3;
-  --h5-font-size-mobile: 30px;
-  --h5-line-height-mobile: 1.3;
-  --h6-font-size-mobile: 24px;
-  --h6-line-height-mobile: 1.3;
-  --body-font-size-mobile: 20px;
-  --body-line-height-mobile: 1.5;
+  --h1-font-size-mobile: 2rem; /* 32px */
+  --h2-font-size-mobile: 1.75rem; /* 28px */
+  --h3-font-size-mobile: 1.5rem; /* 24px */
+  --h4-font-size-mobile: 1.25rem; /* 20px */
+  --h5-font-size-mobile: 1.125rem; /* 18px */
+  --h6-font-size-mobile: 1rem; /* 16px */
+  --body-font-size-mobile: 1rem; /* 16px */
+  --small-font-size-mobile: 0.875rem; /* 14px */
 
-  /* Spacing and sizing system */
+  --h1-line-height-mobile: 1.2;
+  --h2-line-height-mobile: 1.25;
+  --h3-line-height-mobile: 1.3;
+  --h4-line-height-mobile: 1.35;
+  --h5-line-height-mobile: 1.4;
+  --h6-line-height-mobile: 1.45;
+  --body-line-height-mobile: 1.6;
+
   --padding-1: 10px;
   --padding-2: 20px;
 }
@@ -275,7 +275,6 @@ body {
   padding: 0;
   color: var(--black);
 }
-
 
 h1 {
   font-size: var(--h1-font-size);
@@ -310,98 +309,6 @@ img {
   -o-border-radius: 1.5em;
 }
 
-/* Responsive Behaviors */
-
-@media (max-width: 767px) {
-  /* Hero Section */
-  h1 {
-    font-size: var(--h1-font-size-mobile);
-  }
-
-  .container {
-    padding: 0;
-  }
-
-  .hero-green .CTA-button {
-    font-size: 0.875rem;
-    padding: 0.5rem 1rem;
-  }
-
-  /* Mission Section */
-  .hero-bottom h3 {
-    font-size: 1.5rem;
-  }
-
-  .hero-bottom p {
-    font-size: 0.875rem;
-  }
-
-  /* Services Section */
-  .services-section h2 {
-    font-size: 1.75rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.25rem;
-  }
-
-  .service-card p {
-    font-size: 0.875rem;
-  }
-
-  /* Help You Grow Section */
-  .help-you-grow-section h2 {
-    font-size: 1.75rem;
-  }
-
-  .help-you-grow-section p {
-    font-size: 0.875rem;
-  }
-
-  /* Proven Path Section */
-  .path-section h2 {
-    font-size: 1.75rem;
-  }
-
-  .path-section h6 {
-    font-size: 1.25rem;
-  }
-
-  .path-section p {
-    font-size: 0.875rem;
-  }
-
-  /* Impact Section */
-  .stats-section h2 {
-    font-size: 1.75rem;
-  }
-
-  .stats-section dd {
-    font-size: 2rem;
-  }
-
-  .stats-section dt {
-    font-size: 0.875rem;
-  }
-
-  /* Testimonials Section */
-  .testimonials-section h2 {
-    font-size: 1.75rem;
-  }
-
-  .testimonials-section p {
-    font-size: 0.875rem;
-  }
-
-  .testimonials-section .font-semibold {
-    font-size: 1rem;
-  }
-
-  .testimonials-section .text-sm {
-    font-size: 0.75rem;
-  }
-}
-
 /* Utility Classes */
 
 .shadow {
@@ -424,11 +331,36 @@ img {
   color: var(--green-16);
 }
 
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.grayscale:hover {
+  filter: grayscale(0%);
+}
+
 /* Basic Components */
+
+.mini-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--green-16);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+
+  @media (min-width: 640px) {
+    font-size: 1rem;
+  }
+}
 
 .card {
   padding: 20px;
   box-shadow: var(--box-shadow-3);
+}
+
+.workflow-card {
+  margin: 5px;
 }
 
 .container {
@@ -439,8 +371,7 @@ img {
 }
 
 .divider {
-  width: 64px;
-  border-top: 2px solid var(--color-amber-300); /* Amber-300 color */
+  border-top: 2px solid var(--green-16); /* Amber-300 color */
   margin: 20px 0;
 }
 
@@ -459,10 +390,10 @@ img {
 .CTA-button {
   text-transform: uppercase;
   background-image: linear-gradient(
-      102deg,
-      #9acc81 0%, /* Lighter green */
-      #83c78b 51%, /* Lighter main green (--green-8) */
-      #9acc81 100% /* Lighter green */
+    102deg,
+    #9acc81 0%,
+    /* Lighter green */ #83c78b 51%,
+    /* Lighter main green (--green-8) */ #9acc81 100% /* Lighter green */
   );
   background-size: 200%;
   border: none; /* Remove border for a cleaner look */
@@ -471,7 +402,10 @@ img {
   padding: 12px 24px;
   border-radius: var(--border-radius-4); /* Rounded corners */
   cursor: pointer;
-  transition: background-position 0.5s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-position 0.5s ease-in-out,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   position: relative; /* Required for pseudo-element */
   overflow: hidden; /* Hide overflow from pseudo-element */
@@ -494,21 +428,134 @@ img {
   transform: translateY(-2px); /* Slight lift on hover */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
 }
-.primary-button {
-  background-color: var(--green-8); /* Dark green */
-  color: var(--white); /* White text */
-  padding: 12px 24px;
-  border: 2px solid var(--green-8);
-  border-radius: var(--border-radius-4);
-  font-weight: 500;
+
+.email-button {
   text-transform: uppercase;
+  background-image: linear-gradient(
+    102deg,
+    var(--lime-green-1) 0%,
+    var(--lime-green-3) 51%,
+    var(--lime-green-1) 100%
+  );
+  background-size: 200%;
+  border: none;
+  color: var(--green-15);
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: var(--border-radius-4);
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-position 0.5s ease-in-out,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
-.primary-button:hover {
-  background-color: var(--green-6); /* Slightly lighter green */
-  transform: translateY(-2px); /* Slight lift on hover */
+.email-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  filter: url(#noiseFilter);
+  pointer-events: none;
+}
+
+.email-button:hover {
+  background-position: 100% 0%;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  color: var(--green-16);
+}
+
+.submit-button {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    102deg,
+    var(--lime-green-4) 0%,
+    /* Darker lime start */ var(--lime-green-3) 51%,
+    /* Darker lime middle */ var(--lime-green-4) 100% /* Darker lime end */
+  );
+  background-size: 200%;
+  border: none;
+  color: var(--green-16);
+  /*Slightlydarkertextforbettercontrast*/
+  font-weight: 600;
+  /*Slightlyboldertext*/
+  padding: 12px 24px 12px 20px;
+  border-radius: var(--border-radius-4);
+  cursor: pointer;
+  transition:
+    background-position 0.5s ease-in-out,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  /*Innerglow*/
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  -webkit-transition:
+    background-position 0.5s ease-in-out,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  -moz-transition:
+    background-position 0.5s ease-in-out,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  -ms-transition:
+    background-position 0.5s ease-in-out,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  -o-transition:
+    background-position 0.5s ease-in-out,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.submit-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  filter: url(#noiseFilter);
+  pointer-events: none;
+}
+
+.submit-button .icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy animation */
+}
+
+.submit-button:hover {
+  background-position: 100% 0%;
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.submit-button:hover .icon {
+  transform: translateX(4px);
+}
+
+/* Active state */
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .secondary-button {
@@ -520,7 +567,9 @@ img {
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .secondary-button:hover {
@@ -537,7 +586,9 @@ img {
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .accent-button:hover {
@@ -554,22 +605,36 @@ img {
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: var(--raised-upper), var(--raised-lower); /* Raised effect */
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .raised-button:hover {
-  box-shadow: var(--raised-upper), 0 2px 6px hsla(0, 0%, 0%, 0.3); /* Deeper shadow on hover */
+  box-shadow:
+    var(--raised-upper),
+    0 2px 6px hsla(0, 0%, 0%, 0.3); /* Deeper shadow on hover */
   transform: translateY(-2px); /* Slight lift on hover */
 }
 
 /* Hero Sections */
+
+.breadcrumb {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--green-15);
+  font-weight: bold;
+}
+
+.hero-content .divider {
+  border-top-color: var(--green-15);
+}
 
 .hero-green {
   background-color: var(--green);
   text-align: left;
 }
 
-/* Mission Section */
 .mission-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -602,30 +667,50 @@ img {
   line-height: 1.5;
 }
 
-/* Mission Image */
 .mission-image {
   position: absolute;
-  top: -100px; /* Overlaps the hero section */
-  right: -100px; /* Extends beyond the container */
-  width: 500px; /* Adjust as needed */
-  height: 500px; /* Adjust as needed */
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Medium screens (tablets, 768px and up) */
+/* Testimonials Section */
+
+.testimonials-section {
+  background: var(--green-5);
+  background: radial-gradient(
+    circle,
+    var(--lime-green-3) 0%,
+    var(--green-5) 100%
+  );
+  padding-bottom: 4rem;
+}
+
+.testimonial .card {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--white);
+  border-radius: var(--border-radius-3);
+  -webkit-border-radius: var(--border-radius-3);
+  -moz-border-radius: var(--border-radius-3);
+  -ms-border-radius: var(--border-radius-3);
+  -o-border-radius: var(--border-radius-3);
+}
+
 @media (min-width: 768px) {
   .container {
-    max-width: 80%; /* Slightly wider for medium screens */
-    padding: 1.5rem; /* Increase padding for medium screens */
+    max-width: 80%;
+    padding: 1.5rem;
   }
 }
 
-/* Large screens (desktops, 1024px and up) */
 @media (min-width: 1024px) {
   .container {
-    max-width: 70%; /* Original max-width for large screens */
-    padding: 2rem; /* Original padding for large screens */
+    max-width: 70%;
+    padding: 2rem;
   }
 }
 
@@ -642,5 +727,183 @@ img {
 
   &:hover {
     transform: translateY(-5px);
+  }
+}
+
+/* Workflow  */
+.path-section {
+  padding-bottom: 12rem;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--green-13);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Stats */
+.stats-section {
+  position: relative;
+  background: url("../media/svg-gobbler.svg") no-repeat center / contain;
+  min-height: 300px;
+}
+
+.stats-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.stats-section .container {
+  position: inherit;
+  z-index: 1;
+}
+/* Responsive Behaviors: Mobile */
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: var(--h1-font-size-mobile);
+  }
+  h2 {
+    font-size: var(--h2-font-size-mobile);
+  }
+  h3 {
+    font-size: var(--h3-font-size-mobile);
+  }
+  h4 {
+    font-size: var(--h4-font-size-mobile);
+  }
+  h5 {
+    font-size: var(--h5-font-size-mobile);
+  }
+  h6 {
+    font-size: var(--h6-font-size-mobile);
+  }
+  p,
+  li {
+    font-size: var(--body-font-size-mobile);
+  }
+
+  .small-text {
+    font-size: var(--small-font-size-mobile);
+  }
+
+  .container {
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-green .CTA-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Mission Section */
+  .hero-bottom h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-bottom p {
+    font-size: 0.875rem;
+  }
+
+  .service-card {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 5px !important;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Help You Grow Section */
+  .help-you-grow-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .help-you-grow-section p {
+    font-size: 0.875rem;
+  }
+
+  .path-section {
+    padding-bottom: 2rem;
+  }
+
+  .path-section h6 {
+    font-size: 1.25rem;
+  }
+
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--green-13);
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .workflow-card {
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
+
+  .stats-section {
+    background: url("../media/svg-gobbler.svg") no-repeat center / cover;
+  }
+
+  .stats-section dd {
+    font-size: 4rem;
+  }
+
+  .stats-section dt {
+    font-size: var(--body-font-size-mobile);
+  }
+
+  .testimonials-section h2 {
+    font-size: 1.75rem; /* 28px */
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.25rem;
+  }
+
+  .testimonial-card p {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.6;
+  }
+
+  .testimonial-author {
+    font-size: 1rem; /* 16px */
+  }
+
+  .testimonial-position {
+    font-size: 0.875rem; /* 14px */
   }
 }

@@ -3,6 +3,9 @@
 import os
 import sys
 
+# manage.py
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'christianfoundation.settings.development')
+
 
 def main():
     """Run administrative tasks."""

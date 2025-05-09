@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'training/css/training.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="training-list-container">
+  <section class="all-trainings-section">
+    <div class="section-header">
+      <div class="divider-line"></div>
+      <h2 class="section-title">All Training Programs</h2>
+      <p class="section-subtitle">Browse our complete catalog</p>
+    </div>
+    
+    <div class="training-grid">
+      {% for training in trainings %}
+        {% include "training/partials/_training_card.html" with training=training %}
+      {% empty %}
+        <div class="training-empty-state">
+          <p>No training programs available</p>
+        </div>
+      {% endfor %}
+    </div>
+    
+ 
+  </section>
+</div>
+{% endblock %}

@@ -15,25 +15,24 @@
       >
         Welcome to Christian Fundraising Consultancy
       </h1>
-      <div class="flex flex-col md:flex-row items-stretch gap-4">
-        <a
-          href="/call"
-          class="CTA-button rounded-md px-6 py-3 md:px-8 md:py-4 text-center font-semibold text-white"
-        >
-          Book a call
-        </a>
-        <a
-          href="/work"
-          class="flex items-center justify-center rounded-md border border-solid border-black bg-white px-4 py-2 md:px-6 md:py-3 font-bold"
-        >
-          <img
-            src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94d411e6cf99_Vector%20(6).svg"
-            alt=""
-            class="mr-2 max-h-4 w-5"
-          />
-          <p>See our Work</p>
-        </a>
-      </div>
+      <div class="mx-auto mt-10 flex gap-6">
+            <!-- Call Button -->
+            <a href="/call" class="CTA-button flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              Call Us
+          </a>
+          
+          <!-- Email Button -->
+          <a href="mailto:example@email.com" class="email-button flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              Email Us
+          </a>
+        </div>
     </div>
   </div>
 
@@ -52,7 +51,7 @@
       <img
         src="{% static 'media/home-image.jpg' %}"
         alt=""
-        class="shadow relative -bottom-6 -right-6 mt-20 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px"
+        class="shadow relative -bottom-6 -right-6 mt-8 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px"
       />
     </div>
   </div>
@@ -173,138 +172,48 @@
   </div>
 </section>
 
-<!-- Help You Grow Section -->
-<section class="help-you-grow-section py-16">
-  <div class="container mx-auto px-4">
-    <div class="grow-section-grid">
-      <div class="div1 mr-8 grid grid-cols-2 gap-4">
-        <div class="bg-gray-200 h-40 flex items-center justify-center">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Image 1"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div class="bg-gray-200 h-40 flex items-center justify-center">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Image 2"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div class="bg-gray-200 h-40 flex items-center justify-center">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Image 3"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div class="bg-gray-200 h-40 flex items-center justify-center">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Image 4"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="div2 flex flex-col justify-center">
-        <span class="flex items-center w-1/2">
-          <span class="h-px flex-1 bg-amber-300"></span>
-          <span class="pl-4">22+ Years of Experience</span>
-        </span>
-        <h2 class="text-2xl font-bold mb-4 mt-4">
-          We can help your ministry <em>grow</em>
-        </h2>
-        <p class="mb-4">
-          With us, fundraising isn’t just about money — it’s about building a
-          community of givers who share in your mission for God’s Kingdom.
-        </p>
-        <ul class="pl-5 space-y-3 list-disc marker:border-amber-400">
-          <li>
-            <strong>FIND</strong> new supporters, <strong>WIN</strong> them for
-            the cause, <strong>KEEP</strong> them for the long run, and
-            <strong>LIFT</strong> their giving from one level to the next.
-          </li>
-          <li>
-            We believe that your mission deserves a strong, engaged community of
-            givers.
-          </li>
-          <li>
-            We create faith-driven strategies and campaigns that inspire
-            generosity and sustain ministry growth.
-          </li>
-        </ul>
-      </div>
-      <div class="div3 mt-10 mr-8">
-        <a
-          href="/work"
-          class="CTA-button rounded-md px-6 py-3 md:px-8 md:py-4 text-center font-semibold text-white"
-        >
-          See our work
-        </a>
-      </div>
-      <div class="div4 mt-10">
-        <p>Your ministry’s success is our priority.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Proven Path Section -->
+<!-- Proven Workflow -->
 {% include 'workflow.html' %}
 
 <!-- Impact Section -->
-<section class="stats-section py-16">
-  <div class="container mx-auto px-4">
-    <div class="container mx-auto p-4">
-      <span class="flex items-center">
-        <span class="h-px bg-amber-300 flex-grow"></span>
-        <span class="px-4">Our growth</span>
-        <span class="h-px bg-amber-300 flex-grow"></span>
-      </span>
+{% include 'impact.html' %}
+
+<!-- Recent Clients Section -->
+ <section class="recent-clients">
+  <div class="logos">
+    <div class="logo-slide">
+      <img class="grayscale" src="{% static 'media/logos/1.jpg'%}">
+      <img class="grayscale" src="{% static 'media/logos/2.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/3.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/4.jpg'%}">
+      <img class="grayscale" src="{% static 'media/logos/5.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/6.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/7.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/8.jpg'%}">
+      <img class="grayscale" src="{% static 'media/logos/9.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/10.png'%}">
     </div>
-    <h2 class="font-bold text-center mb-4">Impact over the last 22+ years</h2>
-    <div class="py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <dl
-          class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3"
-        >
-          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-            <dt class="text-base/7 text-gray-600">Happy Clients</dt>
-            <dd
-              class="order-first text-4xl font-semibold tracking-tight text-gray-900 lg:text-7xl sm:text-5xl"
-            >
-              127
-            </dd>
-          </div>
-          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-            <dt class="text-base/7 text-gray-600">Training Sessions</dt>
-            <dd
-              class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl"
-            >
-              1,000+
-            </dd>
-          </div>
-          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-            <dt class="text-base/7 text-gray-600">Current Projects</dt>
-            <dd
-              class="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl"
-            >
-              18
-            </dd>
-          </div>
-        </dl>
-      </div>
+    <div class="logo-slide">
+      <img class="grayscale" src="{% static 'media/logos/1.jpg'%}">
+      <img class="grayscale" src="{% static 'media/logos/2.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/3.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/4.jpg'%}">
+      <img class="grayscale" src="{% static 'media/logos/5.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/6.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/7.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/8.jpg'%}">
+      <img class="grayscale" src="{% static 'media/logos/9.png'%}">
+      <img class="grayscale" src="{% static 'media/logos/10.png'%}">
     </div>
   </div>
-</section>
+ </section>
 
 <!-- Testimonials Section -->
 {% include 'testimonials.html' %}
 
 <!-- Resources Section -->
 <section class="blog-section py-16">
-  <div class="container mx-auto px-4">
+  <div class="container m-auto px-4">
     {% load blog_tags %} {% show_latest_posts %}
   </div>
 </section>

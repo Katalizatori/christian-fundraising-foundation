@@ -1,0 +1,57 @@
+# .gitignore - Django/Render (Windows-compatible)
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyd
+*.pyo
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+
+# Django
+*.log
+*.pot
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Node/npm (if applicable)
+node_modules/
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+*.env
+.env.local
+.env.development
+.env.production
+
+# Windows-specific
+Thumbs.db
+[Dd]esktop.ini
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Render/Deployment
+*.DS_Store
+*.dump
+*.pid
+*.egg
+*.egg-info/
+dist/
+build/

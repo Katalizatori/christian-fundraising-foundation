@@ -5,6 +5,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post
 
+
 class PostListView(ListView):
     model = Post
     template_name = "post_list.html"
@@ -15,11 +16,13 @@ class PostListView(ListView):
     def get_queryset(self):
         return Post.objects.filter(status=1)  # Only published posts
 
+
 class PostDetailView(DetailView):
     model = Post
     template_name = "blog/post_detail.html"
     context_object_name = "post"
-    slug_field = 'slug'
+    slug_field = "slug"
+
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
@@ -29,6 +32,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
 
 class PostUpdateView(LoginRequiredMixin, UpdateView):
     model = Post

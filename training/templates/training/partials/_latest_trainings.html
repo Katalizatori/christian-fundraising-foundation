@@ -1,15 +1,14 @@
-<div class="latest-trainings">
-    <h3>Upcoming Training</h3>
-    
-    <div class="training-list">
-        {% for event in latest_trainings %}
-            <div class="training-item">
-                <h4>{{ event.name }}</h4>
-                <time>{{ event.start_datetime|date:"M j" }}</time>
-                <a href="{{ event.url }}" class="btn-small">Details</a>
-            </div>
-        {% empty %}
-            <p>No upcoming training sessions</p>
-        {% endfor %}
+<div class="latest-trainings-section">
+    <div class="latest-trainings-header">
+      <div class="divider-line"></div>
+      <h3 class="section-title">Latest Trainings</h3>
     </div>
-</div>
+
+      {% for training in latest_trainings %}
+        {% include "training/partials/_training_card.html" with training=training %}
+      {% empty %}
+        <div class="training-empty-state">
+          <p>No trainings could be loaded.</p>
+        </div>
+      {% endfor %}
+  </div>

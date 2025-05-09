@@ -15,27 +15,6 @@
   margin: auto;
 }
 
-.path-section {
-  background-color: var(--white);
-}
-
-/* Container for the grid */
-.path-cards-container {
-  gap: 25px; /* Spacing between cards */
-  padding: 20px; /* Padding around the container */
-}
-
-/* Styling for each card */
-.path-card {
-  padding: 20px;
-  box-shadow: var(--box-shadow-3);
-  border-radius: var(--border-radius-2);
-  -webkit-border-radius: var(--border-radius-2);
-  -moz-border-radius: var(--border-radius-2);
-  -ms-border-radius: var(--border-radius-2);
-  -o-border-radius: var(--border-radius-2);
-}
-
 /* Styling for the image container */
 .item1 {
   margin-bottom: 15px; /* Space between image and text */
@@ -74,10 +53,45 @@
   grid-area: 5 / 4 / 6 / 6;
 }
 
-.stats-section {
-  background: url("../media/svg-gobbler.svg") no-repeat center / contain;
-}
+
 
 .testimonials-section {
   background-color: var(--green-3);
+}
+
+/* Recent Clients Section */
+
+@keyframes slide {
+  from {
+    transform: translateX(0)  ;
+    -webkit-transform: translateX(0)  ;
+    -moz-transform: translateX(0)  ;
+    -ms-transform: translateX(0)  ;
+    -o-transform: translateX(0)  ;
+  }
+  to {
+    transform: translateX(-100%)  ;
+    -webkit-transform: translateX(-100%)  ;
+    -moz-transform: translateX(-100%)  ;
+    -ms-transform: translateX(-100%)  ;
+    -o-transform: translateX(-100%)  ;
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+}
+
+.logo-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logo-slide img {
+  height: 50px;
+  margin: 0 40px;
+  display: inline-block;
 }

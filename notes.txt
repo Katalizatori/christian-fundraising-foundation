@@ -1,2 +1,7 @@
 python manage.py makemigrations && python manage.py migrate
-python manage.py runserver  
+python manage.py runserver 
+
+
+curl -X GET `
+"https://us12.api.mailchimp.com/3.0/ping" `
+-H "Authorization: Basic $(echo "anystring:7538e3704fed4e2cc0fde60a6ffbe14a-us12" | base64)"

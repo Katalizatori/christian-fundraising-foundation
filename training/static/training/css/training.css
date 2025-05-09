@@ -10,49 +10,136 @@
     gap: 2rem;
 }
 
+/* ===== Training Card Styles ===== */
 .training-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 25rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
 }
 
 .training-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.training-image {
-    height: 200px;
-    overflow: hidden;
+.training-card-img-holder {
+  width: 100%;
+  height: 25.55%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
 }
 
-.training-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.training-card-img-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 0; /* Remove any image rounding */
 }
 
-.training-content {
-    padding: 1.5rem;
+.training-card:hover .training-card-img-holder img {
+  transform: scale(1.05);
 }
 
-.training-meta {
-    color: #666;
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
+.training-card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.register-button {
-    display: inline-block;
-    background: var(--green);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-top: 1rem;
+.training-badges {
+  margin-bottom: 1rem;
 }
 
+.training-badge {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.training-badge.active {
+  background: var(--green-1);
+  color: var(--green-17);
+}
+
+.training-badge.inactive {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.training-card-title {
+  color: var(--green-19);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+.training-card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.training-card-title a:hover {
+  color: var(--green-16);
+}
+
+.training-description {
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* Maintain original date/time section styling */
+.training-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.training-options span {
+  font-weight: 600;
+  color: var(--green-16);
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .training-card {
+      height: auto; /* Flexible height on mobile */
+      max-height: 28rem;
+  }
+  
+  .training-card-img-holder {
+      height: 10rem; /* Smaller fixed height on mobile */
+  }
+  
+  .training-card-content {
+      padding: 1rem;
+  }
+}
 /* Latest trainings partial */
 .latest-trainings {
     background: #f8f9fa;
@@ -70,4 +157,212 @@
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .training-card {
+        padding: 1rem;
+    }
+    
+    .training-card-img-holder {
+        height: 12rem;
+    }
+    
+    .training-card-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== Latest Trainings Section Styles ===== */
+.latest-trainings-section {
+    margin-bottom: 4rem;
+  }
+  
+  .latest-trainings-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .latest-trainings-header .divider-line {
+    height: 1px;
+    background-color: var(--yellow);
+    flex-grow: 1;
+  }
+  
+  .latest-trainings-header .section-title {
+    padding-left: 1rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .latest-trainings-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  .training-empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: var(--gray);
+  }
+  
+  /* Responsive grid */
+  @media (min-width: 768px) {
+    .latest-trainings-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .latest-trainings-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .latest-trainings-grid {
+      gap: 1rem;
+    }
+  }
+
+/* ===== Upcoming Trainings Section Styles ===== */
+.upcoming-trainings-section {
+    margin-bottom: 4rem;
+  }
+  
+  .upcoming-trainings-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .upcoming-trainings-header .divider-line {
+    height: 1px;
+    background-color: var(--yellow);
+    flex-grow: 1;
+  }
+  
+  .upcoming-trainings-header .section-title {
+    padding-left: 1rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .upcoming-trainings-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Reuse existing responsive grid styles */
+  @media (min-width: 768px) {
+    .upcoming-trainings-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .upcoming-trainings-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Reuse existing responsive adjustments */
+  @media (max-width: 768px) {
+    .upcoming-trainings-grid {
+      gap: 1rem;
+    }
+  }
+
+  /* training.css */
+.training-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    color: var(--green-19);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-subtitle {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  
+  .section-footer {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .view-all-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--green-1);
+    color: var(--green-19);
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .view-all-link:hover {
+    background: var(--green-2);
+    transform: translateY(-2px);
+  }
+  
+  /* Visual distinction between sections */
+  .upcoming-section {
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .latest-section {
+    margin-top: 2rem;
+  }
+
+  /* ===== Icon Additions ===== */
+/* Add to both CSS files without modifying existing styles */
+
+/* Container adjustments */
+.blog-options,
+.training-options {
+    gap: 0.75rem; /* Slightly more spacing between items */
+}
+
+/* Icon text items */
+.blog-options > span,
+.training-options > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Icon base styling */
+.icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    color: inherit; /* Inherits text color */
 }

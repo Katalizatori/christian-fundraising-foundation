@@ -62,28 +62,6 @@ em {
     flex: 1;
 }
 
-.email-form button {
-    text-transform: uppercase;
-    background-image: linear-gradient(  102deg,  var(--yellow) 0%,  var(--lime) 51%, /* Darker shade */  var(--lime) 100%);
-    color: var(--black);
-    background-size: 200%;
-    border: 2px solid #e1f07a;
-    transition: background-position 0.5s ease-in-out;
-    /*Smoothtransition*/padding: 8px;
-    border-radius:var(--border-radius-4);
-    -webkit-border-radius:var(--border-radius-4);
-    -moz-border-radius:var(--border-radius-4);
-    -ms-border-radius:var(--border-radius-4);
-    -o-border-radius:var(--border-radius-4);
-    font-weight: bold;
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-.email-form button:hover {
-    background-position: 100% 0%; /* Move to the second half */
-}
-
 .email-form .form-checkbox a {
     color: var(--green-15);
 }

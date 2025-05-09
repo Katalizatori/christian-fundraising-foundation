@@ -56,15 +56,6 @@
   font-weight: bold;
 }
 
-/* CTA Button */
-.CTA-button {
-  background-color: var(--green);
-  transition: background-color 0.3s ease;
-}
-
-.CTA-button:hover {
-  background-color: var(--dark-green);
-}
 
 /* Hamburger Menu */
 .hamburger {

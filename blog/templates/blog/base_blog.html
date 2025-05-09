@@ -1,25 +1,8 @@
 <!-- Extends base.html and acts as a base for the rest of the blog templates -->
 
-
-{% extends "base.html" %}
-{% load static %}
-
-{% block extra_css %}
-  <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
-{% endblock %}
-
-{% block content %}
-<section class="header">
-
-</section>
-<section class="content">
-  <div class="blog-container">
-    <main class="blog-main">
-      {% block blog_content %}{% endblock %}
-    </main>
-    <aside class="blog-sidebar">
-      {% include "blog/partials/_sidebar.html" %}
-    </aside>
-  </div>
-</section>
+{% extends "base.html" %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}" />
+{% endblock %} {% block content %}
+<main class="blog-main">{% block blog_content %}{% endblock %}</main>
+<aside class="blog-sidebar">{% include "blog/partials/_sidebar.html" %}</aside>
 {% endblock %}

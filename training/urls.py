@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import TrainingListView, TrainingDetailView
+from .views import *
 
-app_name = 'training'
+app_name = "training"
+
 
 urlpatterns = [
-    path('', TrainingListView.as_view(), name='list'),
-    path('<int:pk>/', TrainingDetailView.as_view(), name='detail'),
+    path("", TrainingListView.as_view(), name="list"),
+    path("all/", AllTrainingsView.as_view(), name="all"),
 ]
