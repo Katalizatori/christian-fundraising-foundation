@@ -9,8 +9,13 @@ echo "=== Starting Build Process ==="
 echo "Installing Python packages..."
 pip install -r requirements/prod.txt
 
-python manage.py collectstatic --noinput --clear
+echo "----- Collecting static files -----"
+python manage.py collectstatic --noinput -v 3
 echo "----- Static files collected -----"
+
+# Verify collection
+echo "----- Verifying files -----"
+find /opt/render/project/src/staticfiles -type f | head -20
 
 # 2. Ensure PostgreSQL support
 echo "Installing psycopg2..."
