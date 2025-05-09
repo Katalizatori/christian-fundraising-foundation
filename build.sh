@@ -8,7 +8,9 @@ echo "=== Starting Build Process ==="
 # 1. Install Python dependencies
 echo "Installing Python packages..."
 pip install -r requirements/prod.txt
-python manage.py collectstatic --noinput
+
+python manage.py collectstatic --noinput --clear
+echo "----- Static files collected -----"
 
 # 2. Ensure PostgreSQL support
 echo "Installing psycopg2..."
