@@ -43,8 +43,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -87,16 +87,14 @@ DATABASES = {
 }
 
 # ========================
-# Static & Media Files
+# Static & Media Files (UPDATE THESE)
 # ========================
-STATIC_URL = "static/"
+STATIC_URL = "/static/"  # Add leading slash
 STATICFILES_DIRS = [
-    BASE_DIR / "static",          # project_root/static/
-    BASE_DIR / "blog/static",     # project_root/blog/static/
+    BASE_DIR / "static",
+    BASE_DIR / "blog/static",
 ]
-STATIC_ROOT = BASE_DIR / "staticfiles"  # for collectstatic
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "static" / "media"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # ========================
 # Third-Party Configurations
@@ -153,3 +151,10 @@ USE_TZ = True
 # Development-Specific (will be overridden in production)
 # ========================
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"  # Dev-only
+
+if 'RENDER' in os.environ:
+    # Tell Django to trust the X-Forwarded-Proto header
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    
+    # WhiteNoise configuration
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

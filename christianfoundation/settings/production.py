@@ -25,11 +25,13 @@ DATABASES = {
 
 # Static files (WhiteNoise)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Points to your static folder
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'blog/static'),  # Keep your app-specific static files
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Collection target
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Ensure this is set for production
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media files (if you have user uploads)
