@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf import settings
 
-# Were the functions that render the pages are defined
+# Views that render the pages
 from .views import *
 
 urlpatterns = [
@@ -16,5 +18,19 @@ urlpatterns = [
     path("blog/", include(("blog.urls", "blog"), namespace="blog")),
     path("training/", include(("training.urls", "training"), namespace="training")),
     path("ckeditor/", include("ckeditor_uploader.urls")),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
+# This section is CRUCIAL for Render
+if settings.DEBUG:
+    # Serve media files during development (including on Render)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+else:
+    # In production on Render, we only serve static files via WhiteNoise
+    urlpatterns += staticfiles_urlpatterns()
+
+# Additional security for production
+if not settings.DEBUG:
+    from django.views.defaults import page_not_found
+    urlpatterns += [
+        path('404/', page_not_found, {'exception': None}),
+    ]
