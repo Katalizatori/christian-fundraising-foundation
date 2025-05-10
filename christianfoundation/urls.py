@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
+from django.urls import path, include, re_path
+from django.views.static import serve
 
 # Views that render the pages
 from .views import *
@@ -25,8 +26,10 @@ if settings.DEBUG:
     # Serve media files during development (including on Render)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 else:
-    # In production on Render, we only serve static files via WhiteNoise
-    urlpatterns += staticfiles_urlpatterns()
+    # For production on Render
+    urlpatterns += [
+        re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+    ]
 
 # Additional security for production
 if not settings.DEBUG:
