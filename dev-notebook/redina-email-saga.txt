@@ -1,0 +1,73 @@
+* if you expect professionalism out of me, you have to start acting professionally yourself. That means paying me on time, respecting my time, and respecting my work by not demanding shit you haven't paid for. 
+* just because you have declared it a package does not mean that it is one. just because full-stack developers are generalists, does not mean that it is withing my "professional duties" to provide absolutely everything to you. My duties are limited to what I defined in my invoice. I am open to negotiating the price to any additional services. If you want a "full" professional package, you have to pay for one. You have basically paid for half a website. You are getting the other half + deployment for free. And you wanna add shit on top???? diabolical.
+* I did not argue over scope and expectations as this was an amicable agreement. But if you want a professional one, then we have to act as worker and employer. It is not professional to work for free. I am overworking myself to gain absolutely nothing? But I am being unprofessional? 
+* I have acted in extreme good faith, and I'll I've gotten is you belittling my work, paying me way below what the expected rate for beginner Albanian developers is, delaying my payment, endlessly revising and revising on call. You have misused my good will, and so I feel the need to push back. I am genuinely sorry it has come to this, as I enjoy the work that I do. 
+* Here are the rates again, for your convenience:
+* Render clarification since she's an r-word.
+* you doubling down on your requests, which I told u several times are unreasonable, means you are not open to negotiation. We can part ways here, and I send you the full code and relinquish full rights of it to you. 
+
+================================================
+
+It sounds like your client is overstepping boundaries and exploiting your work by demanding excessive unpaid extras (deployment, training, unnecessary calls) while underpaying you. Here’s how to handle this professionally while protecting yourself:
+1. Clarify the Scope (Politely but Firmly)
+
+    Refer to the original agreement (contract/SOW):
+
+        "As per our initial agreement, my responsibilities covered [X, Y, Z]. Training sessions/deployment were not included in the scope."
+
+    If there’s no contract, define boundaries now:
+
+        "To ensure clarity, let’s outline what’s included in the current payment. Additional services like training and extended support require separate compensation."
+
+2. Push Back on Unpaid Work
+
+    Charge for extra demands:
+
+        "I’d be happy to assist with training/deployment, but these are additional services. My rate for these is [X] per hour/session."
+
+    If they insist it’s part of the "full package":
+
+        "A full-stack development package typically covers building and handing off the product, not ongoing training or free maintenance. Let’s discuss a fair adjustment if you need extended support."
+
+3. Reduce Unnecessary Calls
+
+    Set clear meeting rules:
+
+        *"To stay productive, let’s limit calls to [1-2 per week] with a clear agenda. For minor questions, email/Slack is preferred."*
+
+    If they’re wasting time:
+
+        "I’ll need to charge for calls beyond the agreed scope at [rate] per hour to accommodate this time."
+
+4. If They Refuse to Pay Fairly
+
+    Option 1: Finish strictly what was agreed (no extras) and walk away.
+
+    Option 2: Offer a new contract for additional services.
+
+    Option 3: If they’re toxic, fire them:
+
+        "Given the expanded scope beyond our agreement, I won’t be able to continue without revised terms. Here’s the final deliverable as originally scoped."
+
+Key Phrases to Use
+
+    On scope creep:
+    "This wasn’t part of our original agreement, but I can provide a quote for the additional work."
+
+    On unpaid demands:
+    "I operate on a fee-for-service basis, and these requests fall outside the current arrangement."
+
+    On training:
+    "Training is a separate service—I’d be happy to send you my rates."
+
+Prevent Future Exploitation
+
+    Always use contracts (even simple ones) defining:
+
+        Deliverables
+
+        Number of revisions/calls included
+
+        Fees for extra work (deployment, training, etc.)
+
+    Require payment for scope changes (50% upfront for extras).

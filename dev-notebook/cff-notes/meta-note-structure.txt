@@ -1,0 +1,106 @@
+# STANDARDIZED REFERENCE TEMPLATE
+# Project: Christian Fundraising Foundation
+# File: deployment_standards.txt
+# Purpose: Consistent formatting for all guides
+# Last Updated: [YYYY-MM-DD]
+
+=============================================
+1. FILE STRUCTURE
+=============================================
+
+1.1 Required Headers
+--------------------
+# TITLE
+# Project: [Project Name]
+# Purpose: [1-line description]
+# File: [filename].txt
+# Last Updated: [YYYY-MM-DD]
+
+1.2 Section Formatting
+----------------------
+All sections must use:
+- ALL CAPS dividers with ==== underlines
+- Hierarchical numbering (1.1, 1.1.1)
+- Dashes under subheaders
+- 72 character line width maximum
+
+=============================================
+2. CONTENT FORMATTING
+=============================================
+
+2.1 Code Blocks
+---------------
+Indent with 4 spaces (no triple backticks):
+    # Example Python code
+    def hello():
+        print("Hello World")
+
+2.2 Commands
+------------
+$ command --flags  # Explanatory comment
+$ multi-line \
+  --commands \
+  --use-backslashes
+
+2.3 Tables
+----------
+| Component       | Details          | Notes   |
+|----------------|------------------|---------|
+| Static Files   | /static/assets/  | Required|
+| Media Files    | /media/uploads/  | Optional|
+
+=============================================
+3. TROUBLESHOOTING
+=============================================
+
+3.1 Error Indicators
+--------------------
+[CRITICAL] Immediate action needed
+[WARNING] Potential issue
+[RESOLVED] Confirmed fixes
+
+3.2 Example Format
+------------------
+[CRITICAL] TemplateDoesNotExist
+   Root Cause: Incorrect BASE_DIR
+   Solution: Update settings/base.py
+   Verification: python manage.py check --deploy
+
+=============================================
+4. TIME ESTIMATES
+=============================================
+
+| Phase          | Duration | Owner     | Dependencies |
+|----------------|----------|-----------|--------------|
+| Planning       | 2 hrs    | Dev Team  | None         |
+| Implementation | 4 hrs    | Lead Dev  | Planning     |
+| Testing        | 1.5 hrs  | QA        | Implementation|
+
+=============================================
+5. REQUIRED ELEMENTS
+=============================================
+
+5.1 Every Guide Must Include
+----------------------------
+- Last Updated date
+- Clear section hierarchy
+- Verification steps
+- Time estimates table
+- Plain text formatting ONLY
+- Line breaks at 72 characters
+
+5.2 Prohibited Elements
+-----------------------
+- Markdown syntax (```, **bold**, etc.)
+- Variable fonts/styles
+- Unnumbered sections
+- Lines exceeding 72 characters
+- Special Unicode except basic punctuation
+
+=============================================
+6. SAMPLE FOOTER
+=============================================
+Maintainer: [Your Name]
+Review Cycle: Quarterly
+Approval: [Approver Name]
+Version: 1.0.0

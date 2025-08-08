@@ -1,0 +1,122 @@
+# Django Static/Media Setup Guide
+# Project: Christian Fundraising Foundation
+# File: static_media_setup.txt
+# Last Updated: 2025-18-04
+
+
+=============================================
+1. DIRECTORY STRUCTURE
+=============================================
+
+project_root/
+├── static/
+    └── media/ 
+
+All media is static media here as the client requested no images for blogs. No user submitted media means no need to account for potential extra loading due to images, means no need for the rest of the
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+BELOW IS DEPRACATED: NO NEED FOR SUCH A COMPLEX SETUP
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+=============================================
+1. DIRECTORY STRUCTURE
+=============================================
+
+1.1 Recommended Layout
+----------------------
+project_root/
+├── static/
+│   └── assets/
+│       └── images/  # Website static images
+├── media/           # Future uploads
+└── christianfoundation/
+    └── settings/
+
+1.2 Path Configuration
+----------------------
+# settings/base.py
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # project_root/static/
+]
+MEDIA_ROOT = BASE_DIR / "media"
+
+=============================================
+2. MIGRATION STEPS
+=============================================
+
+2.1 Move Existing Files
+-----------------------
+mkdir -p static/assets/images
+mv media/*.jpg static/assets/images/
+mv media/*.png static/assets/images/
+
+2.2 Template Updates (Manual)
+-----------------------------
+Change ALL:
+<img src="{% static 'media/image.jpg' %}" />
+To:
+<img src="{% static 'assets/images/image.jpg' %}" />
+
+
+=============================================
+3. AUTOMATED TEMPLATE MIGRATION
+=============================================
+
+3.0 Running Scripts for Django Projects
+-----------------------------------------
+
+
+
+3.1 Script Setup (update_template_refs.py)
+-----------------------------------------
+import os
+import re
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).parent
+OLD_PATTERN = r'\{% static [\'"]media/(.*?)[\'"] %\}'
+NEW_PATTERN = r'{% static \'assets/images/\1\' %}'
+
+def update_templates():
+    for file in (PROJECT_ROOT/'templates').rglob('*.html'):
+        with open(file, 'r+') as f:
+            content = f.read()
+            f.seek(0)
+            f.write(re.sub(OLD_PATTERN, NEW_PATTERN, content))
+            f.truncate()
+
+3.2 Execution
+-------------
+python update_template_refs.py
+
+=============================================
+4. VERIFICATION
+=============================================
+
+4.1 Test Commands
+-----------------
+python manage.py findstatic assets/images/home-image.jpg
+python manage.py collectstatic --dry-run
+
+4.2 Expected Structure
+----------------------
+static/
+└── assets/
+    └── images/
+        ├── home-image.jpg
+        └── logo.png
+
+
+
+=============================================
+5. TIME ESTIMATES
+=============================================
+
+| Task                      | Duration  |
+|---------------------------|-----------|
+| Directory restructuring   | 10 min    |
+| Template updates          | 5-30 min  |
+| Static collection         | 5 min     |
+| Testing                   | 15 min    |
+| Total                     | 35-60 min |

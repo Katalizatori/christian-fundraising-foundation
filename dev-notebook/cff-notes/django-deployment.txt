@@ -1,0 +1,22 @@
+
+
+=============================================
+1. TECHNOLOGIES
+=============================================
+Django currently supports two interfaces: WSGI and ASGI.
+- WSGI is the main Python standard for communicating between web servers and applications, but it only supports synchronous code.
+- ASGI is the new, asynchronous-friendly standard that will allow your Django site to use asynchronous Python features, and asynchronous Django features as they are developed.
+
+You should also consider how you will handle static files for your application, and how to handle error reporting.
+
+=============================================
+1. TECHNOLOGIES
+=============================================
+Waitress = WSGI server
+Nginx
+
+However, if you want to host on Siteground, the basic premise would be to get Django running through a WSGI or ASGI server, which is then fronted by Apache or NGINX. My preferred setup, in this case, would be using (waitress)[https://docs.pylonsproject.org/projects/waitress/en/latest/] as a WSGI server then use NGINX to front the server. You would then need to configure NGINX to manage SSL termination, possibly configure static and media files and other HTTP headers.
+
+Let me know if you have any further questions and I can dig out more details.
+
+nanorepublica
