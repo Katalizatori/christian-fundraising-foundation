@@ -10,7 +10,6 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1", "https://christian-fundraising-founda
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600  # Optional: improves performance
     )
 }
 
