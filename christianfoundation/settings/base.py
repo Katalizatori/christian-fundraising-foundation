@@ -1,9 +1,6 @@
-# Import dj-database-url at the beginning of the file.
-import dj_database_url
-
 # christianfoundation/settings/base.py
-from pathlib import Path
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()

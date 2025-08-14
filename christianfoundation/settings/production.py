@@ -1,6 +1,6 @@
 
-from .base import *
 import os
+from .base import *
 import dj_database_url
 
 # Security settings
