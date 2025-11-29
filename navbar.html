@@ -1,0 +1,79 @@
+<nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+        <a href="/">
+            <img class="logo ml-4" style="height: 60px;" src="static/media/logo.png" alt="Company Logo">
+        </a>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="navLinks">
+        <!-- Home Link -->
+        <li>
+            <a href="/" class="nav-link">Home</a>
+        </li>
+
+        <!-- Services Link -->
+        <li>
+            <a href="/services.html" class="nav-link">Services</a>
+        </li>
+
+        <!-- Training Link -->
+        <li>
+            <a href="/training.html" class="nav-link">Training</a>
+        </li>
+
+        <!-- Resources Link -->
+        <li>
+            <a href="/blog.html" class="nav-link">Resources</a>
+        </li>
+
+        <!-- About Link -->
+        <li>
+            <a href="/about.html" class="nav-link">About</a>
+        </li>
+
+        <!-- Contact Link -->
+        <li>
+            <a href="/contact.html" class="nav-link">Contact</a>
+        </li>
+
+        <!-- CTA Button - mobile -->
+        <li class="mobile-cta">
+            <div class="CTA-button px-4 py-2 rounded-md font-semibold text-white">
+                <a href="/book-call.html" class="btn">Book A Call</a>
+            </div>
+        </li>
+    </ul>
+
+    <!-- CTA Button - desktop -->
+    <div class="CTA-button mr-4 px-4 py-2 rounded-md font-semibold text-white desktop-cta">
+        <a href="/book-call.html" class="btn">Book A Call</a>
+    </div>
+</nav>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    // Set active link based on current page
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>

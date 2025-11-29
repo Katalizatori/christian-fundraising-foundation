@@ -1,0 +1,53 @@
+<!--Base template-->
+{% load static %}
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <!--Meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+        <title> Christian Fundraising Consultancy </title>
+        <!--Link to css-->
+        <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <link rel="stylesheet" href="static/css/email-form.css">
+    <link rel="stylesheet" href="static/css/satoshi.css">
+    <link rel="stylesheet" href="static/css/forms.css">
+    <link rel="stylesheet" href="static/css/output.css">
+        
+
+        <!-- Page-specific CSS to reduce load time -->
+
+        
+    </head>
+    
+    <body class="selection:bg-amber-300">
+        <header>
+
+        </header>
+        <main>
+
+        </main>
+        <footer>
+      
+        </footer>
+        <!-- JavaScript to load navbar and footer -->
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        // Load footer  
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+    </body>
+ </html>

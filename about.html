@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Christian Fundraising Consultancy</title>
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <link rel="stylesheet" href="static/css/about.css">
+</head>
+
+<body class="selection:bg-amber-300">
+    <header id="navbar-container"></header>
+
+    <main>
+        <section class="hero" id="hero">
+            <!-- Hero Section -->
+            <div class="hero-green">
+                <div class="hero-content mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20 lg:py-24">
+                    <h1 class="mb-6 max-w-3xl text-3xl font-bold md:mb-10 md:text-5xl lg:mb-12 lg:text-6xl md:leading-tight">
+                        About us
+                    </h1>
+                    <div class="flex flex-col md:flex-row items-stretch gap-4">
+                        <p class="text-3xl">
+                            We are resourceful, results-oriented, and reliable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="mission-section">
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <h3 class="text-2xl font-bold md:text-3xl">Our mission</h3>
+                        <div class="divider"></div>
+                        <p>
+                            We're a small team with big hearts, passionate about helping Christian
+                            charities unlock the generosity of their supporters and make a lasting
+                            Kingdom impact. We create robust strategies, craft impactful
+                            campaigns, and equip your team for long-term success.
+                        </p>
+                    </div>
+                    <img
+                        src="static/media/about-page.jpg"
+                        alt="Our team"
+                        class="shadow relative -bottom-6 -right-6 mt-8 w-[480px] object-cover md:absolute md:mt-0 md:h-[480px] c-h-480px"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team mx-auto max-w-7xl px-5 py-12 md:px-10">
+            <h2 class="text-3xl font-bold mb-8 text-center">Meet Our Team</h2>
+            
+            <div class="team-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Team member cards -->
+                <div class="team-member-card border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="team-member-header p-6">
+                        <div class="flex flex-col items-center gap-2 text-center">
+                            <img 
+                                src="static/media/team/redina.jpg" 
+                                alt="Redina Kolaneci" 
+                                class="grayscale w-24 h-24 rounded-full object-cover border-2 border-blue-100 mb-3"
+                            >
+                            <div>
+                                <h3 class="font-bold text-lg">Redina Kolaneci</h3>
+                                <p class="text-sm text-gray-600">Founder & Managing Director</p>
+                            </div>
+                        </div>
+                        <button class="team-member-toggle w-full mt-6 flex justify-between items-center text-blue-600 hover:text-blue-800">
+                            <span class="text-sm font-medium">More about Redina</span>
+                            <span class="toggle-icon text-xl">+</span>
+                        </button>
+                    </div>
+                    <div class="team-member-details hidden px-6 pb-6">
+                        <!-- Team member details -->
+                    </div>
+                </div>
+                <!-- More team members -->
+            </div>
+        </section>
+
+        <!-- Include impact, testimonials, workflow sections -->
+        <section class="impact">
+            <!-- Content from impact.html -->
+        </section>
+        
+        <section class="testimonials">
+            <!-- Content from testimonials.html -->
+        </section>
+        
+        <section class="workflow">
+            <!-- Content from workflow.html -->
+        </section>
+
+        <script>
+            // Team member toggle functionality
+            document.querySelectorAll(".team-member-toggle").forEach((button) => {
+                button.addEventListener("click", () => {
+                    const card = button.closest(".team-member-card");
+                    const details = card.querySelector(".team-member-details");
+                    const toggleIcon = card.querySelector(".toggle-icon");
+                    
+                    details.classList.toggle("hidden");
+                    toggleIcon.textContent = details.classList.contains("hidden") ? "+" : "−";
+                });
+            });
+        </script>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data);
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+</body>
+</html>
