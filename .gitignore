@@ -49,6 +49,7 @@ Thumbs.db
 *.msp
 
 # Render/Deployment
+render.yaml
 *.DS_Store
 *.dump
 *.pid
