@@ -1,3 +1,4 @@
+/* ---------------------------------------------------------------------------------------- */
 /**
 * @license
 *
@@ -21,6 +22,11 @@
 
 *
 */
+
+/* Dev note: this font comes with a prepared css sheet, which is an immense help. */
+
+/* ---------------------------------------------------------------------------------------- */
+
 @font-face {
   font-family: 'Satoshi-Light';
   src: url('../fonts/Satoshi-Light.woff2') format('woff2'),

@@ -1,38 +1,167 @@
 <section class="footer">
-    <div class="footer-container">
-        <!-- Footer content (same as your original but with static paths) -->
-        <h3 class="font-bold mb-4 text-3xl md:text-4xl text-center">
-            Get <em>FREE</em> fundraising insights
-        </h3>
+  <div class="footer-container">
+    <!-- Heading -->
+    <h3 class="font-bold mb-4 text-3xl md:text-4xl text-center">
+      Get <em>FREE</em> fundraising insights
+    </h3>
 
-        <div class="flex flex-col md:flex-row justify-between items-center p-4">
-            <!-- Email Form -->
-            <div class="form-section">
-                <div class="email-container">
-                    <div class="email-header mb-4">
-                        <p>Every week, you will receive an email with biblical inspiration, research-backed insights, or fundraising ideas you can apply immediately. Join a growing community of over 1,000 Christian leaders and fundraisers. <strong><em>Sign up</em> today.</strong></p>
-                    </div>
-                    <!-- Include email form HTML directly -->
-                    <form class="email-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <!-- Testimonial content -->
-            <div class="flex flex-col md:flex-row gap-5 mt-6 md:mt-0">
-                <img src="static/media/testimonial-footer.webp" alt="Testimonial" class="w-40 h-50 object-cover">
-                <div class="footer-testimonial">
-                    <blockquote class="text-xl italic font-semibold mb-4">
-                        <!-- SVG and testimonial text -->
-                    </blockquote>
-                    <p class="testimonial-citation-1">Rev John Pellowe, MBA, DMin</p>
-                    <p class="testimonial-citation-2">CEO, Canadian Center for Christian Charities</p>
-                </div>
-            </div>
+    <!-- Email Form and Testimonial Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center p-4">
+      <!-- Email Form -->
+      <div class="form-section">
+        <div class="email-container">
+          <div class="email-header mb-4">
+            <p>
+              Every week, you will receive an email with biblical inspiration,
+              research-backed insights, or fundraising ideas you can apply
+              immediately. Join a growing community of over 1,000 Christian
+              leaders and fundraisers. <strong><em>Sign up</em> today.</strong>
+            </p>
+          </div>
+          <!-- Subscription form (from subscriptions/email-form.html) -->
+          <form class="email-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
+      </div>
 
-        <!-- Rest of footer content -->
+      <!-- Testimonial content -->
+      <div class="flex flex-col md:flex-row gap-5 mt-6 md:mt-0">
+        <img
+          src="static/media/testimonial-footer.webp"
+          alt="picture of Rev John Pellowe"
+          class="w-40 h-50 object-cover"
+        />
+        <div class="footer-testimonial">
+          <blockquote class="text-xl italic font-semibold mb-4">
+            <svg
+              class="w-8 h-8 mb-4"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 18 14"
+            >
+              <path
+                d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
+              />
+            </svg>
+            <p>
+              Redina, having received your emails all this time, I have to say
+              that you contribute a great deal to Kingdom work. There must be
+              many ministries like ours that are grateful for the ideas you so
+              freely share
+            </p>
+          </blockquote>
+          <p class="testimonial-citation-1">Rev John Pellowe, MBA, DMin</p>
+          <p class="testimonial-citation-2">
+            CEO, Canadian Center for Christian Charities
+          </p>
+        </div>
+      </div>
     </div>
+
+    <!-- Footer Links Section -->
+    <div
+      class="links-section not-only:grid grid-cols-1 md:grid-cols-3 gap-6 p-4"
+    >
+      <!-- Logo -->
+      <div class="flex justify-center md:justify-start">
+        <img
+          class="logo h-24 md:h-32"
+          src="static/media/logo.png"
+          alt="Company Logo"
+        />
+      </div>
+
+      <!-- Product and Company Links -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+
+        <!-- Product Links -->
+        <ul>
+          <li>
+            <a
+              class="block mb-2 text-lg font-semibold hover:text-slate-500"
+              href="/services"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              class="block mb-2 text-lg font-semibold hover:text-slate-500"
+              href="/training"
+              >Training</a
+            >
+          </li>
+          <li>
+            <a
+              class="block mb-2 text-lg font-semibold hover:text-slate-500"
+              href="/resources"
+              >Resources</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              class="block mb-2 text-lg font-semibold hover:text-slate-500"
+              href="/about"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="block mb-2 text-lg font-semibold hover:text-slate-500"
+              href="/contact"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              class="block mb-2 text-lg font-semibold hover:text-slate-500"
+              href="/"
+              >Home</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Connect with Us -->
+      <div class="p-4">
+        <a
+          class="block mb-2 text-lg font-semibold"
+          href="mailto:redina@christianfundraisingconsultancy.com"
+          class="text-sm hover:text-slate-500"
+          >redina@christianfundraisingconsultancy.com</a
+        >
+        <div class="flex mt-4 gap-3">
+          <a href="linkedin.com"
+            ><img
+              src="static/media/icons8-linkedin.svg"
+              class="w-8 h-8"
+          /></a>
+          <a href="youtube.com"
+            ><img src="static/media/icons8-youtube.svg" class="w-8 h-8"
+          /></a>
+          <a href="substack.com"
+            ><img
+              src="static/media/icons8-substack.svg"
+              class="w-8 h-8"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+      <!-- Copyright Section -->
+      <div class="divider-footer m-auto"></div>
+      <div class="flex flex-col md:flex-row justify-between items-center py-4">
+        <p class="green-15" style="font-size: 1rem">
+          © 2025 Christian Fundraising Consultancy Ltd
+        </p>
+        <a href="/privacy-policy" class="green-15" style="font-size: 1rem"
+          >Privacy Policy</a
+        >
+      </div>
+    </div>
+  </div>
 </section>
